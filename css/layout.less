@@ -1,8 +1,33 @@
+.container{
+	display: block;
+	margin: 0 auto 0;
+	padding: 0 24px;
+	max-width: 1000px; //adjust for screen size
+	@media (min-width: 968px){
+		padding: 0 64px;
+		max-width: 900px;
+		// padding: 120px 15px;
+	}
+	@media (min-width: 1200px){
+		max-width: 1080px;
+	}
+	@media (min-width: 1400px){
+		max-width: 1268px;
+	}
+	@media (min-width: 1600px){
+		max-width: 1540px;
+	}
+}
 .row{
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: -15px;
 	margin-right: -15px;
+	&.content-left{
+		@media (max-width: 767px){
+			flex-direction: column-reverse;
+		}
+	}
 }
 .col{
 	width: 100%;
@@ -13,6 +38,10 @@
 .col-1{
 	flex: 0 0 8.333%;
 	max-width: 8.333%;
+}
+.col-2{
+	flex: 0 0 16.666%;
+	max-width: 16.666%;
 }
 .col-3{
 	flex: 0 0 25%;
@@ -80,4 +109,11 @@
 		flex: 0 0 100%;
 		max-width: 100%;
 	}
+}
+
+section{
+	margin: 80px 0;
+}
+.home-layout{
+
 }
