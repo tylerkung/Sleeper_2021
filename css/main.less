@@ -21,8 +21,6 @@ body{
 .spotlight{
 	overflow: hidden;
 	height: 0;
-	background-color: green;
-	// padding-top: 56.25%;
 	height: calc(0.5625 * (100vw - 224px));
 	width: 100%;
 	max-height: 640px;
@@ -34,6 +32,7 @@ body{
 	.spotlight-content{
 		height: 100%;
 		width: 100%;
+		border-radius: 32px;
 		background-color: blue;
 		display: flex;
 		flex-wrap: wrap;
@@ -105,7 +104,7 @@ body{
 	max-width: 100%;
 	height: 100%;
 	min-height: 300px;
-	// background-color: #eee;
+	background-color: #333;
 	video{
 		max-width: 100%;
 		width: 100%;
@@ -116,4 +115,122 @@ body{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+}
+
+table.comparison-chart{
+	.chart-title{
+
+	}
+	tr.feature{
+
+	}
+}
+
+.chat-ui{
+	position: relative;
+}
+.chat{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	right: -40px;
+	top: 40px;
+	// transform: translateY(100%);
+	&.animate{
+		animation: moveUp 15s;
+		// animation-delay: 3s;
+		// animation-iteration-count: 5;
+		animation-fill-mode: forwards;
+		.chat-item{
+			opacity: 1;
+			&:nth-child(1){
+				transition-delay: 0.3s;
+			}
+			&:nth-child(2){
+				transition-delay: 3.3s;
+			}
+			&:nth-child(3){
+				transition-delay: 6.3s;
+			}
+			&:nth-child(4){
+				transition-delay: 9.3s;
+			}
+			&:nth-child(5){
+				transition-delay: 12.3s;
+			}
+		}
+	}
+	@keyframes moveUp{
+		0%{
+			transform: translateY(100%);
+		}
+		4%{
+			transform: translateY(80%);
+		}
+		20%{
+			transform: translateY(80%);
+		}
+		24%{
+			transform: translateY(60%);
+		}
+		40%{
+			transform: translateY(60%);
+		}
+		44%{
+			transform: translateY(40%);
+		}
+		60%{
+			transform: translateY(40%);
+		}
+		64%{
+			transform: translateY(20%);
+		}
+		80%{
+			transform: translateY(20%);
+		}
+		84%{
+			transform: translateY(0%);
+		}
+		100%{
+			transform: translateY(0%);
+		}
+	}
+}
+
+.chat-item{
+	margin-top: 16px;
+	padding: 12px 32px 12px 12px;
+	background-image: linear-gradient(135deg, rgba(45, 54, 73, 0.8), rgba(28, 33, 45, 0.8));
+	border: 1px solid rgba(58, 70, 91, 0.3);
+	border-radius: 16px;
+	border-bottom-right-radius: 4px;
+	display: flex;
+	align-items: flex-start;
+	max-width: 240px;
+	backdrop-filter: blur(10px);
+	transition: opacity 0.2s ease;
+	opacity: 0;
+	&.my-chat{
+		border-bottom-right-radius: 16px;
+		border-bottom-left-radius: 4px;
+		background-image: linear-gradient(135deg, rgba(0, 206, 184, 0.8), rgba(28, 33, 45, 0.8));
+	}
+}
+.chat-img{
+	width: 24px;
+	height: 24px;
+}
+.chat-content{
+	margin-left: 8px;
+}
+.chat-user{
+	font-family: @inter;
+	font-weight: 600;
+	font-size: 0.777rem;
+}
+.chat-message{
+	font-family: @inter;
+	font-size: 0.777rem;
+	margin-top: 2px;
 }

@@ -14,12 +14,15 @@ var controller = new ScrollMagic.Controller({});
 $('video').each(function(){
 	var currentVideo = this;
 	console.log(currentVideo);
-	new ScrollMagic.Scene({triggerElement: this})
+	new ScrollMagic.Scene({triggerElement: currentVideo})
 		.on("enter", function(e){
 			console.log("play");
 			$(currentVideo)[0].play();
 		})
 		// .addIndicators()
 		.addTo(controller);
-
 })
+new ScrollMagic.Scene({triggerElement: '.chat-ui'})
+	.setClassToggle('.chat', 'animate')
+	// .addIndicators()
+	.addTo(controller);
