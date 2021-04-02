@@ -21,8 +21,8 @@
 .row{
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: -15px;
-	margin-right: -15px;
+	margin-left: -16px;
+	margin-right: -16px;
 	&.content-left{
 		@media (max-width: 991px){
 			flex-direction: column-reverse;
@@ -33,7 +33,7 @@
 	width: 100%;
   position: relative;
 	width: 100%;
-	padding: 0 15px;
+	padding: 0 16px;
 }
 .col-1{
 	flex: 0 0 8.333%;
@@ -125,6 +125,39 @@
 
 section{
 	margin: 80px 0;
+	&.bubble{
+		position: relative;
+		&:before{
+			content: '';
+			height: 200px;
+			width: 200px;
+			border-radius: 50%;
+			filter: blur(120px);
+			z-index: -1;
+			position: absolute;
+			opacity: 0.8;
+		}
+	}
+	&.mint-bubble-1:before{
+		background-color: @mint;
+		top: 50%;
+		left: 0%;
+	}
+	&.mint-bubble-2:before{
+		background-color: @mint;
+		top: 50%;
+		left: 33%;
+	}
+	&.mint-bubble-3:before{
+		background-color: @mint;
+		top: 50%;
+		left: 66%;
+	}
+	&.mint-bubble-4:before{
+		background-color: @mint;
+		top: 50%;
+		left: 100%;
+	}
 }
 .home-layout{
 
