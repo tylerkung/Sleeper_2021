@@ -21,7 +21,6 @@ img{
 	max-width: 100%;
 }
 .spotlight{
-	overflow: hidden;
 	height: 0;
 	height: calc(0.4444 * (100vw - 224px));
 	width: 100%;
@@ -43,6 +42,7 @@ img{
 		top:0;
 		left:0;
 		border-radius: 32px;
+		overflow: hidden;
 	}
 	&.spotlight-football{
 		.spotlight-content{
@@ -75,6 +75,62 @@ img{
 	}
 	+ section{
 		margin-top: 80px;
+	}
+}
+.interactive-ui{
+
+}
+.web-ui{
+	height: 383px;
+	width: 648px;
+	background: linear-gradient(to bottom right, #00CEB8, rgba(28, 33, 45, 0.5), #6E7DF5);
+	border-radius: 16px;
+	padding: 2px;
+	position: relative;
+	display: flex;
+	.web-bar{
+		position: absolute;
+		top: 2px;
+		width: calc(100% - 4px);
+		height: 32px;
+		background-color: black;
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+	}
+	.ui-content{
+		align-items: stretch;
+		width: 100%;
+		// background-color: white;
+		border-radius: 16px;
+		overflow: hidden;
+		img{
+			width: 100%;
+			object-fit: cover;
+			object-position: top left;
+		}
+	}
+}
+.mobile-ui{
+	height: 196px;
+	width: 110px;
+	// background-color: #a0a0a0;
+	border-radius: 16px;
+	background: linear-gradient(to bottom right, #00CEB8, rgba(28, 33, 45, 0.5), #6E7DF5);
+	padding: 1px;
+	position: relative;
+	display: flex;
+	.ui-content{
+		align-items: stretch;
+		width: 100%;
+		// background-color: @white;
+		border-radius: 16px;
+		overflow: hidden;
+		backdrop-filter: blur(10px);
+		img{
+			width: 100%;
+			object-fit: cover;
+			object-position: top center;
+		}
 	}
 }
 
