@@ -129,34 +129,51 @@ section{
 		position: relative;
 		&:before{
 			content: '';
-			height: 200px;
-			width: 200px;
+			height: 96px;
+			width: 96px;
 			border-radius: 50%;
-			filter: blur(120px);
+			filter: blur(60px);
 			z-index: -1;
 			position: absolute;
 			opacity: 0.8;
 		}
 	}
-	&.mint-bubble-1:before{
+	&.mint-bubble:before{
 		background-color: @mint;
-		top: 50%;
+	}
+	&.aqua-bubble:before{
+		background-color: @aqua;
+	}
+	&.purple-bubble:before{
+		background-color: @purple;
+	}
+	&.pos-1:before{
+		top: 40%;
 		left: 0%;
 	}
-	&.mint-bubble-2:before{
-		background-color: @mint;
-		top: 50%;
+	&.pos-2:before{
+		top: 40%;
 		left: 33%;
 	}
-	&.mint-bubble-3:before{
-		background-color: @mint;
-		top: 50%;
+	&.pos-3:before{
+		top: 40%;
 		left: 66%;
 	}
-	&.mint-bubble-4:before{
-		background-color: @mint;
-		top: 50%;
+	&.pos-4:before{
+		top: 40%;
 		left: 100%;
+	}
+	@media (min-width: 1400px){
+		&.bubble:before{
+			height: 120px;
+			width: 120px;
+		}
+		&.pos-1:before{
+			left: 10%;
+		}
+		&.pos-4:before{
+			left: 90%;
+		}
 	}
 }
 .home-layout{
