@@ -12,10 +12,14 @@
 		max-width: 1080px;
 	}
 	@media (min-width: 1400px){
-		max-width: 1268px;
+		// &:not(.mini-container){
+			max-width: 1268px;
+		// }
 	}
 	@media (min-width: 1600px){
-		max-width: 1540px;
+		&:not(.mini-container){
+				max-width: 1540px;
+		}
 	}
 }
 .row{
@@ -26,6 +30,20 @@
 	&.content-right{
 		@media (max-width: 991px){
 			flex-direction: column-reverse;
+		}
+	}
+}
+.fluid-container{
+	@media (max-width: 991px){
+		width: 100%;
+		max-width: unset;
+		overflow: scroll;
+		.row{
+			flex-wrap: nowrap;
+		}
+		.col{
+			width: auto;
+			flex: initial;
 		}
 	}
 }
