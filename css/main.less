@@ -659,8 +659,16 @@ table.comparison-chart{
 	}
 	.game-icon{
 		position: relative;
+		height: 0;
+		width: 100%;
+		padding-top: 100%;
+		border-radius: 24px;
+		overflow: hidden;
 		&:hover{
-			opacity: 0.9;
+			opacity: 0.85;
+			img{
+				transform: scale(1.02);
+			}
 		}
 		img{
 			object-fit: cover;
@@ -671,6 +679,7 @@ table.comparison-chart{
 			top: 0;
 			left: 0;
 			border-radius: 24px;
+			transition: all 0.2s ease;
 		}
 		.game-tags{
 			display: flex;
@@ -693,5 +702,47 @@ table.comparison-chart{
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+	}
+}
+
+.news-item{
+	.thumbnail{
+		position: relative;
+		height: 0;
+		padding-top: 56.25%;
+		border-radius: 24px;
+		overflow: hidden;
+		&:hover{
+			opacity: 0.8;
+			img{
+				transform: scale(1.04);
+			}
+		}
+		img{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			border-radius: 24px;
+			transition: all 0.2s ease;
+		}
+	}
+	h5{
+		color: @white;
+		margin-top: 16px;
+		margin-bottom: 0;
+		&:hover{
+			color: @mint;
+		}
+	}
+	.desc{
+		margin-top: 8px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		-webkit-line-clamp: 2;
+		color: @white;
 	}
 }
