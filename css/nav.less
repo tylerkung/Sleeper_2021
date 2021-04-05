@@ -17,6 +17,21 @@
 			max-width: 100%;
 		}
 	}
+	.nav-item{
+		padding: 16px 24px;
+		display: block;
+		text-decoration: none;
+		color: @light-dm;
+		font-family: @poppins;
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 1px;
+		font-size: .667em;
+		position: relative;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
 	@media (max-width: 991px){
 		opacity: 0;
 		pointer-events: none;
@@ -120,22 +135,6 @@
 		.nav-item{
 			width: calc(100% - 64px);
 		}
-	}
-}
-
-.nav-item{
-	padding: 16px 24px;
-	display: block;
-	text-decoration: none;
-	color: @light-dm;
-	font-family: @poppins;
-	text-transform: uppercase;
-	font-weight: 600;
-	letter-spacing: 1px;
-	font-size: .667em;
-	position: relative;
-	&:hover{
-		text-decoration: underline;
 	}
 }
 
