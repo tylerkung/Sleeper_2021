@@ -76,21 +76,6 @@
 			}
 		}
 	}
-	.nav-item{
-		padding: 16px 24px;
-		display: block;
-		text-decoration: none;
-		color: @light-dm;
-		font-family: @poppins;
-		text-transform: uppercase;
-		font-weight: 600;
-		letter-spacing: 1px;
-		font-size: .667em;
-		position: relative;
-		&:hover{
-			text-decoration: underline;
-		}
-	}
 	.sub-nav{
 		width: 100%;
 		display: block;
@@ -138,6 +123,35 @@
 	}
 }
 
+.nav-item{
+	padding: 16px 24px;
+	display: block;
+	text-decoration: none;
+	color: @light-dm;
+	font-family: @poppins;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: .667em;
+	position: relative;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.side-nav{
+	position: absolute;
+	bottom: 48px;
+	width: 100%;
+	left: 0;
+	.nav-item{
+		text-transform: none;
+		color: @white;
+		font-size: 0.777em;
+		letter-spacing: -0.5px;
+		font-weight: 500;
+	}
+}
 .top-nav-wrapper{
 	position: relative;
 	width: 100%;
