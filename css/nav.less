@@ -9,14 +9,26 @@
 	flex-grow: 10;
 	background-color: @nav-bg;
 	position: fixed;
-	@media (max-width: 991px){
-		display: none;
-	}
+	transition: opacity 0.2s ease;
 	.site-logo{
 		padding: 0 24px 0 16px;
 		img{
 			width: 100%;
 			max-width: 100%;
+		}
+	}
+	@media (max-width: 991px){
+		opacity: 0;
+		pointer-events: none;
+		height: 100vh;
+		width: 100%;
+		left: 0;
+		top: 0;
+		z-index: 998;
+		padding-top: 92px;
+		&.active{
+			opacity: 1;
+			pointer-events: all;
 		}
 	}
 }
@@ -32,25 +44,34 @@
 			max-height: 50px;
 			overflow: hidden;
 			transition: height 0.2s ease-out;
-			&:after{
-				content: '';
+
+			i{
+				position: absolute;
+				right: -40px;
+				top: 50%;
 				height: 24px;
 				width: 24px;
-				position: absolute;
-				right: 16px;
-				top: 24px;
-				transform: translateY(-50%) rotate(180deg);
-				background-image: url('/assets/icon/carat_up.png');
+				transform: translateY(-50%);
+				padding: 16px;
+				&:after{
+					content: '';
+					height: 24px;
+					width: 24px;
+					position: absolute;
+					top: 0;
+					right: 0;
+					transform: rotate(180deg);
+					background-image: url('/assets/icon/carat_up.png');
+				}
 			}
 			.nav-item{
-				width: auto;
+				// width: auto;
 				display: inline-block;
 			}
 			&.active{
 				max-height: 100%;
-				&:after{
+				.nav-item i:after{
 					transform: rotate(0deg);
-					top: 12px;
 				}
 			}
 		}
@@ -110,6 +131,11 @@
 			}
 		}
 	}
+	@media (max-width: 991px){
+		.nav-item{
+			width: calc(100% - 64px);
+		}
+	}
 }
 
 .top-nav-wrapper{
@@ -117,6 +143,15 @@
 	width: 100%;
 	// top: 0;
 	// right: 0;
+	@media (max-width: 991px){
+		position: fixed;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: #1C212D;
+		box-shadow: rgba(0,0,0,0.3) 1px 1px 8px;
+	}
 }
 .top-nav{
 	display: block;
@@ -128,16 +163,47 @@
 	top: 0;
 	right: 0;
 	@media (max-width: 991px){
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 	}
 	.site-logo{
 		max-width: 168px;
+		position: absolute;
+		top: 18px;
+		height: 72px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 	.account-btns{
 		display: flex;
 		justify-content: flex-end;
+
+	}
+}
+
+.mobile-menu-btn{
+	cursor: pointer;
+	// display: none;
+	display: block;
+	span{
+		background-color: @white;
+	  height: 4px;
+	  width: 30px;
+	  border-radius: 2px;
+	  display: block;
+	  margin: 6px 0;
+	  transition: all 0.4s ease;
+	}
+	&.open{
+		span{
+			&:nth-child(1){
+				transform: translate(0, 10px) rotate(-50deg)
+			}
+			&:nth-child(2){
+				opacity: 0;
+			}
+			&:nth-child(3){
+				transform: translate(0, -10px) rotate(50deg);
+			}
+		}
 
 	}
 }

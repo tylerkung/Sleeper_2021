@@ -33,6 +33,9 @@ h1{
 	letter-spacing: -1px;
 	margin-bottom: 1.2em;
 	line-height: 1.14;
+	@media (min-width: 992px) and (max-width: 1200px){
+		font-size: 2.667em;
+	}
 }
 h2{
 	font-family: @poppins;
@@ -51,6 +54,9 @@ h3{
 	letter-spacing: -1px;
 	line-height: 1.5;
 	margin-bottom: 8px;
+	@media (min-width: 992px) and (max-width: 1200px){
+		font-size: 1.778em;
+	}
 }
 h4{
 	font-family: @poppins;
@@ -58,6 +64,9 @@ h4{
 	font-size: 1.778em;
 	letter-spacing: -0.5px;
 	line-height: 1.5;
+	@media (min-width: 992px) and (max-width: 1200px){
+		font-size: 1.333em;
+	}
 }
 h5{
 	font-family: @poppins;
@@ -83,6 +92,11 @@ h6{
 
 .txt-center{
 	text-align: center;
+}
+.mobile-center{
+	@media (max-width: 992px){
+		text-align: center;
+	}
 }
 .txt-secondary{
 	color: @secondary-dm !important;

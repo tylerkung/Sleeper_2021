@@ -32,7 +32,7 @@
 	</header>
 	<div class="wrapper">
 		<div class="nav">
-			<div class="site-logo">
+			<div class="site-logo web-only">
 				<a href="/">
 					<img src="https://sleepercdn.com/images/v2/logos/logo_with_text.png" alt="Sleeper" />
 				</a>
@@ -40,7 +40,7 @@
 			<div class="main-nav">
 				<div class="primary-nav has-children">
 					<a href="/" class="nav-item">
-						Fantasy Sports
+						Fantasy Sports <i></i>
 					</a>
 					<div class="sub-nav">
 						<a href="/fantasy-football" class="sub-nav-item">
@@ -80,6 +80,9 @@
 				<div class="container">
 					<div class="top-nav">
 						<div class="mobile-only mobile-menu-btn">
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
 						<div class="site-logo mobile-only">
 							<a href="/">
@@ -87,50 +90,52 @@
 							</a>
 						</div>
 						<div class="account-btns">
-							<a href="/" class="btn-outline btn">
+							<a href="/" class="btn-outline btn web-only">
 								Log In
 							</a>
-							<a href="/" class="btn-primary btn">
+							<a href="/" class="btn-primary btn web-only">
 								Sign Up
 							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="spotlight spotlight-football">
-				<div class="spotlight-content container">
-					<div class="row">
-						<div class="col col-6 col-md-12">
-							<h6 class="txt-secondary">Open Aug 12th</h6>
-							<h2>Football is back!</h2>
-							<h5 class="txt-secondary">Play the wildly popular fantasy game on the #1 platform</h5>
-							<p><a href="/" class="btn btn-dark web-only">Play Now</a>
-							</p>
-						</div>
-						<div class="col col-6 col-md-12">
-							<div class="interactive-ui">
-								<div class="web-ui football">
-									<div class="web-bar">
-										<div class="close"></div>
-										<div class="min"></div>
-										<div class="open"></div>
+			<div class="container">
+				<div class="spotlight spotlight-football">
+					<div class="spotlight-content">
+						<div class="row">
+							<div class="col col-6 col-md-12">
+								<h6 class="txt-secondary">Open Aug 12th</h6>
+								<h2>Football is back!</h2>
+								<h5 class="txt-secondary">Play the wildly popular fantasy game on the #1 platform</h5>
+								<p><a href="/fantasy-football" class="btn btn-dark web-only">Play Now</a>
+								</p>
+							</div>
+							<div class="col col-6 col-md-12">
+								<div class="interactive-ui">
+									<div class="web-ui football">
+										<div class="web-bar">
+											<div class="close"></div>
+											<div class="min"></div>
+											<div class="open"></div>
+										</div>
+										<div class="ui-content">
+											<img src="/assets/img/football-web.jpg" alt="football UI" class="browser-ui"/>
+											<img src="/assets/img/football-graphic.jpg" alt="football UI" />
+										</div>
 									</div>
-									<div class="ui-content">
-										<img src="/assets/img/football-web.jpg" alt="football UI" class="browser-ui"/>
-										<img src="/assets/img/football-graphic.jpg" alt="football UI" />
-									</div>
-								</div>
-								<div class="mobile-ui football">
-									<div class="ui-content">
-										<img src="/assets/img/mobile_UI_football.png" alt="football UI"/>
+									<div class="mobile-ui football">
+										<div class="ui-content">
+											<img src="/assets/img/mobile_UI_football.png" alt="football UI"/>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="floating-item">
-					<img src="/assets/img/helmet.png" alt="Football"/>
+					<div class="floating-item">
+						<img src="/assets/img/helmet.png" alt="Football"/>
+					</div>
 				</div>
 			</div>
 			<section class="section">
@@ -145,7 +150,7 @@
 					<div class="row">
 						<div class="col col-4 col-md-6">
 							<div class="game-grid featured">
-								<a href="">
+								<a href="/fantasy-football">
 									<div class="game-icon">
 										<!-- <div class="game-tags">
 											<div class="tag btn btn-dark">
@@ -158,7 +163,7 @@
 										<img src="/assets/img/feature-nfl.jpg" alt="Fantasy NFL" />
 									</div>
 								</a>
-								<a href="">
+								<a href="/fantasy-football">
 									<h5 class="game-name">
 										Fantasy Football
 									</h5>
@@ -169,7 +174,7 @@
 						</div>
 						<div class="col col-4 col-md-6">
 							<div class="game-grid featured">
-								<a href="">
+								<a href="/fantasy-lcs">
 									<div class="game-icon">
 										<!-- <div class="game-tags">
 											<div class="tag btn btn-dark">
@@ -179,7 +184,7 @@
 										<img src="/assets/img/feature-lcs.jpg" alt="Fantasy LCS" />
 									</div>
 								</a>
-								<a href="">
+								<a href="/fantasy-lcs">
 									<h5 class="game-name">
 										Fantasy LCS
 									</h5>
@@ -190,7 +195,7 @@
 						</div>
 						<div class="col col-4 web-only">
 							<div class="game-grid featured">
-								<a href="">
+								<a href="/fantasy-nba">
 									<div class="game-icon">
 										<!-- <div class="game-tags">
 											<div class="tag btn btn-dark">
@@ -200,7 +205,7 @@
 										<img src="/assets/img/feature-nba.jpg" alt="Fantasy NBA" />
 									</div>
 								</a>
-								<a href="">
+								<a href="fantasy-nba">
 									<h5 class="game-name">
 										Fantasy NBA
 									</h5>
@@ -274,8 +279,8 @@
 					<div class="row">
 						<div class="col col-12">
 							<div class="banner lcs-banner">
-								<div class="banner-content">
-									<h4>Fantasy League of Legends is here!</h4>
+								<div class="banner-content col col-6 col-md-12">
+									<h3>Fantasy League of Legends is here!</h3>
 									<a href="/fantasy-lcs" class="btn btn-dark">Play Now</a>
 								</div>
 							</div>
@@ -320,15 +325,17 @@
 					</div>
 				</div>
 			<section>
-				<div class="spotlight">
-					<div class="container spotlight-content">
-						<img src="/assets/background/NFL BG.jpg" class="spotlight-bg" />
-						<div class="row">
-							<div class="col col-6">
-								<h3>Start a game with your friends now</h3>
-								<a href="/" class="btn btn-primary">Download App</a>
-							</div>
-							<div class="col col-6">
+				<div class="container">
+					<div class="spotlight">
+						<div class="spotlight-content">
+							<img src="/assets/background/NFL BG.jpg" class="spotlight-bg" />
+							<div class="row">
+								<div class="col col-6">
+									<h3>Start a game with your friends now</h3>
+									<a href="/download" class="btn btn-primary">Download App</a>
+								</div>
+								<div class="col col-6">
+								</div>
 							</div>
 						</div>
 					</div>

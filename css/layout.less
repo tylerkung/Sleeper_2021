@@ -145,15 +145,17 @@ section{
 	margin: 80px 0;
 	&.bubble{
 		position: relative;
-		&:before{
-			content: '';
-			height: 96px;
-			width: 96px;
-			border-radius: 50%;
-			filter: blur(60px);
-			z-index: -1;
-			position: absolute;
-			opacity: 0.8;
+		@media (min-width: 992px){
+			&:before{
+				content: '';
+				height: 96px;
+				width: 96px;
+				border-radius: 50%;
+				filter: blur(60px);
+				z-index: -1;
+				position: absolute;
+				opacity: 0.8;
+			}
 		}
 	}
 	&.mint-bubble:before{
@@ -164,6 +166,12 @@ section{
 	}
 	&.purple-bubble:before{
 		background-color: @purple;
+	}
+	&.orange-bubble:before{
+		background-color: @orange;
+	}
+	&.yellow-bubble:before{
+		background-color: @yellow;
 	}
 	&.pos-1:before{
 		top: 40%;

@@ -3,11 +3,13 @@ $(document).ready(function(){
 		$(this)[0].load();
 	});
 })
-$('.primary-nav').click(function(e){
-	console.log(e.target.className);
-	if(e.target.className !== 'nav-item has-children'){
-		$(this).toggleClass('active');
-	}
+$('.nav-item i').click(function(e){
+	e.preventDefault();
+	$(this).parents('.has-children').toggleClass('active');
+});
+$('.mobile-menu-btn').click(function(e){
+	$(this).toggleClass('open');
+	$('.nav').toggleClass('active');
 });
 
 var controller = new ScrollMagic.Controller({});

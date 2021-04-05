@@ -19,6 +19,9 @@ body{
 	@media (min-width: 992px){
 		padding-left: @nav-width-desktop;
 	}
+	@media (max-width: 991px){
+		padding-top: 104px;
+	}
 }
 img{
 	max-width: 100%;
@@ -32,6 +35,13 @@ img{
 .web-only{
 	@media (max-width: 991px){
 		display: none !important;
+	}
+}
+.container > .spotlight{
+	padding: 0;
+	.spotlight-content{
+		padding-left: 48px;
+		padding-right: 48px;
 	}
 }
 .spotlight{
@@ -74,6 +84,36 @@ img{
 			}
 		}
 	}
+	&.spotlight-nba{
+		.spotlight-content{
+			padding-top: 40px;
+			background-image: url('/assets/background/nba-hero.jpg');
+		}
+		@media (max-width: 991px){
+			background-size: 150%;
+			background-position: center bottom;
+		}
+	}
+	&.spotlight-lcs{
+		.spotlight-content{
+			padding-top: 40px;
+			background-image: url('/assets/background/lcs-hero.jpg');
+		}
+		@media (max-width: 991px){
+			background-size: 150%;
+			background-position: center bottom;
+		}
+	}
+	&.spotlight-bm{
+		.spotlight-content{
+			padding-top: 40px;
+			background-image: url('/assets/background/bm-hero.jpg');
+		}
+		@media (max-width: 991px){
+			background-size: 150%;
+			background-position: center bottom;
+		}
+	}
 	.spotlight-content{
 		height: 100%;
 		width: 100%;
@@ -95,7 +135,7 @@ img{
 	.floating-item{
 		position: absolute;
 		z-index: 99;
-		right: 40%;
+		right: 10%;
 		bottom: 0%;
 		@media (min-width: 992px){
 			right: 35%;
@@ -112,10 +152,11 @@ img{
 }
 .interactive-ui{
 	padding-top: 40px;
-	padding-left: 40px;
 	position: relative;
+
 	@media (min-width: 992px){
 		padding-top: 0px;
+		padding-left: 40px;
 		.mobile-ui{
 			height: 240px;
 			width: 128px;
@@ -150,6 +191,13 @@ img{
 	padding: 2px;
 	position: relative;
 	display: flex;
+	margin: 0 auto;
+	&.basketball{
+		background: linear-gradient(to bottom right, #FF5C00, rgba(28, 33, 45, 0.5), #FFAE58)
+	}
+	&.lcs{
+		background: linear-gradient(to bottom right, @lavender, rgba(28, 33, 45, 0.5), @purple)
+	}
 	.web-bar{
 		position: absolute;
 		top: 2px;
@@ -233,6 +281,16 @@ img{
 		}
 	}
 }
+.interactive-ui.no-animate{
+	.web-ui{
+		.ui-content img:first-of-type{
+			animation: none;
+		}
+		.web-bar:before{
+			display: none;
+		}
+	}
+}
 .mobile-ui{
 	height: 220px;
 	width: 120px;
@@ -244,6 +302,12 @@ img{
 	display: flex;
 	bottom: -40px;
 	left: 80px;
+	&.basketball{
+		background: linear-gradient(to bottom right, #FF5C00, rgba(28, 33, 45, 0.5), #FFAE58)
+	}
+	&.lcs{
+		background: linear-gradient(to bottom right, @lavender, rgba(28, 33, 45, 0.5), @purple)
+	}
 	.ui-content{
 		align-items: stretch;
 		width: 100%;
@@ -306,7 +370,7 @@ img{
 .badges-container{
 	margin-top: 48px;
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 }
 .badge{
@@ -327,6 +391,11 @@ img{
 		&.badge-fb-strategy{background-position:-96px -96px}
 		&.badge-fb-popular{background-position:-192px -96px}
 		&.badge-fb-fun{background-position:-288px -96px}
+		&.badge-lcs-chat{background-position:0px -192px}
+		&.badge-lcs-strategy{background-position:-96px -192px}
+		&.badge-lcs-popular{background-position:-192px -192px}
+		&.badge-lcs-fun{background-position:-288px -192px}
+		&.badge-bm-season{background-position:0px -288px}
 	}
 	.badge-title{
 		color: @secondary-dm;
@@ -417,6 +486,12 @@ table.comparison-chart{
 	@media(max-width: 1399px){
 		right: -12%;
 		transform: scale(0.8);
+	}
+	@media (max-width: 991px){
+		right: 10%;
+	}
+	@media (max-width: 767px){
+		right: 2%;
 	}
 	// transform: translateY(100%);
 	&.animate{
@@ -594,6 +669,10 @@ table.comparison-chart{
 		color: @secondary-dm;
 		font-family: @poppins;
 		font-weight: 400;
+		@media (max-width: 992px){
+			margin-bottom: 12px;
+			margin-top: 40px;
+		}
 	}
 	.nav-item{
 		margin-bottom: 24px;
@@ -637,7 +716,7 @@ table.comparison-chart{
 		background-color: transparent;
 		flex-direction: column;
 		.game-icon{
-			border-radius: 24px;
+			border-radius: 16px;
 			width: 160px;
 			height: 160px;
 		}
@@ -664,6 +743,9 @@ table.comparison-chart{
 		padding-top: 100%;
 		border-radius: 24px;
 		overflow: hidden;
+		@media (max-width: 991px){
+			border-radius: 16px;
+		}
 		&:hover{
 			opacity: 0.85;
 			img{
@@ -680,6 +762,9 @@ table.comparison-chart{
 			left: 0;
 			border-radius: 24px;
 			transition: all 0.2s ease;
+			@media (max-width: 991px){
+				border-radius: 16px;
+			}
 		}
 		.game-tags{
 			display: flex;
@@ -706,6 +791,9 @@ table.comparison-chart{
 }
 
 .news-item{
+	@media (max-width: 991px){
+		margin-bottom: 48px;
+	}
 	.thumbnail{
 		position: relative;
 		height: 0;
@@ -715,7 +803,7 @@ table.comparison-chart{
 		&:hover{
 			opacity: 0.8;
 			img{
-				transform: scale(1.04);
+				transform: scale(1.02);
 			}
 		}
 		img{
@@ -744,5 +832,71 @@ table.comparison-chart{
 		white-space: nowrap;
 		-webkit-line-clamp: 2;
 		color: @white;
+	}
+}
+
+.banner{
+	border-radius: 24px;
+	padding: 100px;
+	position: relative;
+	overflow: hidden;
+	@media (max-width: 1200px){
+		padding: 40px;
+	}
+	@media (min-width: 1200px){
+		.banner-content{
+			padding-right: 64px;
+		}
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		display: block;
+		border-top-right-radius: 24px;
+		border-bottom-right-radius: 24px;
+		background-position: bottom center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		@media(min-width: 1200px){
+			width: 65%;
+			right: -10%;
+		}
+	}
+	&.lcs-banner{
+		background-image: linear-gradient(45deg, rgba(4,106,224,0.6), rgba(110,125,245,0.6));
+		background-color: @white;
+		&:before{
+			background-image: url('/assets/background/fantasy-lcs-banner.png');
+		}
+	}
+	.banner-content{
+		h3{
+			color: @dark;
+			margin-bottom: 24px;
+		}
+	}
+	@media (max-width: 991px){
+		.banner-content{
+			padding: 16px 16px 24px;
+			background-color: #2D3649;
+			text-align: center;
+			h3{
+				color: @white;
+				margin-top: 0;
+			}
+			.btn{
+				background-color: @white;
+				color: @btn-primary-txt;
+			}
+		}
+		padding: 56.25% 0 0;
+		&:before{
+			width: 100%;
+			background-position: top center;
+		}
 	}
 }
