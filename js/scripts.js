@@ -10,6 +10,7 @@ $('.nav-item i').click(function(e){
 $('.mobile-menu-btn').click(function(e){
 	$(this).toggleClass('open');
 	$('.nav').toggleClass('active');
+	$('body').toggleClass('lock-scroll');
 });
 
 var controller = new ScrollMagic.Controller({});
