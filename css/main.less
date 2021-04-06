@@ -82,7 +82,7 @@ img{
 			padding-top: 40px;
 			background-image: url('/assets/background/football-hero.png');
 			@media (max-width: 991px){
-				background-size: 150%;
+				background-size: 200%;
 				background-position: center bottom;
 			}
 		}
@@ -91,30 +91,30 @@ img{
 		.spotlight-content{
 			padding-top: 40px;
 			background-image: url('/assets/background/nba-hero.jpg');
-		}
-		@media (max-width: 991px){
-			background-size: 150%;
-			background-position: center bottom;
+			@media (max-width: 991px){
+				background-size: 200%;
+				background-position: center bottom;
+			}
 		}
 	}
 	&.spotlight-lcs{
 		.spotlight-content{
 			padding-top: 40px;
 			background-image: url('/assets/background/lcs-hero.jpg');
-		}
-		@media (max-width: 991px){
-			background-size: 150%;
-			background-position: center bottom;
+			@media (max-width: 991px){
+				background-size: 200%;
+				background-position: center bottom;
+			}
 		}
 	}
 	&.spotlight-bm{
 		.spotlight-content{
 			padding-top: 40px;
 			background-image: url('/assets/background/bm-hero.jpg');
-		}
-		@media (max-width: 991px){
-			background-size: 150%;
-			background-position: center bottom;
+			@media (max-width: 991px){
+				background-size: 200%;
+				background-position: center bottom;
+			}
 		}
 	}
 	.spotlight-content{
@@ -207,7 +207,7 @@ img{
 		width: calc(100% - 4px);
 		height: 32px;
 		z-index: 99;
-		margin-left:4px;
+		padding-left:4px;
 		&:before{
 			content: '';
 			background-color: rgba(25,29,41,1);
@@ -753,6 +753,9 @@ table.comparison-chart{
 			left: 0;
 			color: @white;
 			line-height: 1.2;
+			@media (min-width: 997px) and (max-width: 1199px){
+				font-size: 3.5vw;
+			}
 		}
 	}
 	.game-icon{
@@ -766,8 +769,8 @@ table.comparison-chart{
 			border-radius: 16px;
 		}
 		&:hover{
-			opacity: 0.85;
 			img{
+				opacity: 0.85;
 				transform: scale(1.02);
 			}
 		}
