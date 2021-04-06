@@ -207,6 +207,7 @@ img{
 		width: calc(100% - 4px);
 		height: 32px;
 		z-index: 99;
+		margin-left:4px;
 		&:before{
 			content: '';
 			background-color: rgba(25,29,41,1);
@@ -222,9 +223,9 @@ img{
 			animation-iteration-count: infinite;
 		}
 		.close, .min, .open{
-			height: 16px; width: 16px;
+			height: 12px; width: 12px;
 			display:inline-block;
-			margin-left: 16px;
+			margin-left: 6px;
 			margin-top: 8px;
 			background-color: white;
 			border-radius: 50%;
@@ -672,6 +673,7 @@ table.comparison-chart{
 		color: @secondary-dm;
 		font-family: @poppins;
 		font-weight: 400;
+		text-transform: uppercase;
 		@media (max-width: 992px){
 			margin-bottom: 12px;
 			margin-top: 40px;
@@ -737,6 +739,20 @@ table.comparison-chart{
 			width: 100%;
 			padding-top: 133%;
 			// background-color: #eee;
+			position: relative;
+		}
+		.game-title{
+			position: absolute;
+			font-family: @poppins;
+			font-size: 3.111em;
+			font-weight: 700;
+			height: 100%;
+			width: 100%;
+			padding: 24px;
+			top: 0;
+			left: 0;
+			color: @white;
+			line-height: 1.2;
 		}
 	}
 	.game-icon{
