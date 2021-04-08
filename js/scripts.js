@@ -25,11 +25,12 @@ $('.video-thumbnail').click(function(e){
 	else if (id === 'basketball-tutorial') currentVid = basketball_vid;
 	else if (id === 'lcs-tutorial') currentVid = lcs_vid;
 
-	$('#yt-player').html('<iframe width="1920" height="1080" src="' + currentVid + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="LCS Video"></iframe>')
+	$('#yt-player').html('<iframe width="1920" height="1080" src="' + currentVid + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="LCS Video"></iframe>');
 	$('.tutorial-video').addClass('active');
 });
 $('.video-bg').click(function(e){
 	$('.tutorial-video').removeClass('active');
+	$('#yt-player').html('');
 })
 
 var controller = new ScrollMagic.Controller({});
