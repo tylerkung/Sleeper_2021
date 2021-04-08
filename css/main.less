@@ -223,7 +223,7 @@ img{
 			top: 0;
 			left: 0;
 			z-index: -1;
-			animation: fadeInOut 16s;
+			animation: fadeInOut 12s;
 			animation-iteration-count: infinite;
 		}
 		.close, .min, .open{
@@ -263,7 +263,7 @@ img{
 				margin-left: -100%;
 			}
 			&:first-of-type{
-				animation: fadeInOut 16s;
+				animation: fadeInOut 12s;
 				animation-iteration-count: infinite;
 			}
 		}
@@ -827,9 +827,9 @@ table.comparison-chart{
 		border-radius: 24px;
 		overflow: hidden;
 		&:hover{
-			opacity: 0.8;
 			img{
 				transform: scale(1.02);
+				opacity: 0.8;
 			}
 		}
 		img{
@@ -859,11 +859,49 @@ table.comparison-chart{
 		-webkit-line-clamp: 2;
 		color: @white;
 	}
+	&.video-thumbnail{
+		img{
+			opacity: 0.7;
+		}
+		h5{
+			&:hover{
+				color: @white;
+			}
+		}
+		.thumbnail {
+			cursor: pointer;
+			.play-btn{
+				position: absolute;
+				height: 72px;
+				width: 72px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-image: linear-gradient(135deg, #A3BBD3, #3A465B);
+				border-radius: 50%;
+				z-index: 1;
+				&:before{
+					content: '';
+					height: 100%;
+					width: 100%;
+					position: absolute;
+					display: block;
+					top: 0;
+					left: 0;
+					background-image: url('/assets/icon/play-icon.png');
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: 30%;
+					z-index: -1;
+				}
+			}
+		}
+	}
 }
 
 .banner{
 	border-radius: 24px;
-	padding: 100px;
+	padding: 80px;
 	position: relative;
 	overflow: hidden;
 	@media (max-width: 1200px){
@@ -925,4 +963,48 @@ table.comparison-chart{
 			background-position: top center;
 		}
 	}
+}
+
+.tutorial-video{
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 99;
+	opacity: 0;
+	transition: all 0.2s ease;
+	pointer-events: none;
+	&.active{
+		opacity: 1;
+		pointer-events: all;
+	}
+}
+.video-bg{
+	background: rgba(7, 14, 29, 0.8);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+}
+.video-wrapper{
+		width: 70vw;
+		.player-wrapper{
+			padding-bottom: 56.25%;
+			position: relative;
+			height: 0;
+		}
+		iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+// 	z-index: 99;
+// 	background: rgba(7, 14, 29, 0.8);
 }
