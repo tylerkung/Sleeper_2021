@@ -60,7 +60,7 @@ img{
 	padding-right: 24px;
 	position: relative;
 	border-radius: 32px;
-	h2,h6,h5{
+	h2,h3,h6,h5{
 		margin: 0;
 	}
 	h2{
@@ -69,6 +69,9 @@ img{
 	@media (max-width: 1200px){
 		height: auto;
 		max-height: unset;
+	}
+	@media (min-width: 1400px){
+		// height: calc(0.3 * (100vw - 224px));
 	}
 	.spotlight-bg{
 		object-fit: cover;
@@ -96,7 +99,7 @@ img{
 			padding-top: 40px;
 			background-image: url('/assets/background/nba-hero.jpg');
 			@media (max-width: 991px){
-				background-size: 200%;
+				background-size: 160%;
 				background-position: center bottom;
 			}
 		}
@@ -106,7 +109,7 @@ img{
 			padding-top: 40px;
 			background-image: url('/assets/background/lcs-hero.jpg');
 			@media (max-width: 991px){
-				background-size: 200%;
+				background-size: 110%;
 				background-position: center bottom;
 			}
 		}
@@ -116,7 +119,7 @@ img{
 			padding-top: 40px;
 			background-image: url('/assets/background/bm-hero.jpg');
 			@media (max-width: 991px){
-				background-size: 200%;
+				background-size: 160%;
 				background-position: center bottom;
 			}
 		}
@@ -521,9 +524,11 @@ table.comparison-chart{
 	@media(max-width: 1399px){
 		right: -12%;
 		transform: scale(0.8);
+		top: 0%;
 	}
 	@media (max-width: 991px){
 		right: 10%;
+		top: 10%;
 	}
 	@media (max-width: 767px){
 		right: 2%;
@@ -668,7 +673,7 @@ table.comparison-chart{
 
 .footer{
 	border-top: 1px solid #677897;
-	padding-top: 80px;
+	padding-top: 16px;
 	.footer-main{
 		border-bottom: 1px solid #677897;
 		padding-bottom: 64px;
@@ -679,6 +684,15 @@ table.comparison-chart{
 		padding: 48px 0;
 		font-size: 0.777em;
 		color: @secondary-dm;
+		@media (max-width: 991px){
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 24px 0;
+			> div{
+				margin-bottom: 24px;
+			}
+		}
 		a{
 			color: @secondary-dm;
 			text-decoration: none;
@@ -764,6 +778,9 @@ table.comparison-chart{
 }
 
 .game-grid{
+	@media (max-width: 991px){
+		width: 140px;
+	}
 	&.featured{
 		.game-icon{
 			height: 0;
