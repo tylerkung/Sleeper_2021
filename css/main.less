@@ -823,7 +823,7 @@ table.comparison-chart{
 		&:hover{
 			img{
 				opacity: 0.85;
-				transform: scale(1.02);
+				// transform: scale(1.02);
 			}
 		}
 		img{
@@ -834,7 +834,7 @@ table.comparison-chart{
 			position: absolute;
 			top: 0;
 			left: 0;
-			border-radius: 24px;
+			// border-radius: 24px;
 			transition: all 0.2s ease;
 			@media (max-width: 991px){
 				border-radius: 16px;
@@ -1055,4 +1055,93 @@ table.comparison-chart{
 		}
 // 	z-index: 99;
 // 	background: rgba(7, 14, 29, 0.8);
+}
+
+.slideshow{
+	height: 0;
+	width: 100%;
+	padding-top: 40%;
+	border-radius: 24px;
+	overflow: hidden;
+	position: relative;
+	background-color: #333;
+	.prev, .next{
+		height: 64px;
+		width: 64px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 32px;
+		display: block;
+		z-index: 9;
+		cursor: pointer;
+		background-image: url('/assets/icon/carat_left.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+	.next{
+		background-image: url('/assets/icon/carat_right.png');
+		left: auto;
+		right: 32px;
+	}
+	.pagination{}
+	.slideshow-content{
+		top: 0;
+		left: 0;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		// max-width: 3408px;
+		transform: translateX(0px);
+		&:not(.no-anim){
+			transition: transform 0.4s ease;
+		}
+		.slide{
+			// position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: white;
+			float: left;
+			display: block;
+			position: relative;
+			&.slide-2{
+				background-color: #222;
+			}
+			&.slide-3{
+				background-color: #111;
+			}
+			img{
+				object-fit: cover;
+				object-position: center center;
+			}
+		}
+	}
+}
+
+&.tag{
+	&:before{
+		content: '';
+		height: 80px;
+		width: 80px;
+		display: block;
+		background-size: cover;
+		background-repeat: no-repeat;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: 9
+	}
+}
+
+&.tag-fb:before{
+	background-image: url('/assets/icon/tag-fb.png')
+}
+&.tag-bm:before{
+	background-image: url('/assets/icon/tag-bm.png')
+}
+&.tag-lcs:before{
+	background-image: url('/assets/icon/tag-lcs.png')
 }
