@@ -764,8 +764,13 @@ table.comparison-chart{
 		color: @white;
 		margin: 0;
 	}
+	@media (max-width: 1199px){
+		.game-icon{
+			border-radius: 16px;
+		}
+	}
 
-	@media (max-width: 992px){
+	@media (max-width: 991px){
 		width: 160px;
 		background-color: transparent;
 		flex-direction: column;
@@ -817,7 +822,7 @@ table.comparison-chart{
 		padding-top: 100%;
 		border-radius: 24px;
 		overflow: hidden;
-		@media (max-width: 991px){
+		@media (max-width: 1199px){
 			border-radius: 16px;
 		}
 		&:hover{
@@ -874,6 +879,9 @@ table.comparison-chart{
 		padding-top: 56.25%;
 		border-radius: 24px;
 		overflow: hidden;
+		@media (max-width: 991px){
+			border-radius: 16px;
+		}
 		&:hover{
 			img{
 				transform: scale(1.02);
