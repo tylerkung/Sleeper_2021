@@ -7,7 +7,6 @@ $(document).ready(function(){
 	$('video').each(function(){
 		$(this)[0].load();
 	});
-	// sizeSlides();
 })
 
 $('.nav-item i').click(function(e){
@@ -21,7 +20,6 @@ $('.mobile-menu-btn').click(function(e){
 });
 
 $('.video-thumbnail').click(function(e){
-	console.log($(this).attr('id'));
 	var id = $(this).attr('id');
 	var currentVid;
 	if (id === 'football-tutorial') currentVid = football_vid;
@@ -52,7 +50,6 @@ new ScrollMagic.Scene({triggerElement: '.chat-ui'})
 	.addTo(controller);
 
 $(window).on('load', function(){
-	// console.log($('.slideshow-content').outerWidth());
 	initSlides();
 });
 
@@ -72,7 +69,8 @@ function initSlides(){
 
 function sizeSlides(){
 	viewport = parseInt($('.slideshow').css('width'),10);
-	$('.slideshow-content').css('width', viewport*5);
+	var currentSlide = parseInt($('.slideshow-content').attr('aria-current'),10);
+	$('.slideshow-content').css({'width': viewport*5, 'transform': 'translateX(' + (-viewport * currentSlide) + 'px' + ')'});
 	$('.slide').each(function(){
 		$(this).css('width', viewport);
 	})
@@ -138,7 +136,6 @@ function slidePrev(){
 
 	var currentPage = $('.pagination .active');
 	var prev = $(currentPage).prev();
-	console.log(prev);
 	if (!prev.length) prev = $('.pagination div').siblings(':last').next();
 	$(currentPage).removeClass('active');
 	$(prev).addClass('active');
