@@ -1065,6 +1065,13 @@ table.comparison-chart{
 	overflow: hidden;
 	position: relative;
 	background-color: #333;
+	&.lock{
+		pointer-events: none;
+		.prev, .next{
+			pointer-events: none;
+			cursor: default;
+		}
+	}
 	.prev, .next{
 		height: 64px;
 		width: 64px;
@@ -1087,7 +1094,27 @@ table.comparison-chart{
 		left: auto;
 		right: 32px;
 	}
-	.pagination{}
+	.pagination{
+		display: flex;
+		position: absolute;
+		bottom: 24px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 99;
+		> div{
+			height: 12px;
+			width: 12px;
+			background-color: rgba(216,226,237,0.5);
+			border-radius: 8px;
+			&:not(:first-of-type){
+				margin-left: 16px;
+			}
+			&.active{
+				background-color: @white;
+				width: 32px;
+			}
+		}
+	}
 	.slideshow-content{
 		top: 0;
 		left: 0;

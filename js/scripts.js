@@ -78,17 +78,11 @@ function sizeSlides(){
 	})
 }
 
-$('.next:not(.lock)').click(slideNext);
-$('.prev:not(.lock)').click(slidePrev);
-
-function lockSlide(){
-	// conosole.log(this);
-	// $(this).addClass('lock');
-}
+$('.next').click(slideNext);
+$('.prev').click(slidePrev);
 
 function slideNext(){
 	sizeSlides();
-	lockSlide();
 	var current = parseInt($('.slideshow-content').attr('aria-current'), 10);
 	var max = parseInt($('.slideshow-content').attr('aria-count'),10);
 	var curTransform;
@@ -96,12 +90,14 @@ function slideNext(){
 	var values = matrix.split('(')[1].match(/-?[\d\.]+/g);
 	curTransform = parseInt(values[4],10);
 	$('.slideshow-content').removeClass('no-anim');
+	$('.slideshow').addClass('lock');
 	$('.slideshow-content').css('transform', 'translateX(' + (curTransform - viewport) + 'px' + ')');
 	current++;
 	$('.slideshow-content').attr('aria-current', current);
 	// console.log(current++)
 	setTimeout(function(){
 		$('.slideshow-content').addClass('no-anim');
+		$('.slideshow').removeClass('lock');
 	}, 400)
 	if (max < current){
 		setTimeout(function(){
@@ -109,11 +105,15 @@ function slideNext(){
 			$('.slideshow-content').attr('aria-current', 1);
 		}, 401)
 	}
+	var currentPage = $('.pagination .active');
+	var next = $(currentPage).next();
+	if (!next.length) next = $('.page-1');
+	$(currentPage).removeClass('active');
+	$(next).addClass('active');
 }
 
 function slidePrev(){
 	sizeSlides();
-	lockSlide();
 	var current = parseInt($('.slideshow-content').attr('aria-current'), 10);
 	var max = parseInt($('.slideshow-content').attr('aria-count'),10);
 	var curTransform;
@@ -121,11 +121,13 @@ function slidePrev(){
 	var values = matrix.split('(')[1].match(/-?[\d\.]+/g);
 	curTransform = parseInt(values[4],10);
 	$('.slideshow-content').removeClass('no-anim');
+	$('.slideshow').addClass('lock');
 	$('.slideshow-content').css('transform', 'translateX(' + (curTransform + viewport) + 'px' + ')');
 	current--;
 	$('.slideshow-content').attr('aria-current', current);
 	setTimeout(function(){
 		$('.slideshow-content').addClass('no-anim');
+		$('.slideshow').removeClass('lock');
 	}, 400)
 	if (0 === current){
 		setTimeout(function(){
@@ -133,4 +135,11 @@ function slidePrev(){
 			$('.slideshow-content').attr('aria-current', 3);
 		}, 401)
 	}
+
+	var currentPage = $('.pagination .active');
+	var prev = $(currentPage).prev();
+	console.log(prev);
+	if (!prev.length) prev = $('.pagination div').siblings(':last').next();
+	$(currentPage).removeClass('active');
+	$(prev).addClass('active');
 }
