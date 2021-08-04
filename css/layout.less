@@ -1,25 +1,26 @@
 .container{
 	display: block;
 	margin: 0 auto 0;
-	padding: 0 24px;
-	max-width: 1000px; //adjust for screen size
-	max-width: 1200px !important;
+	padding: 0 32px;
+	// max-width: 1200px !important;
 	@media (min-width: 968px){
 		padding: 0 32px;
-		max-width: 800px;
+		// max-width: 800px;
 		// padding: 120px 15px;
 	}
 	@media (min-width: 1200px){
-		max-width: 980px;
+		// max-width: 980px;
 	}
 	@media (min-width: 1400px){
 		// &:not(.mini-container){
-			max-width: 1064px;
+			// max-width: 1064px;
 		// }
 	}
-	@media (min-width: 1600px){
+	@media (min-width: @width-xl){
 		&:not(.mini-container){
-				max-width: 1200px;
+				max-width: 1663px;
+				margin:0;
+				padding: 0 40px;
 		}
 	}
 }

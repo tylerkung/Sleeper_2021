@@ -22,10 +22,10 @@ body{
 .main{
 	width: 100%;
 	overflow: hidden;
-	@media (min-width: 992px){
+	@media (min-width: @width-xs){
 		padding-left: @nav-width-desktop;
 	}
-	@media (max-width: 991px){
+	@media (max-width: @width-xs){
 		padding-top: 104px;
 	}
 }
@@ -34,12 +34,12 @@ img{
 }
 
 .mobile-only{
-	@media (min-width: 992px){
+	@media (min-width: @width-xs){
 		display: none !important;
 	}
 }
 .web-only{
-	@media (max-width: 991px){
+	@media (max-width: @width-xs){
 		display: none !important;
 	}
 }

@@ -10,6 +10,11 @@
 	background-color: @nav-bg;
 	position: fixed;
 	transition: opacity 0.2s ease;
+	border-right: 1px solid rgba(240,240,243,0.2);
+	@media (min-width: 1920px){
+		width: 256px;
+		min-width: 256px;
+	}
 	.site-logo{
 		padding: 0 24px;
 		img{
@@ -21,18 +26,31 @@
 		padding: 16px 24px;
 		display: block;
 		text-decoration: none;
-		color: @light-dm;
+		color: @secondary-dm;
 		font-family: @poppins;
 		text-transform: uppercase;
 		font-weight: 600;
-		letter-spacing: 1px;
-		font-size: .667em;
+		letter-spacing: -1px;
+		font-size: .875em;
 		position: relative;
 		&:hover{
 			text-decoration: underline;
 		}
 	}
-	@media (max-width: 991px){
+	.nav-icon{
+		width: 24px;
+		height: 24px;
+		background-color: #eee;
+		// display: inline-block;
+		margin-right: 8px;
+	}
+	.nav-title{
+		// display: inline;
+	}
+	@media (max-width: @width-l){
+
+	}
+	@media (max-width: @nav-width-mobile){
 		opacity: 0;
 		pointer-events: none;
 		height: 100vh;
@@ -95,16 +113,19 @@
 		width: 100%;
 		display: block;
 		position: relative;
-		margin: 4px 0;
+		margin: 16px 0;
 		.sub-nav-item{
-			display: block;
+			// display: block;
+			display: flex;
+			align-items:center;
 			margin: 0 16px;
 			text-decoration: none;
 			color: @secondary-dm;
 			font-family: @poppins;
-			font-weight: 500;
-			font-size: .777em;
-			padding: 14px 16px;
+			font-weight: 600;
+			letter-spacing: -0.5px;
+			font-size: .875em;
+			padding: 12px 16px;
 			border-radius: 8px;
 			&:hover{
 				background-color: rgba(58, 70, 91, 0.5);
@@ -131,7 +152,7 @@
 			}
 		}
 	}
-	@media (max-width: 991px){
+	@media (max-width: @nav-width-mobile){
 		.nav-item{
 			width: calc(100% - 64px);
 		}
@@ -181,7 +202,7 @@
 	width: 100%;
 	// top: 0;
 	// right: 0;
-	@media (max-width: 991px){
+	@media (max-width: @nav-width-mobile){
 		position: fixed;
 		z-index: 999;
 		top: 0;
@@ -200,7 +221,7 @@
 	// position: absolute;
 	top: 0;
 	right: 0;
-	@media (max-width: 991px){
+	@media (max-width: @nav-width-mobile){
 	}
 	.site-logo{
 		max-width: 168px;

@@ -1,0 +1,40 @@
+
+.debugger{
+	background-color: @mint;
+	min-height: 40px;
+	min-width: 80px;
+	padding: 16px 32px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+	.debug-content{
+		display: none;
+		color: @dark;
+	}
+	@media(min-width: @width-xl){
+		.width-1920{
+			display: block;
+		}
+	}
+	@media(min-width: @width-l) and (max-width: 1919px){
+		.width-1440{
+			display: block;
+		}
+	}
+	@media(min-width: @width-m) and (max-width: 1479px){
+		.width-1024{
+			display: block;
+		}
+	}
+	@media(min-width: @width-s) and (max-width: 1023px){
+		.width-768{
+			display: block;
+		}
+	}
+	@media(min-width: @width-xs) and (max-width: 767px){
+		.width-414{
+			display: block;
+		}
+	}
+}
