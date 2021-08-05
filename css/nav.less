@@ -1,8 +1,7 @@
 .nav{
 	// background-color: #eee;
 	padding-top: 20px;
-	width: @nav-width-desktop;
-	min-width: @nav-width-desktop;
+	width: auto;
 	height: 100%;
 	min-height: 100vh;
 	display: block;
@@ -11,12 +10,21 @@
 	position: fixed;
 	transition: opacity 0.2s ease;
 	border-right: 1px solid rgba(240,240,243,0.2);
+	@media (min-width: @width-l){
+		width: @nav-width-desktop;
+		min-width: @nav-width-desktop;
+	}
 	@media (min-width: 1920px){
 		width: 256px;
 		min-width: 256px;
 	}
 	.site-logo{
 		padding: 0 24px;
+		@media (max-width: 1479px){
+			margin: 0 16px;
+			height: 48px;
+			width: 48px;
+		}
 		img{
 			width: 100%;
 			max-width: 100%;
@@ -42,15 +50,20 @@
 		height: 24px;
 		background-color: #eee;
 		// display: inline-block;
-		margin-right: 8px;
+		@media(min-width: @width-l){
+			margin-right: 8px;
+		}
 	}
 	.nav-title{
 		// display: inline;
+		@media (max-width: 1479px){
+			display: none;
+		}
 	}
-	@media (max-width: @width-l){
+	@media (max-width: 1479px){
 
 	}
-	@media (max-width: @nav-width-mobile){
+	@media (max-width: 413px){
 		opacity: 0;
 		pointer-events: none;
 		height: 100vh;
@@ -94,7 +107,7 @@
 					top: 0;
 					right: 0;
 					transform: rotate(180deg);
-					background-image: url('/assets/icon/carat_up.png');
+					background-image: url('/assets/old/icon/carat_up.png');
 				}
 			}
 			.nav-item{
@@ -152,7 +165,7 @@
 			}
 		}
 	}
-	@media (max-width: @nav-width-mobile){
+	@media (max-width: 413px){
 		.nav-item{
 			width: calc(100% - 64px);
 		}
@@ -164,6 +177,9 @@
 	bottom: 48px;
 	width: 100%;
 	left: 0;
+	@media (max-width: 1479px){
+		display: none;
+	}
 	.nav-item{
 		text-transform: none;
 		color: @white;
@@ -200,9 +216,10 @@
 .top-nav-wrapper{
 	position: relative;
 	width: 100%;
+	border-bottom: 1px solid rgba(240,240,243,0.2);
 	// top: 0;
 	// right: 0;
-	@media (max-width: @nav-width-mobile){
+	@media (max-width: 413px){
 		position: fixed;
 		z-index: 999;
 		top: 0;
@@ -221,7 +238,7 @@
 	// position: absolute;
 	top: 0;
 	right: 0;
-	@media (max-width: @nav-width-mobile){
+	@media (max-width: 413px){
 	}
 	.site-logo{
 		max-width: 168px;

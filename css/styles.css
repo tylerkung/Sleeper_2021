@@ -513,7 +513,7 @@ img {
 }
 .spotlight.spotlight-football .spotlight-content {
   padding-top: 40px;
-  background-image: url('/assets/background/football-hero.png');
+  background-image: url('/assets/old/background/football-hero.png');
 }
 @media (max-width: 991px) {
   .spotlight.spotlight-football .spotlight-content {
@@ -523,7 +523,7 @@ img {
 }
 .spotlight.spotlight-nba .spotlight-content {
   padding-top: 40px;
-  background-image: url('/assets/background/nba-hero.jpg');
+  background-image: url('/assets/old/background/nba-hero.jpg');
 }
 @media (max-width: 991px) {
   .spotlight.spotlight-nba .spotlight-content {
@@ -533,7 +533,7 @@ img {
 }
 .spotlight.spotlight-lcs .spotlight-content {
   padding-top: 40px;
-  background-image: url('/assets/background/lcs-hero.jpg');
+  background-image: url('/assets/old/background/lcs-hero.jpg');
 }
 @media (max-width: 991px) {
   .spotlight.spotlight-lcs .spotlight-content {
@@ -543,7 +543,7 @@ img {
 }
 .spotlight.spotlight-bm .spotlight-content {
   padding-top: 40px;
-  background-image: url('/assets/background/bm-hero.jpg');
+  background-image: url('/assets/old/background/bm-hero.jpg');
 }
 @media (max-width: 991px) {
   .spotlight.spotlight-bm .spotlight-content {
@@ -826,7 +826,7 @@ img {
   left: 0;
   background-color: rgba(50, 70, 91, 0.5);
   border-radius: 50%;
-  background-image: url('/assets/icon/football_sprites.png');
+  background-image: url('/assets/old/icon/football_sprites.png');
   background-repeat: no-repeat;
 }
 .feature-title.feature-football-ads:before {
@@ -861,7 +861,7 @@ img {
   height: 96px;
   width: 96px;
   border-radius: 50%;
-  background-image: url('/assets/icon/Sprites96x96.png');
+  background-image: url('/assets/old/icon/Sprites96x96.png');
   background-repeat: no-repeat;
 }
 .badge .badge-img.badge-ff-chat {
@@ -1389,7 +1389,7 @@ table.comparison-chart tr.feature td:first-child {
   display: block;
   top: 0;
   left: 0;
-  background-image: url('/assets/icon/play-icon.png');
+  background-image: url('/assets/old/icon/play-icon.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30%;
@@ -1436,7 +1436,7 @@ table.comparison-chart tr.feature td:first-child {
   background-color: #fff;
 }
 .banner.lcs-banner:before {
-  background-image: url('/assets/background/fantasy-lcs-banner.png');
+  background-image: url('/assets/old/background/fantasy-lcs-banner.png');
 }
 .banner .banner-content h3 {
   color: #022047;
@@ -1584,7 +1584,7 @@ table.comparison-chart tr.feature td:first-child {
   top: 0;
   right: 0;
   transform: rotate(180deg);
-  background-image: url('/assets/icon/carat_up.png');
+  background-image: url('/assets/old/icon/carat_up.png');
 }
 .main-nav .primary-nav.has-children .nav-item {
   display: inline-block;
