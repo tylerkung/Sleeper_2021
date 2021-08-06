@@ -21,6 +21,14 @@ body{
 	}
 }
 
+.flex-center{
+	display: flex;
+	align-items: center;
+}
+.inline-flex{
+	display: inline-flex !important;
+}
+
 .main{
 	width: 100%;
 	overflow: hidden;
@@ -802,7 +810,7 @@ table.comparison-chart{
 		border: 1px solid #485770;
 		.header{
 			position: relative;
-			padding-bottom: 70%;
+			padding-bottom: 60%;
 			height: 0;
 			.bg{
 				position: absolute;
@@ -874,61 +882,92 @@ table.comparison-chart{
 			height: 49px;
 			.label{
 				margin-bottom: 0;
+				color: #D8E2ED;
+			}
+			.footer-primary{
+				.label{
+					color: #D8E2ED;
+					letter-spacing: 1px;
+					img{
+						margin-right: 4px;
+					}
+				}
 			}
 		}
-	}
-	.label{
-		font-family: @poppins;
-		font-weight: 500;
-		font-size: 0.75em;
-		text-transform: uppercase;
-		color: #606F8C;
-		margin-bottom: 2px;
-	}
-	.value{
-		font-family: @poppins;
-		font-weight: 700;
-		font-size: 1em;
-		img{
-			height: 16px;
-			width: 16px;
-			margin: 0 2px;
+		.label{
+			font-family: @poppins;
+			font-weight: 500;
+			font-size: 0.75em;
+			text-transform: uppercase;
+			color: #606F8C;
+			margin-bottom: 2px;
 		}
-		&.list{
-			font-size: 0.875em;
-			ul{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				li{
+		.value{
+			font-family: @poppins;
+			font-weight: 700;
+			font-size: 1em;
+			&.flex-center img{
+				margin-right: 4px;
+			}
+			img{
+				height: 16px;
+				width: 16px;
+			}
+			&.list{
+				font-size: 0.875em;
+				ul{
+					list-style-type: none;
 					margin: 0;
 					padding: 0;
-					display: inline;
-					&:not(:last-of-type){
-						padding-right: 8px;
-						&:after{
-							content: "•";
-							margin-left: 8px;
+					white-space: nowrap;
+					li{
+						margin: 0;
+						padding: 0;
+						display: inline;
+						&:not(:last-of-type){
+							padding-right: 8px;
+							&:after{
+								content: "•";
+								margin-left: 8px;
+							}
 						}
 					}
 				}
 			}
 		}
-	}
-	.avatars{
-		.avatar{
-			display: inline-block;
-			vertical-align: top;
-			height: 24px;
-			width: 24px;
-			border-radius: 12px;
-			border: 3px solid #233046;
-			background-color: #eee;
-			margin-left: -3px;
-			&:not(:first-of-type){
-				margin-left: -12px;
+		.avatars{
+			.avatar{
+				display: inline-block;
+				vertical-align: top;
+				height: 24px;
+				width: 24px;
+				border-radius: 12px;
+				border: 3px solid #233046;
+				background-color: #eee;
+				margin-left: -3px;
+				&:not(:first-of-type){
+					margin-left: -9px;
+				}
 			}
 		}
+	}
+	.game-icon{
+		border-radius: 50%;
+		overflow: hidden;
+		max-width: 88px;
+		max-height: 88px;
+		margin: 0 auto;
+		img{
+			object-fit: cover;
+		}
+	}
+	.game-name{
+		color: #fff;
+		text-align: center;
+		font-family: @inter;
+		font-weight: 500;
+		margin-top: 16px;
+		letter-spacing: -0.5px;
 	}
 }
 
