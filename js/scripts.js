@@ -34,20 +34,62 @@ $('.video-bg').click(function(e){
 	$('#yt-player').html('');
 })
 
+$('.video-item').click(function(e){
+	var yt_link = $(this).attr('aria-video');
+	$('#yt-player').html('<iframe width="1920" height="1080" src="' + yt_link + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Sleeper Fantasy"></iframe>');
+	$('.tutorial-video').addClass('active');
+});
+
 var controller = new ScrollMagic.Controller({});
-$('video').each(function(){
-	var currentVideo = this;
-	new ScrollMagic.Scene({triggerElement: currentVideo})
+// $('video').each(function(){
+// 	var currentVideo = this;
+// 	new ScrollMagic.Scene({triggerElement: currentVideo})
+// 		.on("enter", function(e){
+// 			$(currentVideo)[0].play();
+// 		})
+// 		// .addIndicators()
+// 		.addTo(controller);
+// })
+
+controller.scrollTo(function (newpos){
+	TweenMax.to($(window), 0.5, {scrollTo: {y: newpos, offsetY:264}});
+});
+
+$('a.anchor').each(function(){
+	var currentAnchor = this;
+	new ScrollMagic.Scene({
+		triggerElement: currentAnchor,
+		reverse: true,
+		triggerHook: 0,
+		offset: -266,
+		duration: 40})
 		.on("enter", function(e){
-			$(currentVideo)[0].play();
+			var thisId = $(currentAnchor).attr('id');
+			$('.header-anchors a.active').removeClass('active');
+			$('.header-anchors a[href="#' + thisId + '"]').addClass('active');
 		})
-		// .addIndicators()
 		.addTo(controller);
-})
+});
+
 new ScrollMagic.Scene({triggerElement: '.chat-ui'})
 	.setClassToggle('.chat', 'animate')
 	// .addIndicators()
 	.addTo(controller);
+
+new ScrollMagic.Scene({
+	triggerElement: '.page-header-wrapper',
+	triggerHook: 0
+})
+	.setClassToggle('.page-header', 'sticky')
+	// .addIndicators()
+	.addTo(controller);
+
+	new ScrollMagic.Scene({
+		triggerElement: '.page-header-wrapper',
+		triggerHook: 0
+	})
+		.setClassToggle('.main', 'sticky-nav')
+		.addTo(controller);
 
 $(window).on('load', function(){
 	initSlides();
@@ -59,7 +101,7 @@ $(window).resize(function(){
 
 function initSlides(){
 	sizeSlides();
-	$('.slideshow-content').attr({'aria-count': 3, 'aria-current': 1});
+	$('.slideshow-content').attr({'aria-count': 4, 'aria-current': 1});
 	var lastClone = $('.slide.last').clone().removeClass('last');
 	var firstClone = $('.slide.first').clone().removeClass('first');
 	$(lastClone).insertBefore('.first');
@@ -70,7 +112,7 @@ function initSlides(){
 function sizeSlides(){
 	viewport = parseInt($('.slideshow').css('width'),10);
 	var currentSlide = parseInt($('.slideshow-content').attr('aria-current'),10);
-	$('.slideshow-content').css({'width': viewport*5, 'transform': 'translateX(' + (-viewport * currentSlide) + 'px' + ')'});
+	$('.slideshow-content').css({'width': viewport*6, 'transform': 'translateX(' + (-viewport * currentSlide) + 'px' + ')'});
 	$('.slide').each(function(){
 		$(this).css('width', viewport);
 	})
@@ -129,8 +171,8 @@ function slidePrev(){
 	}, 400)
 	if (0 === current){
 		setTimeout(function(){
-			$('.slideshow-content').css('transform', 'translateX(' + (-viewport * 3) + 'px' + ')');
-			$('.slideshow-content').attr('aria-current', 3);
+			$('.slideshow-content').css('transform', 'translateX(' + (-viewport * 4) + 'px' + ')');
+			$('.slideshow-content').attr('aria-current', 4);
 		}, 401)
 	}
 
@@ -140,3 +182,13 @@ function slidePrev(){
 	$(currentPage).removeClass('active');
 	$(prev).addClass('active');
 }
+
+$('.header-anchors a').click(function(e){
+	e.preventDefault();
+	var ele = $(this).attr('href');
+	console.log($('a#features').offset().top);
+	var elePos = $('a' + ele).offset().top;
+	// $(window).scrollTop(elePos);
+	controller.scrollTo('a' + ele);
+	// console.log()
+})

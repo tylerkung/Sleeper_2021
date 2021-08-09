@@ -37,7 +37,12 @@
 		<div class="nav">
 			<div class="site-logo web-only">
 				<a href="/">
-					<img src="/assets/old/img/sleeper-logo-w.png" alt="Sleeper" />
+					<div class="logo-lg">
+						<img src="/assets/old/img/sleeper-logo-w.png" alt="Sleeper" />
+					</div>
+					<div class="logo-sm">
+						<img src="/assets/img/logo-mobile.png" alt="Sleeper" />
+					</div>
 				</a>
 			</div>
 			<div class="main-nav">
@@ -45,24 +50,44 @@
 					<!-- <a href="/" class="nav-item">
 						Fantasy Sports <i></i>
 					</a> -->
-					<div class="sub-nav active">
+					<div class="sub-nav">
 						<a href="/fantasy-football" class="sub-nav-item">
-							Fantasy Football
+							<div class="nav-icon">
+								<img src="/assets/icon/football.png" alt="Fantasy Football">
+							</div>
+							<div class="nav-title">
+								Fantasy Football
+							</div>
 						</a>
 					</div>
 					<div class="sub-nav">
 						<a href="/fantasy-basketball" class="sub-nav-item">
-							Fantasy Basketball
-						</a>
-					</div>
-					<div class="sub-nav">
-						<a href="/fantasy-lcs" class="sub-nav-item">
-							Fantasy LCS
+							<div class="nav-icon">
+								<img src="/assets/icon/basketball.png" alt="Fantasy Basketball">
+							</div>
+							<div class="nav-title">
+								Fantasy Basketball
+							</div>
 						</a>
 					</div>
 					<div class="sub-nav">
 						<a href="/bracket-mania" class="sub-nav-item">
-							Bracket Mania
+							<div class="nav-icon">
+								<img src="/assets/icon/bm.png" alt="Bracket Mania">
+							</div>
+							<div class="nav-title">
+								Bracket Mania
+							</div>
+						</a>
+					</div>
+					<div class="sub-nav">
+						<a href="/fantasy-lcs" class="sub-nav-item">
+							<div class="nav-icon">
+								<img src="/assets/icon/lcs.png" alt="Fantasy LCS">
+							</div>
+							<div class="nav-title">
+								Fantasy LCS
+							</div>
 						</a>
 					</div>
 				</div> <!-- END FANTASY SPORTS -->
@@ -79,28 +104,43 @@
 			</div> <!-- end main nav -->
 			<div class="side-nav">
 				<div class="secondary-nav">
-					<a href="https://sleeper.app/login" class="nav-item mobile-only">
-						Log In
+					<a href="/fantasy-football" class="nav-item">
+						<div class="nav-icon">
+							<img src="/assets/icon/download.png" alt="Download">
+						</div>
+						<div class="nav-title">
+							Download
+						</div>
 					</a>
 				</div>
 				<div class="secondary-nav">
-					<a href="https://sleeper.app/create?type=league" class="nav-item mobile-only">
-						Sign Up
+					<a href="https://blog.sleeper.app/" target="_blank" class="nav-item">
+						<div class="nav-icon">
+							<img src="/assets/icon/blog.png" alt="Blog">
+						</div>
+						<div class="nav-title">
+							Blog
+						</div>
 					</a>
 				</div>
 				<div class="secondary-nav">
-					<a href="https://sleeper.app/download" class="nav-item" target="_blank">
-						Download
+					<a href="https://support.sleeper.app/" target="_blank" class="nav-item">
+						<div class="nav-icon">
+							<img src="/assets/icon/support.png" alt="Support">
+						</div>
+						<div class="nav-title">
+							Support
+						</div>
 					</a>
 				</div>
 				<div class="secondary-nav">
-					<a href="https://blog.sleeper.app/" class="nav-item" target="_blank">
-						Blog
-					</a>
-				</div>
-				<div class="secondary-nav">
-					<a href="https://support.sleeper.app/" class="nav-item" target="_blank">
-						Support
+					<a href="/fantasy-football" class="nav-item">
+						<div class="nav-icon">
+							<img src="/assets/icon/about.png" alt="About">
+						</div>
+						<div class="nav-title">
+							About
+						</div>
 					</a>
 				</div>
 				<!-- <img src="https://sleepercdn.com/images/landing/fantasylcs/logo-footer.png" alt="Sleeper" class="nav-logo"/> -->
@@ -145,156 +185,54 @@
 					</div>
 				</div>
 			</div>
-			<div class="container">
-				<div class="spotlight spotlight-football">
-					<div class="spotlight-content">
-						<div class="row">
-							<div class="col col-6 col-md-12 mobile-center">
-								<h6 class="txt-secondary">Open Now</h6>
-								<h3>It's time to ditch your old fantasy football platform.</h3>
-								<h5 class="txt-secondary">See why millions switched to Sleeper - a modern platform that’s easy to use, flexible, and social.</h5>
-								<p><a href="https://sleeper.app/download" class="btn btn-dark web-only">Play Now</a>
-								</p>
-							</div>
-							<div class="col col-6 col-md-12">
-								<div class="interactive-ui">
-									<div class="web-ui football">
-										<div class="web-bar">
-											<div class="close"></div>
-											<div class="min"></div>
-											<div class="open"></div>
-										</div>
-										<div class="ui-content">
-											<img src="/assets/old/img/nfl-web.jpg" alt="football UI" class="browser-ui"/>
-											<img src="/assets/old/img/football-graphic.jpg" alt="football UI" />
-										</div>
-									</div>
-									<div class="mobile-ui football">
-										<div class="ui-content">
-											<img src="/assets/old/img/mobile_UI_football.png" alt="football UI"/>
-										</div>
-									</div>
-								</div>
-							</div>
+			<div class="page-header-wrapper">
+				<div class="page-header header-football">
+					<div class="badge">
+						<img src="/assets/img/badge_fball.png" alt="Fantasy Football" />
+					</div>
+					<div class="header-title">
+						<div class="container">
+							<ul class="breadcrumbs">
+								<li class="home">
+									<a href="/">Home</a>
+								</li>
+								<li>
+									Fantasy Football
+								</li>
+							</ul>
+							<h1>Fantasy Football</h1>
 						</div>
 					</div>
-					<div class="floating-item">
-						<img src="/assets/old/img/helmet.png" alt="Football"/>
+					<div class="header-anchors">
+						<div class="container">
+							<a href="#features" aria-label="features" class="active">Features</a>
+							<a href="#how-to" aria-label="how-to">How To Play</a>
+							<a href="#game-modes" aria-label="game-modes">Game Modes</a>
+							<a href="#" aria-label="4">Mockdraft</a>
+							<a href="#" aria-label="5">Testimonials</a>
+							<a href="#" aria-label="6">Why Sleeper</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<section class="ui-section bubble mint-bubble pos-1">
-				<div class="container">
-					<div class="row content-left">
-						<div class="col col-6 col-md-12 content-half mobile-center">
-							<h3>In-App Chat — the one and only of its kind</h3>
-							<p>No more switching back and forth — Sleeper's intuitive in-app chat functionality makes it easy to react, send gifs, and talk trash.</p>
-						</div>
-						<div class="col col-6 col-md-12">
-							<div class="ui-graphic chat-ui">
-								<div class="chat">
-									<div class="chat-item">
-										<img src="/assets	/icon/user_lilac.png" alt="Chat bubble" class="chat-img"/>
-										<div class="chat-content">
-											<div class="chat-user">beastmode
-											</div>
-											<div class="chat-message">
-												Everyone ready for the draft?
-											</div>
-										</div>
-									</div>
-									<div class="chat-item">
-										<img src="/assets	/icon/user_aqua.png" alt="Chat bubble" class="chat-img"/>
-										<div class="chat-content">
-											<div class="chat-user">QBFirst
-											</div>
-											<div class="chat-message">
-												Let's do it
-											</div>
-										</div>
-									</div>
-									<div class="chat-item my-chat">
-										<img src="/assets	/icon/user_green.png" alt="Chat bubble" class="chat-img"/>
-										<div class="chat-content">
-											<div class="chat-user">fantasyking
-											</div>
-											<div class="chat-message">
-												This season is mine so don't even bother!
-											</div>
-										</div>
-									</div>
-									<div class="chat-item">
-										<img src="/assets	/icon/user_aqua.png" alt="Chat bubble" class="chat-img"/>
-										<div class="chat-content">
-											<div class="chat-user">QBFirst
-											</div>
-											<div class="chat-message">
-												How'd you do last year?
-											</div>
-										</div>
-									</div>
-									<div class="chat-item">
-										<img src="/assets/old/icon/user_lavender.png" alt="Chat bubble" class="chat-img"/>
-										<div class="chat-content">
-											<div class="chat-user">grandma
-											</div>
-											<div class="chat-message">
-												<img src="https://sleepercdn.com/images/mascots_v2/56_GoldMiner/stickers/animations/taunting-mobile-small.webp" alt="Gold Miner" width="80px" height="80px"/>
-											</div>
-										</div>
-									</div>
-								</div>
-								<video src="https://agitated-clarke-2b2b1f.netlify.app/assets/old/video/900NFL_4.mp4" preload="none" disablepictureinpicture muted playsinline id="video_03"/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="ui-section bubble aqua-bubble pos-4">
-				<div class="container">
-					<div class="row content-right">
-						<div class="col col-6 col-md-12">
-							<div class="ui-graphic">
-								<video src="https://agitated-clarke-2b2b1f.netlify.app/assets/old/video/900NFL_1.mp4" preload="none" disablepictureinpicture muted playsinline id="video_03"/>
-							</div>
-						</div>
-						<div class="col col-6 col-md-12 content-half mobile-center">
-							<h3>Best Drafting Experience in the Game</h3>
-							<p>Start anytime, pause your draft or try out the slow draft option. Spice up your draft experience with draft pick trading or enable 3rd round reversal.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="ui-section bubble mint-bubble pos-2">
-				<div class="container">
-					<div class="row content-left">
-						<div class="col col-6 col-md-12 content-half mobile-center">
-							<h3>Dead league no more — Trading Made Easy</h3>
-							<p>Clean, intuitive trade block where you can easily discuss and show interest in players. Go for it all or build for the future by trading future draft picks.</p>
-						</div>
-						<div class="col col-6 col-md-12">
-							<div class="ui-graphic">
-								<video src="https://agitated-clarke-2b2b1f.netlify.app/assets/old/video/900NFL_2.mp4" preload="none" disablepictureinpicture muted playsinline id="video_03"/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+
 			<section>
 				<div class="container">
 					<div class="row">
 						<div class="col col-4 col-sm-6">
 							<div class="feature-title feature-football-ads">
-								<h6>100% Ad Free</h6>
+								<h4><a id="features" class="anchor">100% Ad Free</a></h4>
 							</div>
-							<ul class="txt-secondary">
-								<li>Display ads ejected from the app</li>
-								<li>No fluff, no ads — Just fantasy sports</li>
-							</ul>
+							<p>
+								<ul class="txt-secondary">
+									<li>Display ads ejected from the app</li>
+									<li>No fluff, no ads — Just fantasy sports</li>
+								</ul>
+							</p>
 						</div>
 						<div class="col col-4 col-sm-6">
 							<div class="feature-title feature-football-scoring">
-								<h6>Unparalleled Scoring Customization</h6>
+								<h4>Unparalleled Scoring Customization</h4>
 							</div>
 							<ul class="txt-secondary">
 								<li>Bonus scoring for yards and touchdowns</li>
@@ -304,7 +242,7 @@
 						</div>
 						<div class="col col-4 col-sm-6">
 							<div class="feature-title feature-football-research">
-								<h6>Next Level Research</h6>
+								<h4>Next Level Research</h4>
 							</div>
 							<ul class="txt-secondary">
 								<li>Stat packed with the latest news to keep you on top of the game</li>
@@ -313,7 +251,7 @@
 						</div>
 						<div class="col col-4 col-sm-6">
 							<div class="feature-title feature-football-commish">
-								<h6>Unrivalled Commish Tools</h6>
+								<h4>Unrivalled Commish Tools</h4>
 							</div>
 							<ul class="txt-secondary">
 								<li>Edit matchup scores, waivers, or rosters</li>
@@ -322,7 +260,7 @@
 						</div>
 						<div class="col col-4 col-sm-6">
 							<div class="feature-title feature-football-team">
-								<h6>Truly Individualize Your Team</h6>
+								<h4>Truly Individualize Your Team</h4>
 							</div>
 							<ul class="txt-secondary">
 								<li>Customize your team with team icons</li>
@@ -332,7 +270,7 @@
 						</div>
 						<div class="col col-4 col-sm-6">
 							<div class="feature-title feature-football-timer">
-								<h6>Fantasy Sports All Year Long</h6>
+								<h4>Fantasy Sports All Year Long</h4>
 							</div>
 							<ul class="txt-secondary">
 								<li>Easy intro to dynasty</li>
@@ -345,21 +283,76 @@
 			</section>
 			<section>
 				<div class="container">
-					<div class="row flex-center">
-						<div class="col col-7">
-							<h3>How to play fantasy football</h3>
-							<h6 class="txt-secondary">(1:54) - What's a draft? Best strategy, quick tips, how to start a league and more, all in this short tutorial video.</h6>
+					<div class="row">
+						<div class="col col-12">
+							<h3><a id="how-to" class="anchor">How to play fantasy football</a></h3>
+							<h5 class="txt-secondary">What's a draft? Best strategy, quick tips, how to start a league and more, all in these short tutorial videos.</h5>
 						</div>
-						<div class="col col-1">
-						</div>
+					</div>
+				</div>
+				<div class="container fluid-container nowrap-always">
+					<div class="row">
 						<div class="col col-4">
-							<div class="news-item video-thumbnail" id="football-tutorial">
+							<div class="video-item" aria-video="https://www.youtube.com/embed/vg8Huk_Twjk">
 								<div class="thumbnail">
+									<img src="/assets/img/thumb_bestball.jpg" alt="Bestball" />
 									<div class="play-btn">
 									</div>
-									<img src="/assets/old/img/feature-nfl.jpg" alt="How to play Fantasy Football"/>
+								</div>
+								<div class="vid-content">
+									<div class="subtitle">Subtitle here</div>
+									<h5>Bestball</h5>
 								</div>
 							</div>
+						</div>
+						<div class="col col-4">
+							<div class="video-item" aria-video="https://www.youtube.com/embed/vg8Huk_Twjk">
+								<div class="thumbnail">
+									<img src="/assets/img/thumb_bestball.jpg" alt="Bestball" />
+									<div class="play-btn">
+									</div>
+								</div>
+								<div class="vid-content">
+									<div class="subtitle">Subtitle here</div>
+									<h5>Bestball</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col col-4">
+							<div class="video-item" aria-video="https://www.youtube.com/embed/vg8Huk_Twjk">
+								<div class="thumbnail">
+									<img src="/assets/img/thumb_bestball.jpg" alt="Bestball" />
+									<div class="play-btn">
+									</div>
+								</div>
+								<div class="vid-content">
+									<div class="subtitle">Subtitle here</div>
+									<h5>Bestball</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col col-4">
+							<div class="video-item" aria-video="https://www.youtube.com/embed/vg8Huk_Twjk">
+								<div class="thumbnail">
+									<img src="/assets/img/thumb_bestball.jpg" alt="Bestball" />
+									<div class="play-btn">
+									</div>
+								</div>
+								<div class="vid-content">
+									<div class="subtitle">Subtitle here</div>
+									<h5>Bestball</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="col col-12">
+							<h3><a id="game-modes" class="anchor">Full support for every game mode</a></h3>
+							<h5 class="txt-secondary">Sleeper lets you play the way you want, whether it's Redraft, Keeper, or Dynasty</h5>
 						</div>
 					</div>
 				</div>
@@ -632,5 +625,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js" integrity="sha512-1OG9UO4krPizjtz/c9iDbjCqtXznBYdJeD4ccPaYfJHzC6F1qoQ3P1bgQ3J8lgCoK5qGVCqsY4+/RKjLDzITVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/js/scripts.js"></script>
 </html>

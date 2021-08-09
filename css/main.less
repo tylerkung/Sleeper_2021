@@ -41,6 +41,11 @@ body{
 	@media (max-width: @width-xs){
 		padding-top: 104px;
 	}
+	&.sticky-nav{
+		.page-header-wrapper + *{
+			padding-top: 213px;
+		}
+	}
 }
 img{
 	max-width: 100%;
@@ -358,8 +363,8 @@ img{
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: @poppins;
-	font-size: .777em;
-	font-weight: 500;
+	font-size: .875em;
+	font-weight: 600;
 	letter-spacing: 1px;
 	line-height: 1;
 	color: @white;
@@ -394,7 +399,18 @@ img{
 	background-color: @body-bg;
 	color: @white;
 }
-
+.btn-mint{
+	background-image: linear-gradient(135deg, #4CE2A7, #00B7B3);
+}
+.btn-orange{
+	background-image: linear-gradient(135deg, #FFAE58, #FF6F42);
+}
+.btn-red{
+	background-image: linear-gradient(135deg, #FFAA7F, #FF3A6E);
+}
+.btn-success{
+	background-image: linear-gradient(135deg, #4CE2B8, #07C5FF);
+}
 .feature-title{
 	padding-left: 96px;
 	position: relative;
@@ -952,7 +968,6 @@ table.comparison-chart{
 		}
 	}
 	.game-icon{
-		border-radius: 50%;
 		overflow: hidden;
 		max-width: 88px;
 		max-height: 88px;
@@ -1051,6 +1066,40 @@ table.comparison-chart{
 					background-size: 30%;
 					z-index: -1;
 				}
+			}
+		}
+	}
+}
+.video-item{
+	border-radius: 16px;
+	border: 1px solid #48566F;
+	overflow: hidden;
+	.thumbnail{
+		height: 0;
+		padding-bottom: 56.4%;
+		position: relative;
+		cursor: pointer;
+		img{
+			position: absolute;
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.vid-content{
+		padding: 16px;
+		.subtitle{
+			font-size: 0.75em;
+			color: #606F8C;
+			margin-bottom: 2px;
+			font-weight: 600;
+		}
+		h5{
+			font-weight: 700;
+			margin: 0;
+			cursor: pointer;
+			&:hover{
+				text-decoration: underline;
 			}
 		}
 	}
@@ -1252,6 +1301,64 @@ table.comparison-chart{
 			img{
 				object-fit: cover;
 				object-position: center center;
+			}
+		}
+	}
+	&.poseidon{
+		background-color: transparent;
+		padding-top: 24.75%;
+		margin-top: 48px;
+		.pagination{
+			left: 40px;
+			transform: none;
+			bottom: 48px;
+			> div{
+				height: 12px;
+				width: 32px;
+				background-color: rgba(216,226,237,0.5);
+				border-radius: 6px;
+				&:not(:first-of-type){
+					margin-left: 8px;
+				}
+				&.active{
+					background-color: @white;
+					width: 69px;
+				}
+			}
+		}
+		.slide{
+			position: relative;
+			&, &.slide-2, &.slide-3{
+				background-color: transparent;
+			}
+		}
+		.content{
+			position: absolute;
+			bottom: 100px;
+			left: 0;
+			width: 100%;
+			color: #fff;
+			padding: 0 40px;
+			.game-badge{
+				img{
+					border-radius: 8px;
+					height: 48px;
+					width: auto;
+					float: left;
+					margin-right: 8px;
+					margin-top: 4px;
+				}
+			}
+			h1{
+				margin: 0 0 4px;
+			}
+			.subtitle{
+				font-family: @poppins;
+				font-weight: 600;
+				line-height: 1.5;
+			}
+			.description{
+				margin-bottom: 16px;
 			}
 		}
 	}
