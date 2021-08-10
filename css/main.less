@@ -358,7 +358,7 @@ img{
 }
 .btn{
 	display: inline-block;
-	padding: 16px 24px;
+	padding: 18px 24px;
 	border-radius: 40px;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -396,8 +396,9 @@ img{
 	border: 2px solid @white;
 }
 .btn-dark{
-	background-color: @body-bg;
-	color: @white;
+	background-color: #202635;
+	color: @mint;
+	border: 1px solid rgba(124,139,164,0.3);
 }
 .btn-mint{
 	background-image: linear-gradient(135deg, #4CE2A7, #00B7B3);
@@ -409,6 +410,7 @@ img{
 	background-image: linear-gradient(135deg, #FFAA7F, #FF3A6E);
 }
 .btn-success{
+	color: @btn-primary-txt;
 	background-image: linear-gradient(135deg, #4CE2B8, #07C5FF);
 }
 .feature-title{
@@ -667,40 +669,36 @@ table.comparison-chart{
 }
 
 .testimonial{
+	display: flex;
+	align-items: center;
 	border-radius: 32px;
 	border: 1px solid rgba(255,255,255,0.1);
 	background-color: rgba(58,70,91,0.5);
 	padding: 32px;
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-left: 56px;
 	position: relative;
-	height: 100%;
+	min-width: 411px !important;
+	margin: 16px 24px 0;
 	.testimonial-image{
 		border-radius: 50%;
-		height: 96px;
-		width: 96px;
+		height: 68px;
+		width: 68px;
 		border: 1px solid rgba(255,255,255,0.3);
 		background-color: #7988A1;
 		position: absolute;
-		top: -48px;
-		left: 50%;
-		transform: translateX(-50%);
+		top: -16px;
+		left: -24px;
 	}
 	.testimonial-quote{
 		color: @secondary-dm;
-		font-family: @inter;
+		font-family: @poppins;
 		line-height: 1.5;
-		@media (min-width: 968px){
-			font-size: 1.333em;
-		}
+		font-weight: 500;
 	}
 	.testimonial-user{
-		font-family: @inter;
-		font-weight:600;
+		font-weight: 500;
 		color: @light-dm;
-		font-size: 0.9em;
-		position: absolute;
-		bottom: 48px;
+		font-size: 0.75em;
 	}
 }
 
@@ -1105,6 +1103,35 @@ table.comparison-chart{
 	}
 }
 
+.banner-tk{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center right;
+	border-radius: 16px;
+	overflow: hidden;
+	padding: 40px;
+	border: 1px solid #48566F;
+	.title
+	h1{
+		margin: 0;
+		font-weight: 700;
+	}
+	h5{
+		margin-top: 8px;
+		margin-bottom: 12px;
+		color: @secondary-dm;
+	}
+	.title{
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+	}
+	.btn-success{
+		padding: 22px 40px;
+		margin-left: 16px;
+	}
+}
+
 .banner{
 	border-radius: 24px;
 	padding: 80px;
@@ -1387,4 +1414,33 @@ table.comparison-chart{
 }
 &.tag-lcs:before{
 	background-image: url('/assets/old/icon/tag-lcs.png')
+}
+
+.league-badge{
+	@media (max-width: 767px){
+		margin-top: 32px;
+	}
+}
+.draft-header{
+	margin-top: 4px;
+	margin-bottom: 14px;
+}
+.draft-badge{
+	margin-right: 8px;
+	height: 52px;
+	width: 52px;
+}
+.draft-group{
+	.col{
+		display: flex;
+		// align-items: center;
+	}
+	h4{
+		margin: 0;
+	}
+	p{
+		font-size: 0.75em;
+		line-height: 1.25;
+		margin: 0;
+	}
 }

@@ -40,6 +40,9 @@
 	&.flex-center{
 		align-items: center;
 	}
+	&.flex-stretch{
+		align-items: stretch;
+	}
 }
 .fluid-container{
 	// @media (max-width: 991px){
@@ -82,6 +85,11 @@
 		}
 		.col{
 			min-width: 216px;
+		}
+	}
+	&.extra-padding{
+		.row{
+			padding: 0 40px 16px;
 		}
 	}
 }
@@ -180,7 +188,7 @@
 }
 
 section{
-	margin: 32px 0;
+	margin: 64px 0;
 	&.bubble{
 		position: relative;
 		@media (min-width: 992px){
