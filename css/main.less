@@ -1285,7 +1285,7 @@ table.comparison-chart{
 		bottom: 24px;
 		left: 50%;
 		transform: translateX(-50%);
-		z-index: 99;
+		z-index: 97;
 		> div{
 			height: 12px;
 			width: 12px;
@@ -1386,6 +1386,73 @@ table.comparison-chart{
 			}
 			.description{
 				margin-bottom: 16px;
+			}
+		}
+	}
+	&.hermes{
+		background-color: transparent;
+		padding-top: 24.75%;
+		margin-top: 48px;
+		.pagination{
+			left: 40px;
+			transform: none;
+			bottom: 48px;
+			> div{
+				height: 12px;
+				width: 32px;
+				background-color: rgba(216,226,237,0.5);
+				border-radius: 6px;
+				&:not(:first-of-type){
+					margin-left: 8px;
+				}
+				&.active{
+					background-color: @white;
+					width: 69px;
+				}
+			}
+		}
+		.slide{
+			position: relative;
+			&, &.slide-2, &.slide-3{
+				background-color: transparent;
+			}
+		}
+		.content{
+			position: absolute;
+			bottom: 100px;
+			left: 0;
+			width: 100%;
+			color: #fff;
+			padding: 0 40px;
+			.game-badge{
+				img{
+					border-radius: 8px;
+					height: 48px;
+					width: auto;
+					float: left;
+					margin-right: 8px;
+					margin-top: 4px;
+				}
+			}
+			h1{
+				margin: 0 0 4px;
+			}
+			.subtitle{
+				font-family: @poppins;
+				font-weight: 600;
+				line-height: 1.5;
+			}
+			.description{
+				margin-bottom: 16px;
+			}
+		}
+		.slideshow-video{
+			position: absolute;
+			width: 50%;
+			top: 0;
+			right: 0;
+			video{
+				width: 100%;
 			}
 		}
 	}
