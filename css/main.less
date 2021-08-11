@@ -1393,6 +1393,7 @@ table.comparison-chart{
 		background-color: #17263e;
 		padding-top: 34.54%;
 		margin-top: 48px;
+		border: 1px solid #495872;
 		.slideshow-content{
 			z-index: 8;
 		}
@@ -1442,7 +1443,7 @@ table.comparison-chart{
 			}
 		}
 		.content{
-			width: 60%;
+			width: 50%;
 			color: #fff;
 			padding: 0 40px;
 			.game-badge{
@@ -1456,7 +1457,7 @@ table.comparison-chart{
 				}
 			}
 			h1{
-				margin: 0 0 4px;
+				margin: 0 0 8px;
 				opacity: 0;
 				transform: translateY(16px);
 				transition: all 0.3s ease-out;
@@ -1467,17 +1468,22 @@ table.comparison-chart{
 				line-height: 1.5;
 			}
 			.description{
+				font-family: @inter;
+				font-size: 0.875em;
+				color: @secondary-dm;
 				margin-bottom: 16px;
 				opacity: 0;
 				transform: translateY(16px);
 				transition: all 0.3s ease-out;
+				line-height: 1.5;
 			}
 		}
 		.slideshow-video{
 			position: absolute;
 			z-index: 7;
 			// width: 100%;
-			top: 0;
+			max-width: 60%;
+			bottom: 0;
 			right: 0;
 			video{
 				width: 100%;
