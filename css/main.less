@@ -1390,9 +1390,12 @@ table.comparison-chart{
 		}
 	}
 	&.hermes{
-		background-color: transparent;
-		padding-top: 24.75%;
+		background-color: #17263e;
+		padding-top: 34.54%;
 		margin-top: 48px;
+		.slideshow-content{
+			z-index: 8;
+		}
 		.pagination{
 			left: 40px;
 			transform: none;
@@ -1412,16 +1415,34 @@ table.comparison-chart{
 			}
 		}
 		.slide{
-			position: relative;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			float: none;
+			pointer-events: none;
 			&, &.slide-2, &.slide-3{
 				background-color: transparent;
 			}
+			&.active{
+				pointer-events: all;
+				h1, .description{
+					opacity: 1;
+					transform: translateY(0px);
+				}
+				h1{
+					transition-delay: 0.5s;
+				}
+				.description{
+					transition-delay: 0.9s;
+				}
+			}
 		}
 		.content{
-			position: absolute;
-			bottom: 100px;
-			left: 0;
-			width: 100%;
+			width: 60%;
 			color: #fff;
 			padding: 0 40px;
 			.game-badge{
@@ -1436,6 +1457,9 @@ table.comparison-chart{
 			}
 			h1{
 				margin: 0 0 4px;
+				opacity: 0;
+				transform: translateY(16px);
+				transition: all 0.3s ease-out;
 			}
 			.subtitle{
 				font-family: @poppins;
@@ -1444,15 +1468,20 @@ table.comparison-chart{
 			}
 			.description{
 				margin-bottom: 16px;
+				opacity: 0;
+				transform: translateY(16px);
+				transition: all 0.3s ease-out;
 			}
 		}
 		.slideshow-video{
 			position: absolute;
-			width: 50%;
+			z-index: 7;
+			// width: 100%;
 			top: 0;
 			right: 0;
 			video{
 				width: 100%;
+				float: right;
 			}
 		}
 	}

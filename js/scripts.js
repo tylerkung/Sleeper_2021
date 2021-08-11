@@ -92,14 +92,16 @@ new ScrollMagic.Scene({
 		.addTo(controller);
 
 $(window).on('load', function(){
-	initSlides();
+	if(!$('.hermes').length) initSlides();
+	else initHermes();
 });
 
 $(window).resize(function(){
-	sizeSlides();
+	if(!$('.hermes').length) sizeSlides();
 });
 
 function initSlides(){
+	console.log('init');
 	sizeSlides();
 	$('.slideshow-content').attr({'aria-count': 4, 'aria-current': 1});
 	var lastClone = $('.slide.last').clone().removeClass('last');
@@ -181,6 +183,26 @@ function slidePrev(){
 	if (!prev.length) prev = $('.pagination div').siblings(':last').next();
 	$(currentPage).removeClass('active');
 	$(prev).addClass('active');
+}
+
+function initHermes(){
+	setInterval(cycleSlides, 6000);
+}
+
+function cycleSlides(){
+	console.log("cycle");
+	var currentPage = $('.pagination .active');
+	var next = $(currentPage).next();
+	if (!next.length) next = $('.page-1');
+	$(currentPage).removeClass('active');
+	$(next).addClass('active');
+
+	var currentSlide = $('.slide.active');
+	var nextS = $(currentSlide).next();
+	if (!nextS.length) nextS = $('.slide.first');
+	$(currentSlide).removeClass('active');
+	$(nextS).addClass('active');
+	// currentSlide = nextS;
 }
 
 $('.header-anchors a').click(function(e){
