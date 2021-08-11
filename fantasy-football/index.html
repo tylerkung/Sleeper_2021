@@ -24,6 +24,23 @@
 	<noscript>You need to enable JavaScript to run this app.</noscript>
 	<header>
 	</header>
+	<div class="debugger">
+		<div class="debug-content width-1920">
+			1920px
+		</div>
+		<div class="debug-content width-1480">
+			1480px
+		</div>
+		<div class="debug-content width-1024">
+			1024px
+		</div>
+		<div class="debug-content width-768">
+			768px
+		</div>
+		<div class="debug-content width-414">
+			414px
+		</div>
+	</div>
 	<div class="tutorial-video">
 		<div class="video-bg"></div>
 		<div class="video-wrapper">
@@ -207,9 +224,9 @@
 						<div class="container">
 							<a href="#features" aria-label="features" class="active">Features</a>
 							<a href="#how-to" aria-label="how-to">How To Play</a>
-							<a href="#game-modes" aria-label="game-modes">Game Modes</a>
+							<a href="#game-modes" aria-label="game-modes" class="web-only">Game Modes</a>
 							<a href="#mockdraft" aria-label="mockdraft">Mockdraft</a>
-							<a href="#testimonials" aria-label="testimonials">Testimonials</a>
+							<a href="#testimonials" aria-label="testimonials" class="web-only">Testimonials</a>
 							<a href="#why-sleeper" aria-label="why-sleeper">Why Sleeper</a>
 						</div>
 					</div>
@@ -265,60 +282,58 @@
 			<section>
 				<div class="container">
 					<div class="row">
-						<div class="col col-4 col-sm-6">
+						<div class="col col-4 col-sm-12">
 							<div class="feature-title feature-football-ads">
 								<h4><a id="features" class="anchor">100% Ad Free</a></h4>
 							</div>
-							<p>
-								<ul class="txt-secondary">
-									<li>Display ads ejected from the app</li>
-									<li>No fluff, no ads — Just fantasy sports</li>
-								</ul>
-							</p>
+							<ul class="txt-secondary web-only">
+								<li>Display ads ejected from the app</li>
+								<li>No fluff, no ads — Just fantasy sports</li>
+							</ul>
 						</div>
-						<div class="col col-4 col-sm-6">
+						<div class="col col-4 col-sm-12">
 							<div class="feature-title feature-football-scoring">
 								<h4>Unparalleled Scoring Customization</h4>
 							</div>
-							<ul class="txt-secondary">
+							<ul class="txt-secondary web-only">
 								<li>Bonus scoring for yards and touchdowns</li>
 								<li>Tiered PPR, points per first down, and more</li>
 								<li>Extra matchup against league median</li>
 							</ul>
 						</div>
-						<div class="col col-4 col-sm-6">
+						<div class="col col-4 col-sm-12">
 							<div class="feature-title feature-football-research">
 								<h4>Next Level Research</h4>
 							</div>
-							<ul class="txt-secondary">
+							<ul class="txt-secondary web-only">
 								<li>Stat packed with the latest news to keep you on top of the game</li>
 								<li>Roster % and Start %</li>
 							</ul>
 						</div>
-						<div class="col col-4 col-sm-6">
+						<div class="col col-4 col-sm-12">
 							<div class="feature-title feature-football-commish">
 								<h4>Unrivalled Commish Tools</h4>
 							</div>
-							<ul class="txt-secondary">
+							<ul class="txt-secondary web-only">
 								<li>Edit matchup scores, waivers, or rosters</li>
 								<li>Customize or re-seed playoff matchups</li>
 							</ul>
 						</div>
-						<div class="col col-4 col-sm-6">
+						<div class="col col-4 col-sm-12">
 							<div class="feature-title feature-football-team">
 								<h4>Truly Individualize Your Team</h4>
 							</div>
-							<ul class="txt-secondary">
+							<ul class="txt-secondary web-only">
 								<li>Customize your team with team icons</li>
 								<li>Animated fighting mascots</li>
 								<li>Give nicknames to your favorite players</li>
 							</ul>
 						</div>
-						<div class="col col-4 col-sm-6">
+						<div class="col col-4 col-sm-12">
 							<div class="feature-title feature-football-timer">
 								<h4>Fantasy Sports All Year Long</h4>
 							</div>
-							<ul class="txt-secondary">
+							<ul class="txt-secondary web-only">
 								<li>Easy intro to dynasty</li>
 								<li>Play fun new game modes year round</li>
 								<li>Offseason player movement supported</li>
@@ -393,7 +408,7 @@
 					</div>
 				</div>
 			</section>
-			<section>
+			<section class="web-only">
 				<div class="container">
 					<div class="row">
 						<div class="col col-12">
@@ -511,16 +526,17 @@
 								<tr class="chart-title">
 									<th>
 									</th>
-									<th><img src="/assets/old/img/Sleeper-app-logo.png" alt="Sleeper App" />
+									<th><img src="/assets/img/sleeper-logo-text.png" alt="Sleeper App" />
 									</th>
-									<th><img src="/assets/old/img/other-apps.png" alt="Sleeper App" />
-										Other Apps
+									<th>
+										<img src="/assets/old/img/other-apps.png" alt="Sleeper App" />
+										<div>Other Apps</div>
 									</th>
 								</tr>
 								<tr class="feature">
 									<td class="title">Ad-Free</td>
-									<td width="128"><img src="/assets/old/icon/checkmark-green.png" alt="check"/></td>
-									<td width="128"></td>
+									<td width="280"><img src="/assets/old/icon/checkmark-green.png" alt="check"/></td>
+									<td width="280"></td>
 								</tr>
 								<tr class="feature">
 									<td class="title">Cost</td>

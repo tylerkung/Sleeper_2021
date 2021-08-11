@@ -32,14 +32,14 @@ body{
 .main{
 	width: 100%;
 	overflow: hidden;
-	@media (min-width: @width-xs){
+	@media (min-width: @width-s){
 		padding-left: 85px;
 	}
 	@media (min-width: @width-l){
 		padding-left: @nav-width-desktop;
 	}
-	@media (max-width: @width-xs){
-		padding-top: 104px;
+	@media (max-width: 767px){
+		padding-top: 56px;
 	}
 	&.sticky-nav{
 		.page-header-wrapper + *{
@@ -52,12 +52,12 @@ img{
 }
 
 .mobile-only{
-	@media (min-width: @width-xs){
+	@media (min-width: @width-s){
 		display: none !important;
 	}
 }
 .web-only{
-	@media (max-width: @width-xs){
+	@media (max-width: 767px){
 		display: none !important;
 	}
 }
@@ -500,20 +500,31 @@ table.comparison-chart{
 	border-collapse: collapse;
 	th{
 		font-size: 0.85rem;
-		padding-bottom: 16px;
+		padding-top: 16px;
+		padding-bottom: 8px;
 		font-family: @poppins;
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 1px;
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+		&:nth-child(2){
+			background-color: #131E2C;
+		}
 	}
 	.chart-title{
 
 	}
 	tr.feature{
+		min-height: 70px;
 		&:nth-of-type(2n){
 			background-image: linear-gradient(to right, rgba(163,187,211,0), rgba(163,187,211,0.05) 10%);
+			td:nth-child(2){
+				background-color: #192533;
+			}
 		}
 		td{
+			height: 70px;
 			padding:16px;
 			border: 2px solid #29303E;
 			font-family: @inter;
@@ -523,6 +534,9 @@ table.comparison-chart{
 			&:not(.title){
 				text-align: center;
 				font-size: 0.888em;
+			}
+			&:nth-child(2){
+				background-color: #131E2C;
 			}
 			&:nth-child(3){
 				color: #7988a1;
@@ -1457,9 +1471,10 @@ table.comparison-chart{
 				}
 			}
 			h1{
+				font-weight: 700;
 				margin: 0 0 8px;
 				opacity: 0;
-				transform: translateY(16px);
+				transform: translateY(8px);
 				transition: all 0.3s ease-out;
 			}
 			.subtitle{
@@ -1473,7 +1488,7 @@ table.comparison-chart{
 				color: @secondary-dm;
 				margin-bottom: 16px;
 				opacity: 0;
-				transform: translateY(16px);
+				transform: translateY(8px);
 				transition: all 0.3s ease-out;
 				line-height: 1.5;
 			}
@@ -1490,7 +1505,38 @@ table.comparison-chart{
 				float: right;
 			}
 		}
-	}
+		@media (max-width: 964px){
+			padding-top: 60%;
+			.content{
+				width: 60%;
+			}
+		}
+		@media (max-width: 767px){
+			padding-top: 100%;
+			.pagination{
+				top: 40px;
+				left: 16px;
+			}
+			.slide{
+				height: 50%;
+				width: 100%;
+				display: block;
+				padding-top: 80px;
+			}
+			.content{
+				width: 100%;
+				padding: 0 16px;
+			}
+			.slideshow-video{
+				max-width: unset;
+				width: 100%;
+
+			}
+		}
+		@media (max-width: 640px){
+			padding-top: 140%;
+		}
+	} //end .hermes
 }
 
 &.tag{

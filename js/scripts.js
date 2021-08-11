@@ -190,7 +190,6 @@ function initHermes(){
 }
 
 function cycleSlides(){
-	console.log("cycle");
 	var currentPage = $('.pagination .active');
 	var next = $(currentPage).next();
 	if (!next.length) next = $('.page-1');
@@ -208,7 +207,6 @@ function cycleSlides(){
 $('.header-anchors a').click(function(e){
 	e.preventDefault();
 	var ele = $(this).attr('href');
-	console.log($('a#features').offset().top);
 	var elePos = $('a' + ele).offset().top;
 	// $(window).scrollTop(elePos);
 	controller.scrollTo('a' + ele);

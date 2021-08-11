@@ -1,9 +1,9 @@
 .container{
 	display: block;
 	margin: 0 auto 0;
-	padding: 0 32px;
+	padding: 0 16px;
 	// max-width: 1200px !important;
-	@media (min-width: 968px){
+	@media (min-width: @width-s){
 		padding: 0 32px;
 		// max-width: 800px;
 		// padding: 120px 15px;
@@ -98,6 +98,10 @@
   position: relative;
 	width: 100%;
 	padding: 0 16px;
+	@media (max-width: 767px){
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
 }
 .col-1{
 	flex: 0 0 8.333%;
@@ -271,26 +275,37 @@ section{
 }
 .page-header-wrapper{
 	min-height: 1px;
+	@media (max-width: 767px){
+		padding-top: 20px;
+	}
 }
 .page-header{
 	// background-color: #333;
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
+	background-position: center right;
 	&.sticky{
 		position: fixed;
 		z-index: 98;
-		width: calc(100% - 85px);
+		width: 100%;
 		top: 0;
 		background-color: #17263a;
+		padding-top: 20px;
+		@media (min-width: @width-s){
+			width: calc(100% - 85px);
+			padding-top: 0;
+		}
 		@media (min-width: @width-l){
 			width: calc(100% - 256px);
 		}
 	}
 	&.header-football{
 		background-image: url('/assets/background/bg_head.png');
-		.header-anchors a.active{
-			color: @mint;
+		.header-anchors a{
+			&.active, &:hover{
+				color: @mint;
+			}
 		}
 	}
 	.badge{
@@ -299,6 +314,13 @@ section{
 		top: 50%;
 		transform: translateY(-50%);
 		margin: 0;
+		z-index: 1;
+		@media (max-width: 767px){
+			right: 16px;
+			img{
+				width: 96px;
+			}
+		}
 	}
 	.header-title{
 		padding: 32px 0;
@@ -345,15 +367,31 @@ section{
 		}
 	}
 	.header-anchors{
-		padding: 20px 0;
 		border-top: 1px solid rgba(240, 240, 243, 0.2);
 		border-bottom: 1px solid rgba(240, 240, 243, 0.2);
-
+		position: relative;
+		&:before{
+			content: '';
+			height: 100%;
+			width: 48px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background-image: linear-gradient(90deg, rgba(8,17,29,0), #0F1B2B)
+		}
+		.container{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			white-space: nowrap;
+			overflow: scroll;
+		}
 		a{
 			color: @light-dm;
 			font-weight: 700;
 			text-transform: uppercase;
 			font-size: 0.875em;
+			display: inline-block;
+			white-space: nowrap;
 			&.active{
 				color: @mint;
 			}
