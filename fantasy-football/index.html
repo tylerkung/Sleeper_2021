@@ -227,7 +227,7 @@
 							<a href="#game-modes" aria-label="game-modes" class="web-only">Game Modes</a>
 							<a href="#mockdraft" aria-label="mockdraft">Mockdraft</a>
 							<a href="#testimonials" aria-label="testimonials" class="web-only">Testimonials</a>
-							<a href="#why-sleeper" aria-label="why-sleeper">Why Sleeper</a>
+							<a href="#why-sleeper" aria-label="why-sleeper" class="web-only">Why Sleeper</a>
 						</div>
 					</div>
 				</div>
@@ -246,7 +246,7 @@
 						<div class="slide slide-1 first active">
 							<div class="content">
 								<h1 class="title">
-									In-app chat — the one and only of its kind
+									In-app chat <span>— the one and only of its kind</span>
 								</h1>
 								<div class="description">
 									No more switching back and forth — Sleeper's intuitive in-app chat funcionality makes it easy to react, send gifs, and talk trash.
@@ -266,7 +266,7 @@
 						<div class="slide slide-3 last">
 							<div class="content">
 								<h1 class="title">
-									Dead league no more — Trading Made Easy
+									Dead league no more <span>— Trading Made Easy</span>
 								</h1>
 								<div class="description">
 									Clean, intuitive trade block where you can easily discuss and show interest in players. Go for it all or build for the future by trading future draft picks.
@@ -275,7 +275,7 @@
 						</div>
 					</div>
 					<div class="slideshow-video">
-						<video src="https://agitated-clarke-2b2b1f.netlify.app/assets/video/NFL.mp4" preload="false" autoplay disablepictureinpicture muted loop playsinline id="NFL-video"/>
+						<video src="https://agitated-clarke-2b2b1f.netlify.app/assets/video/NFL02.mp4" preload="false" autoplay disablepictureinpicture muted loop playsinline id="NFL-video"/>
 					</div>
 				</div>
 			</div>
@@ -346,8 +346,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col col-12">
-							<h2><a id="how-to" class="anchor">How to play fantasy football</a></h2>
-							<h5 class="txt-secondary">What's a draft? Best strategy, quick tips, how to start a league and more, all in these short tutorial videos.</h5>
+							<h2 class="web-only"><a id="how-to" class="anchor">How to play fantasy football</a></h2>
+							<h2 class="mobile-only txt-center"><a id="how-to" class="anchor">Learn Fantasy Football in Two Minutes</a></h2>
+							<h5 class="txt-secondary web-only">What's a draft? Best strategy, quick tips, how to start a league and more, all in these short tutorial videos.</h5>
 						</div>
 					</div>
 				</div>
@@ -443,13 +444,44 @@
 					<div class="row">
 						<div class="col col-12">
 							<a id="mockdraft" class="anchor">
-								<div class="banner-tk" style="background-image: url('/assets/img/banner_mockdraft.jpg');">
+								<div class="banner-tk web-only" style="background-image: url('/assets/img/banner_mockdraft.jpg');">
 									<div class="title">
 										<div>
 											<h1>Try out your mockdraft</h1>
 											<h5>Learn more about different types of draft modes.</h5>
 										</div>
 										<a href="" class="btn btn-success">Play Now</a>
+									</div>
+									<div class="draft-group row">
+										<div class="col col-3">
+											<img src="/assets/img/img_snake.png" class="draft-badge" alt="Snake"/>
+											<div>
+												<h4>Snake</h4>
+												<p>Draft in a specified or randomized order. Each round, the order reverses.</p>
+											</div>
+										</div>
+										<div class="col col-3">
+											<img src="/assets/img/img_linear.png" class="draft-badge" alt="Linear"/>
+											<div>
+												<h4>Linear</h4>
+												<p>Return back to the beginning of the order each round.</p>
+											</div>
+										</div>
+										<div class="col col-3">
+											<img src="/assets/img/img_auction.png" class="draft-badge" alt="Auction"/>
+											<div>
+												<h4>Auction</h4>
+												<p>Managers draft players by bidding their Auction budget.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="banner-tk mobile-only" style="background-image: url('/assets/img/mockdraft_mobile.jpg');">
+									<div class="title">
+										<div>
+											<h1>Try out a mockdraft</h1>
+										</div>
+										<a href="" class="btn btn-mint">Play Now</a>
 									</div>
 									<div class="draft-group row">
 										<div class="col col-3">
@@ -515,7 +547,7 @@
 					</div>
 				</div>
 			</section>
-			<section>
+			<section class="web-only">
 				<div class="container">
 					<div class="row">
 						<div class="col col-lg-12">
