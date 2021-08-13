@@ -390,6 +390,7 @@ img{
 }
 .btn-primary{
 	color: @btn-primary-txt;
+	border: 2px solid @white;
 }
 .btn-outline{
 	background-color: rgba(216, 226, 237, 0.1);
@@ -433,6 +434,7 @@ img{
 		border-radius: 50%;
 		background-image: url('/assets/old/icon/football_sprites.png');
 		background-repeat: no-repeat;
+		// background-size: 100%;
 	}
 	&.feature-football-ads:before{background-position:0px 0px}
 	&.feature-football-scoring:before{background-position:-80px 0px}
@@ -440,6 +442,20 @@ img{
 	&.feature-football-commish:before{background-position:0px -80px}
 	&.feature-football-team:before{background-position:-80px -80px}
 	&.feature-football-timer:before{background-position:-160px -80px}
+	@media (max-width: 767px){
+		padding-left: 88px;
+		&:before{
+			height: 64px;
+			width: 64px;
+			background-size: 192px;
+		}
+		&.feature-football-ads:before{background-position:0px 0px}
+		&.feature-football-scoring:before{background-position:-64px 0px}
+		&.feature-football-research:before{background-position:-128px 0px}
+		&.feature-football-commish:before{background-position:0px -64px}
+		&.feature-football-team:before{background-position:-64px -64px}
+		&.feature-football-timer:before{background-position:-128px -64px}
+	}
 }
 .badges-container{
 	margin-top: 48px;
@@ -538,9 +554,17 @@ table.comparison-chart{
 			}
 			&:nth-child(2){
 				background-color: #131E2C;
+				width: 180px;
+				@media (min-width: @width-m){
+					width: 280px;
+				}
 			}
 			&:nth-child(3){
 				color: #7988a1;
+				width: 180px;
+				@media (min-width: @width-m){
+					width: 280px;
+				}
 			}
 		}
 		&:first-child td{
@@ -692,8 +716,14 @@ table.comparison-chart{
 	padding: 32px;
 	padding-left: 56px;
 	position: relative;
-	min-width: 411px !important;
 	margin: 16px 24px 0;
+	max-width: 80% !important;
+	&:first-of-type{
+		margin-left: 40px;
+	}
+	@media (min-width: @width-s){
+		min-width: 411px !important;
+	}
 	.testimonial-image{
 		border-radius: 50%;
 		height: 68px;
@@ -1092,13 +1122,60 @@ table.comparison-chart{
 		padding-bottom: 56.4%;
 		position: relative;
 		cursor: pointer;
+		.play-btn{
+			position: absolute;
+			height: 80px;
+			width: 80px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: rgba(255,255,255,0.2);
+			border: 1px solid rgba(163,187,211,0.3);
+			border-radius: 50%;
+			z-index: 1;
+			transition: all 0.2s ease;
+			&:before{
+				content: '';
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				background-image: url('/assets/old/icon/play-icon.png');
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: 30%;
+				z-index: -1;
+			}
+		}
 		img{
 			position: absolute;
 			object-fit: cover;
 			height: 100%;
 			width: 100%;
+			transition: all 0.3s ease;
 		}
+		&:hover{
+			.play-btn{
+				opacity: 0.3;
+			}
+			img{
+				transform: scale(1.04);
+			}
+		}
+
 	}
+	// &:hover{
+	// 	.thumbnail{
+	// 		.play-btn{
+	// 			opacity: 0.3;
+	// 		}
+	// 		img{
+	// 			transform: scale(1.04);
+	// 		}
+	// 	}
+	// }
 	.vid-content{
 		padding: 16px;
 		.subtitle{
@@ -1126,6 +1203,14 @@ table.comparison-chart{
 	overflow: hidden;
 	padding: 40px;
 	border: 1px solid #48566F;
+	@media (min-width: @width-s) and (max-width: 1023px){
+		background-size: cover;
+		background-position: center left;
+		.col-3{
+			flex: 0 0 33.3%;
+			max-width: 33.3%;
+		}
+	}
 	@media (max-width: 767px){
 		padding-top: 64px;
 		background-position: top right;

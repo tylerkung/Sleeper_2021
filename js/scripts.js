@@ -55,6 +55,10 @@ controller.scrollTo(function (newpos){
 	TweenMax.to($(window), 0.5, {scrollTo: {y: newpos, offsetY:264}});
 });
 
+// controller.scrollFluid(function(ele){
+// 	TweenMax.to(ele, 0.5, {scrollTo: {x: 500}});
+// })
+
 $('a.anchor').each(function(){
 	var currentAnchor = this;
 	new ScrollMagic.Scene({
@@ -245,4 +249,17 @@ $('.header-anchors a').click(function(e){
 	// $(window).scrollTop(elePos);
 	controller.scrollTo('a' + ele);
 	// console.log()
+})
+
+$('.fluid-container .next').click(function(){
+	var container = $(this).parents('.fluid-container').children('.row');
+	var curPos = container.scrollLeft();
+	TweenMax.to(container, 0.4, {scrollTo: {x: curPos + $(window).width() / 3}});
+	// controller.scrollFluid(container);
+})
+$('.fluid-container .prev').click(function(){
+	var container = $(this).parents('.fluid-container').children('.row');
+	var curPos = container.scrollLeft();
+	TweenMax.to(container, 0.4, {scrollTo: {x: curPos - $(window).width() / 3}});
+	// controller.scrollFluid(container);
 })
