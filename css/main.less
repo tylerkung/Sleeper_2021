@@ -390,7 +390,7 @@ img{
 }
 .btn-primary{
 	color: @btn-primary-txt;
-	border: 2px solid @white;
+	// border: 2px solid transparent;
 }
 .btn-outline{
 	background-color: rgba(216, 226, 237, 0.1);
@@ -862,7 +862,9 @@ table.comparison-chart{
 }
 
 .game-grid{
+	display: inline-block;
 	&.featured{
+		display: block;
 		border-radius: 16px;
 		overflow: hidden;
 		background-color: #152238;
@@ -1455,7 +1457,7 @@ table.comparison-chart{
 	&.poseidon{
 		background-color: transparent;
 		padding-top: 24.75%;
-		margin-top: 48px;
+		margin-top: 16px;
 		.pagination{
 			left: 40px;
 			transform: none;
