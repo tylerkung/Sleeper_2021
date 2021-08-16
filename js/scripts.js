@@ -123,6 +123,11 @@ function initSlides(){
 function sizeSlides(){
 	viewport = parseInt($('.slideshow').css('width'),10);
 	console.log(viewport);
+	while (viewport === 0){
+		setTimeout(function(){
+			viewport = parseInt($('.slideshow').css('width'),10);
+		}, 100)
+	}
 	var currentSlide = parseInt($('.slideshow-content').attr('aria-current'),10);
 	$('.slideshow-content').css({'width': viewport*6, 'transform': 'translateX(' + (-viewport * currentSlide) + 'px' + ')'});
 	$('.slide').each(function(){

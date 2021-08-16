@@ -67,9 +67,12 @@
 		padding: 0;
 		.row{
 			flex-wrap: nowrap;
-			overflow: scroll;
+			overflow: hidden;
 			margin: 0;
 			padding: 0 16px 16px;
+			&:hover{
+				overflow-x: scroll;
+			}
 		}
 		.col-4{
 			min-width: 453px !important;
@@ -92,9 +95,12 @@
 		padding: 0;
 		.row{
 			flex-wrap: nowrap;
-			overflow: scroll;
+			overflow: hidden;
 			margin: 0;
 			padding: 0 16px 16px;
+			&:hover{
+				overflow-x: scroll;
+			}
 		}
 		.col-3{
 			min-width: 324px !important;
@@ -471,7 +477,10 @@ section{
 			padding-top: 20px;
 			padding-bottom: 20px;
 			white-space: nowrap;
-			overflow: scroll;
+			overflow: hidden;
+			&:hover{
+				overflow-x: scroll;
+			}
 		}
 		a{
 			color: @light-dm;
