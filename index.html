@@ -204,12 +204,15 @@
 							<a href="https://sleeper.app/create?type=league" class="btn-primary btn web-only">
 								Sign Up
 							</a>
+							<a href="https://sleeper.app/create?type=league" class="btn-mint btn mobile-only">
+								Get The App
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="container">
-				<div class="slideshow poseidon web-only">
+			<div class="container home-container">
+				<div class="slideshow poseidon">
 					<!-- <div class="prev">
 					</div>
 					<div class="next">
@@ -226,7 +229,8 @@
 					</div>
 					<div class="slideshow-content no-anim">
 						<a href="/fantasy-football" class="slide slide-1 first">
-							<img src="/assets/img/banner_football.png" alt="Fantasy Football" />
+							<img src="/assets/img/banner_football.png" alt="Fantasy Football" class="web-bg"/>
+							<img src="/assets/background/NFL_mobile.png" alt="Fantasy Football" class="mobile-bg"/>
 							<div class="content">
 								<div class="game-badge">
 									<img src="/assets/old/img/game-football.jpg" alt="Fantasy Football" />
@@ -248,7 +252,8 @@
 							</div>
 						</a>
 						<a href="/fantasy-basketball" class="slide slide-2">
-							<img src="/assets/img/banner_bball.png" alt="Fantasy Football" />
+							<img src="/assets/img/banner_bball.png" alt="Fantasy Basketball" class="web-bg"/>
+							<img src="/assets/background/NBA_mobile.png" alt="Fantasy Basketball" class="mobile-bg"/>
 							<div class="content">
 								<div class="subtitle txt-yellow">
 									OPEN AUG 12th
@@ -267,7 +272,8 @@
 							</div>
 						</a>
 						<a href="https://sleeper.app/fantasylcs" class="slide slide-3">
-							<img src="/assets/img/banner_lcs.png" alt="Fantasy LCS" />
+							<img src="/assets/img/banner_lcs.png" alt="Fantasy LCS" class="web-bg"/>
+							<img src="/assets/background/LCS_mobile.png" alt="Fantasy LCS" class="mobile-bg"/>
 							<div class="content">
 								<div class="game-badge">
 									<img src="/assets/img/LCS.png" alt="Fantasy LCS" />
@@ -289,7 +295,8 @@
 							</div>
 						</a>
 						<a href="/bracket-mania" class="slide slide-4 last">
-							<img src="/assets/img/banner_bracketmania.png" alt="Bracket Mania" />
+							<img src="/assets/img/banner_bracketmania.png" alt="Bracket Mania" class="web-bg"/>
+							<img src="/assets/background/BM_mobile.png" alt="Bracket Mania" class="mobile-bg"/>
 							<div class="content">
 								<div class="subtitle txt-red">
 									Season Starts March 2022
@@ -667,6 +674,10 @@
 					</div>
 				</div>
 				<div class="container fluid-container">
+					<div class="controls">
+						<div class="prev"></div>
+						<div class="next"></div>
+					</div>
 					<div class="row flex-stretch">
 						<div class="col col-4">
 							<div class="league-preview">
@@ -951,72 +962,70 @@
 				<div class="container">
 					<div class="row">
 						<div class="col col-12">
-							<a id="mockdraft" class="anchor">
-								<div class="banner-tk web-only" style="background-image: url('/assets/img/banner_mockdraft.jpg');">
-									<div class="title">
-										<div>
-											<h1>Try out your mockdraft</h1>
-											<h5>Learn more about different types of draft modes.</h5>
-										</div>
-										<a href="" class="btn btn-success">Play Now</a>
+							<div class="banner-tk web-only" style="background-image: url('/assets/img/banner_mockdraft.jpg');">
+								<div class="title">
+									<div>
+										<h1>Try out your mockdraft</h1>
+										<h5>Learn more about different types of draft modes.</h5>
 									</div>
-									<div class="draft-group row">
-										<div class="col col-3">
-											<img src="/assets/img/img_snake.png" class="draft-badge" alt="Snake"/>
-											<div>
-												<h4>Snake</h4>
-												<p>Draft in a specified or randomized order. Each round, the order reverses.</p>
-											</div>
+									<a href="" class="btn btn-success">Play Now</a>
+								</div>
+								<div class="draft-group row">
+									<div class="col col-3">
+										<img src="/assets/img/img_snake.png" class="draft-badge" alt="Snake"/>
+										<div>
+											<h4>Snake</h4>
+											<p>Draft in a specified or randomized order. Each round, the order reverses.</p>
 										</div>
-										<div class="col col-3">
-											<img src="/assets/img/img_linear.png" class="draft-badge" alt="Linear"/>
-											<div>
-												<h4>Linear</h4>
-												<p>Return back to the beginning of the order each round.</p>
-											</div>
+									</div>
+									<div class="col col-3">
+										<img src="/assets/img/img_linear.png" class="draft-badge" alt="Linear"/>
+										<div>
+											<h4>Linear</h4>
+											<p>Return back to the beginning of the order each round.</p>
 										</div>
-										<div class="col col-3">
-											<img src="/assets/img/img_auction.png" class="draft-badge" alt="Auction"/>
-											<div>
-												<h4>Auction</h4>
-												<p>Managers draft players by bidding their Auction budget.</p>
-											</div>
+									</div>
+									<div class="col col-3">
+										<img src="/assets/img/img_auction.png" class="draft-badge" alt="Auction"/>
+										<div>
+											<h4>Auction</h4>
+											<p>Managers draft players by bidding their Auction budget.</p>
 										</div>
 									</div>
 								</div>
-								<div class="banner-tk mobile-only" style="background-image: url('/assets/img/mockdraft_mobile.jpg');">
-									<div class="title">
-										<div>
-											<h6 class="txt-light mobile-only" style="margin: 0 0 8px;">Get The App</h6>
-											<h1>Try out a mockdraft</h1>
-										</div>
-										<a href="" class="btn btn-mint">Play Now</a>
+							</div>
+							<div class="banner-tk mobile-only" style="background-image: url('/assets/img/mockdraft_mobile.jpg');">
+								<div class="title">
+									<div>
+										<h6 class="txt-light mobile-only" style="margin: 0 0 8px;">Get The App</h6>
+										<h1>Try out a mockdraft</h1>
 									</div>
-									<div class="draft-group row">
-										<div class="col col-3">
-											<img src="/assets/img/img_snake.png" class="draft-badge" alt="Snake"/>
-											<div>
-												<h4>Snake</h4>
-												<p>Draft in a specified or randomized order. Each round, the order reverses.</p>
-											</div>
+									<a href="" class="btn btn-mint">Play Now</a>
+								</div>
+								<div class="draft-group row">
+									<div class="col col-3">
+										<img src="/assets/img/img_snake.png" class="draft-badge" alt="Snake"/>
+										<div>
+											<h4>Snake</h4>
+											<p>Draft in a specified or randomized order. Each round, the order reverses.</p>
 										</div>
-										<div class="col col-3">
-											<img src="/assets/img/img_linear.png" class="draft-badge" alt="Linear"/>
-											<div>
-												<h4>Linear</h4>
-												<p>Return back to the beginning of the order each round.</p>
-											</div>
+									</div>
+									<div class="col col-3">
+										<img src="/assets/img/img_linear.png" class="draft-badge" alt="Linear"/>
+										<div>
+											<h4>Linear</h4>
+											<p>Return back to the beginning of the order each round.</p>
 										</div>
-										<div class="col col-3">
-											<img src="/assets/img/img_auction.png" class="draft-badge" alt="Auction"/>
-											<div>
-												<h4>Auction</h4>
-												<p>Managers draft players by bidding their Auction budget.</p>
-											</div>
+									</div>
+									<div class="col col-3">
+										<img src="/assets/img/img_auction.png" class="draft-badge" alt="Auction"/>
+										<div>
+											<h4>Auction</h4>
+											<p>Managers draft players by bidding their Auction budget.</p>
 										</div>
 									</div>
 								</div>
-							</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1025,7 +1034,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col col-12">
-							<h3>From channels you follow...</h3>
+							<h3>Popular Channels</h3>
 						</div>
 					</div>
 				</div>

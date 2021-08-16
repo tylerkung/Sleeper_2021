@@ -765,7 +765,7 @@ table.comparison-chart{
 }
 
 .footer{
-	border-top: 1px solid #677897;
+	// border-top: 1px solid #677897;
 	padding-top: 16px;
 	.footer-main{
 		border-bottom: 1px solid #677897;
@@ -1480,11 +1480,67 @@ table.comparison-chart{
 		background-color: transparent;
 		padding-top: 25%;
 		margin-top: 16px;
+		position: relative;
+		.mobile-bg{
+			display:none;
+			object-position: center bottom;
+		}
 		@media (max-width: 1479px){
 			padding-top: 40%;
-			.slideshow-content .slide img{
+			.slideshow-content .slide img.web-bg{
 				object-fit: cover;
 				object-position: center left;
+			}
+		}
+		@media (max-width: 1023px){
+			padding-top: 55%;
+			.slideshow-content .slide img.mobile-bg{
+				display: block;
+			}
+			.slideshow-content .slide img.web-bg{
+				display: none;
+			}
+		}
+		@media (max-width: 767px){
+			margin-top: 0;
+			border-radius: 0px;
+			height: 50vh;
+			min-height: 480px;
+			padding: 0;
+			padding-top: 80px;
+			&:after{
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100px;
+				background-image: linear-gradient(to bottom, transparent, #131f31 80%);
+				bottom: 0;
+				left: 0;
+				pointer-events: none;
+			}
+			.btn-mint{
+				color: @white;
+				border: 2px solid @mint;
+				background-image: linear-gradient(135deg, rgba(230,239,250,0.15), rgba(163,187,211,0.15));
+				background-color: transparent;
+			}
+			.btn-orange{
+				color: @white;
+				border: 2px solid @orange;
+				background-image: linear-gradient(135deg, rgba(230,239,250,0.15), rgba(163,187,211,0.15));
+				background-color: transparent;
+			}
+			.btn-red{
+				color: @white;
+				border: 2px solid @red;
+				background-image: linear-gradient(135deg, rgba(230,239,250,0.15), rgba(163,187,211,0.15));
+				background-color: transparent;
+			}
+			.btn-success{
+				color: @white;
+				border: 2px solid @mint;
+				background-image: linear-gradient(135deg, rgba(230,239,250,0.15), rgba(163,187,211,0.15));
+				background-color: transparent;
 			}
 		}
 		.pagination{
@@ -1504,15 +1560,33 @@ table.comparison-chart{
 					width: 69px;
 				}
 			}
+			@media (max-width: 767px){
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				align-items: center;
+				> div{
+					height: 8px;
+					width: 8px;
+					border-radius: 8px;
+					&.active{
+						height: 16px;
+						width: 16px;
+					}
+				}
+			}
 		}
 		.slide{
 			position: relative;
 			overflow:hidden;
 			border-radius: 24px;
+			@media (max-width: 767px){
+				border-radius: 0px;
+			}
 			&, &.slide-2, &.slide-3{
 				background-color: transparent;
 			}
-			img{
+			img.web-bg{
 				object-position: top center !important;
 			}
 		}
@@ -1525,6 +1599,9 @@ table.comparison-chart{
 			top: 0;
 			@media (max-width: 1479px){
 				padding-top: 12%;
+			}
+			@media (max-width: 767px){
+				padding-top: 160px;
 			}
 			.game-badge{
 				img{
@@ -1710,7 +1787,8 @@ table.comparison-chart{
 	padding: 24px;
 	height: 100%;
 	position: relative;
-	h6.title{
+	background-image: linear-gradient(290deg, rgba(90, 105, 155, 0.07), transparent, rgba(210, 0, 101, 0.1));
+ 	h6.title{
 		color: #606F8C;
 		margin: 0;
 	}

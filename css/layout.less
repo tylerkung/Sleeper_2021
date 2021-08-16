@@ -23,6 +23,11 @@
 				padding: 0 40px;
 		}
 	}
+	&.home-container{
+		@media (max-width: 767px){
+			padding: 0;
+		}
+	}
 }
 .row{
 	display: flex;
@@ -266,6 +271,9 @@
 
 section{
 	margin: 64px 0;
+	@media (max-width: 767px){
+		margin: 48px 0;
+	}
 	&.bubble{
 		position: relative;
 		@media (min-width: 992px){
@@ -344,7 +352,14 @@ section{
 	}
 }
 .home-layout{
-
+	.main{
+		padding-top: 0;
+	}
+	.top-nav-wrapper{
+		@media (max-width: 767px){
+			background-color: rgba(19, 36, 60, 0.4);
+		}
+	}
 }
 .page-header-wrapper{
 	min-height: 1px;

@@ -321,7 +321,10 @@
 	// position: absolute;
 	top: 0;
 	right: 0;
-	@media (max-width: 413px){
+	@media (max-width: 767px){
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 	.site-logo{
 		max-width: 168px;
@@ -330,6 +333,9 @@
 		height: 72px;
 		left: 50%;
 		transform: translateX(-50%);
+		@media (max-width: 767px){
+			height: auto;
+		}
 	}
 	.account-btns{
 		display: flex;
@@ -338,6 +344,9 @@
 		> *{
 			margin: 0 16px;
 			display: block;
+			@media (max-width: 767px){
+				margin: 0;
+			}
 		}
 		.btn-download img{
 			max-height: 44px;
