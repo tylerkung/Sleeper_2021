@@ -128,8 +128,8 @@ function sizeSlides(){
 	})
 }
 
-$('.next').click(slideNext);
-$('.prev').click(slidePrev);
+// $('.next').click(slideNext);
+// $('.prev').click(slidePrev);
 // $('.slideshow.poseidon .page').click(selectSlide);
 function slideNext(){
 	sizeSlides();
