@@ -10,6 +10,9 @@
 	position: fixed;
 	transition: opacity 0.2s ease;
 	border-right: 1px solid rgba(240,240,243,0.2);
+	@media (min-width: @width-s){
+		padding-top: 36px;
+	}
 	@media (min-width: @width-l){
 		width: @nav-width-desktop;
 		min-width: @nav-width-desktop;
@@ -145,7 +148,8 @@
 		.sub-nav-item{
 			// display: block;
 			display: flex;
-			align-items:center;
+			align-items: center;
+			position: relative;
 			margin: 0 16px;
 			text-decoration: none;
 			color: @secondary-dm;
@@ -155,12 +159,30 @@
 			font-size: .875em;
 			padding: 12px 16px;
 			border-radius: 8px;
-			&:hover{
+			&:after{
+				content: '';
+				position: absolute;
+				height: calc(100% - 4px);
+				top: 2px;
+				border-radius: 1px;
+				width: 2px;
+				background-color: @mint;
+				right: -16px;
+				display: none;
+			}
+			&:hover, &.active{
 				background-color: rgba(58, 70, 91, 0.5);
 				color: @white;
 			}
 			@media (max-width: 1479px){
 				padding: 14px;
+			}
+			@media (min-width: @width-s) and (max-width: 1479px){
+				&:hover, &.active{
+					&:after{
+						display: block;
+					}
+				}
 			}
 		}
 		&.active{
@@ -297,8 +319,18 @@
 	.account-btns{
 		display: flex;
 		justify-content: flex-end;
+		align-items: center;
+		> *{
+			margin: 0 16px;
+			display: block;
+		}
+		.btn-download img{
+			max-height: 44px;
+			width: auto;
+		}
 		.btn{
 			padding: 12px 24px;
+			white-space: nowrap;
 		}
 	}
 }

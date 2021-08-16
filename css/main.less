@@ -1017,6 +1017,9 @@ table.comparison-chart{
 		max-width: 88px;
 		max-height: 88px;
 		margin: 0 auto;
+		&:hover{
+			opacity: 0.7;
+		}
 		img{
 			object-fit: cover;
 		}
@@ -1449,15 +1452,23 @@ table.comparison-chart{
 				background-color: #111;
 			}
 			img{
-				object-fit: cover;
+				object-fit: contain;
 				object-position: center center;
+				height: 100%;
 			}
 		}
 	}
 	&.poseidon{
 		background-color: transparent;
-		padding-top: 24.75%;
+		padding-top: 26%;
 		margin-top: 16px;
+		@media (max-width: 1479px){
+			padding-top: 40%;
+			.slideshow-content .slide img{
+				object-fit: cover;
+				object-position: center left;
+			}
+		}
 		.pagination{
 			left: 40px;
 			transform: none;
@@ -1478,17 +1489,22 @@ table.comparison-chart{
 		}
 		.slide{
 			position: relative;
+			overflow:hidden;
+			border-radius: 24px;
 			&, &.slide-2, &.slide-3{
 				background-color: transparent;
 			}
 		}
 		.content{
 			position: absolute;
-			bottom: 100px;
 			left: 0;
 			width: 100%;
 			color: #fff;
-			padding: 0 40px;
+			padding: 6% 40px 0;
+			top: 0;
+			@media (max-width: 1479px){
+				padding-top: 12%;
+			}
 			.game-badge{
 				img{
 					border-radius: 8px;
@@ -1719,5 +1735,33 @@ table.comparison-chart{
 		line-height: 1.25;
 		margin: 0;
 		color: #A3BBD3;
+	}
+}
+
+.card-promo{
+	padding: 24px 24px 48px;
+	position: relative;
+	border-radius: 16px;
+	overflow: hidden;
+	border: 1px solid rgba(96,111,140,0.7);
+	.card-bg{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		object-position: bottom right;
+	}
+	.card-title{
+		font-weight: 700;
+	}
+	h6{
+		margin-bottom: 0;
+	}
+	.card-content{
+		position: relative;
+		z-index: 1;
+		width: 60%;
 	}
 }
