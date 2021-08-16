@@ -122,6 +122,7 @@ function initSlides(){
 
 function sizeSlides(){
 	viewport = parseInt($('.slideshow').css('width'),10);
+	console.log(viewport);
 	var currentSlide = parseInt($('.slideshow-content').attr('aria-current'),10);
 	$('.slideshow-content').css({'width': viewport*6, 'transform': 'translateX(' + (-viewport * currentSlide) + 'px' + ')'});
 	$('.slide').each(function(){
