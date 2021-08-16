@@ -102,6 +102,7 @@ $(window).on('load', function(){
 		else if($('.poseidon').length) initPoseidon();
 		else initSlides();
 	}
+	if($('.preview-slideshow').length) initApollo();
 });
 
 $(window).resize(function(){
@@ -114,8 +115,8 @@ function initSlides(){
 	$('.slideshow-content').attr({'aria-count': 4, 'aria-current': 1});
 	var lastClone = $('.slide.last').clone().removeClass('last');
 	var firstClone = $('.slide.first').clone().removeClass('first');
-	$(lastClone).insertBefore('.first');
-	$(firstClone).insertAfter('.last');
+	$(lastClone).insertBefore('.slide.first');
+	$(firstClone).insertAfter('.slide.last');
 	$('.slideshow-content').css('transform', 'translateX(' + (-viewport) + 'px' + ')');
 }
 
@@ -155,9 +156,9 @@ function slideNext(){
 			$('.slideshow-content').attr('aria-current', 1);
 		}, 401)
 	}
-	var currentPage = $('.pagination .active');
+	var currentPage = $('.slideshow .pagination .active');
 	var next = $(currentPage).next();
-	if (!next.length) next = $('.page-1');
+	if (!next.length) next = $('.slideshow .page-1');
 	$(currentPage).removeClass('active');
 	$(next).addClass('active');
 }
@@ -227,6 +228,10 @@ function initHermes(){
 	setInterval(cycleSlides, 6000);
 }
 
+function initApollo(){
+	setInterval(cyclePSlides, 4000);
+}
+
 function cycleSlides(){
 	var currentPage = $('.pagination .active');
 	var next = $(currentPage).next();
@@ -237,6 +242,21 @@ function cycleSlides(){
 	var currentSlide = $('.slide.active');
 	var nextS = $(currentSlide).next();
 	if (!nextS.length) nextS = $('.slide.first');
+	$(currentSlide).removeClass('active');
+	$(nextS).addClass('active');
+	// currentSlide = nextS;
+}
+
+function cyclePSlides(){
+	var currentPage = $('.preview-slideshow .pagination .active');
+	var next = $(currentPage).next();
+	if (!next.length) next = $('.preview-slideshow .page-1');
+	$(currentPage).removeClass('active');
+	$(next).addClass('active');
+
+	var currentSlide = $('.preview-slideshow .p-slide.active');
+	var nextS = $(currentSlide).next();
+	if (!nextS.length) nextS = $('.preview-slideshow .p-slide.first');
 	$(currentSlide).removeClass('active');
 	$(nextS).addClass('active');
 	// currentSlide = nextS;

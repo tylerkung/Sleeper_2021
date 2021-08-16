@@ -428,6 +428,9 @@ img{
 		height: 16px;
 		width: 16px;
 	}
+	&:hover{
+		border: 3px solid @white;
+	}
 }
 .feature-title{
 	padding-left: 96px;
@@ -1700,7 +1703,72 @@ table.comparison-chart{
 		}
 	} //end .hermes
 }
-
+.preview-slideshow{
+	border: 1px solid rgba(96,111,140,0.7);
+	border-radius: 16px;
+	overflow: hidden;
+	padding: 24px;
+	height: 100%;
+	position: relative;
+	h6.title{
+		color: #606F8C;
+		margin: 0;
+	}
+	.pagination{
+		display: flex;
+		position: absolute;
+		bottom: 24px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 97;
+		align-items: center;
+		> div{
+			height: 8px;
+			width: 8px;
+			background-color: rgba(216,226,237,0.5);
+			border-radius: 8px;
+			&:not(:first-of-type){
+				margin-left: 8px;
+			}
+			&.active{
+				background-color: @white;
+				height: 16px;
+				width: 16px;
+			}
+		}
+	}
+	.p-slide{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transform: translateY(8px);
+		transition: all 0.3s ease-out;
+		.content{
+			display: flex;
+			position: relative;
+			height: 100%;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+			padding: 48px;
+			img{
+				max-height: 100%;
+			}
+		}
+		&.active{
+			pointer-events: all;
+			opacity: 1;
+			transform: translateY(0px);
+			transition-delay: 0.4s;
+		}
+	}
+}
 &.tag{
 	&:before{
 		content: '';
@@ -1902,6 +1970,12 @@ table.comparison-chart{
 			.team{
 				.team-name{
 					margin-bottom: 4px;
+					span{
+						font-family: @inter;
+						font-size: 10px;
+						color: #A3BBD3;
+						margin: 0 4px;
+					}
 				}
 				&.team-left{
 
