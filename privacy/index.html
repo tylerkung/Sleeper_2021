@@ -26,9 +26,14 @@
 	</header>
 	<div class="wrapper">
 		<div class="nav">
-			<div class="site-logo web-only">
+			<div class="site-logo ">
 				<a href="/">
-					<img src="/assets/old/img/sleeper-logo-w.png" alt="Sleeper" />
+					<div class="logo-lg">
+						<img src="/assets/old/img/sleeper-logo-w.png" alt="Sleeper" />
+					</div>
+					<div class="logo-sm">
+						<img src="/assets/img/logo-mobile.png" alt="Sleeper" />
+					</div>
 				</a>
 			</div>
 			<div class="main-nav">
@@ -38,22 +43,42 @@
 					</a> -->
 					<div class="sub-nav">
 						<a href="/fantasy-football" class="sub-nav-item">
-							Fantasy Football
+							<div class="nav-icon">
+								<img src="/assets/icon/football.png" alt="Fantasy Football">
+							</div>
+							<div class="nav-title">
+								Fantasy Football
+							</div>
 						</a>
 					</div>
 					<div class="sub-nav">
 						<a href="/fantasy-basketball" class="sub-nav-item">
-							Fantasy Basketball
-						</a>
-					</div>
-					<div class="sub-nav">
-						<a href="/fantasy-lcs" class="sub-nav-item">
-							Fantasy LCS
+							<div class="nav-icon">
+								<img src="/assets/icon/basketball.png" alt="Fantasy Basketball">
+							</div>
+							<div class="nav-title">
+								Fantasy Basketball
+							</div>
 						</a>
 					</div>
 					<div class="sub-nav">
 						<a href="/bracket-mania" class="sub-nav-item">
-							Bracket Mania
+							<div class="nav-icon">
+								<img src="/assets/icon/bm.png" alt="Bracket Mania">
+							</div>
+							<div class="nav-title">
+								Bracket Mania
+							</div>
+						</a>
+					</div>
+					<div class="sub-nav">
+						<a href="https://sleeper.app/fantasylcs" class="sub-nav-item">
+							<div class="nav-icon">
+								<img src="/assets/icon/lcs.png" alt="Fantasy LCS">
+							</div>
+							<div class="nav-title">
+								Fantasy LCS
+							</div>
 						</a>
 					</div>
 				</div> <!-- END FANTASY SPORTS -->
@@ -70,28 +95,43 @@
 			</div> <!-- end main nav -->
 			<div class="side-nav">
 				<div class="secondary-nav">
-					<a href="https://sleeper.app/login" class="nav-item mobile-only">
-						Log In
+					<a href="/fantasy-football" class="nav-item">
+						<div class="nav-icon">
+							<img src="/assets/icon/download.png" alt="Download">
+						</div>
+						<div class="nav-title">
+							Download
+						</div>
 					</a>
 				</div>
 				<div class="secondary-nav">
-					<a href="https://sleeper.app/create?type=league" class="nav-item mobile-only">
-						Sign Up
+					<a href="https://blog.sleeper.app/" target="_blank" class="nav-item">
+						<div class="nav-icon">
+							<img src="/assets/icon/blog.png" alt="Blog">
+						</div>
+						<div class="nav-title">
+							Blog
+						</div>
 					</a>
 				</div>
 				<div class="secondary-nav">
-					<a href="https://sleeper.app/download" class="nav-item" target="_blank">
-						Download
+					<a href="https://support.sleeper.app/" target="_blank" class="nav-item">
+						<div class="nav-icon">
+							<img src="/assets/icon/support.png" alt="Support">
+						</div>
+						<div class="nav-title">
+							Support
+						</div>
 					</a>
 				</div>
 				<div class="secondary-nav">
-					<a href="https://blog.sleeper.app/" class="nav-item" target="_blank">
-						Blog
-					</a>
-				</div>
-				<div class="secondary-nav">
-					<a href="https://support.sleeper.app/" class="nav-item" target="_blank">
-						Support
+					<a href="/fantasy-football" class="nav-item">
+						<div class="nav-icon">
+							<img src="/assets/icon/about.png" alt="About">
+						</div>
+						<div class="nav-title">
+							About
+						</div>
 					</a>
 				</div>
 				<!-- <img src="https://sleepercdn.com/images/landing/fantasylcs/logo-footer.png" alt="Sleeper" class="nav-logo"/> -->
@@ -744,12 +784,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer">
+			<div class="footer mobile-only">
 				<div class="container">
 					<div class="row footer-secondary">
-						<div class="mobile-only"><img src="https://sleepercdn.com/images/landing/fantasylcs/logo-footer.png" alt="Sleeper Logo"/></div>
-						<div>© 2020, Blitz Studios, Inc.</div>
-						<div class="back"><a href="#top"><img src="https://sleepercdn.com/images/landing/fantasylcs/back-top.png" alt="Back to top"/><div>Back to top</div></a></div>
+						<div class="socials">
+							<a href="https://www.reddit.com/r/SleeperApp/" target="_blank" rel="noreferrer">
+								<img src="https://sleepercdn.com/images/landing/fantasylcs/reddit-footer.png" alt="Reddit"/>
+							</a>
+							<a href="https://twitter.com/SleeperHQ" target="_blank" rel="noreferrer">
+								<img src="https://sleepercdn.com/images/landing/fantasylcs/twitter-footer.png" alt="Twitter"/>
+							</a>
+							<a href="https://www.facebook.com/sleeperhq" target="_blank" rel="noreferrer">
+								<img src="https://sleepercdn.com/images/landing/fantasylcs/facebook-footer.png" alt="Facebook"/>
+							</a>
+						</div>
+						<div class="mini-nav">
+							<p><a href="https://support.sleeper.app/en/" target="_blank">Support</a> • <a href="https://docs.sleeper.app/" target="_blank">API</a> • <a href="/privacy">Privacy & Terms</a> • <a href="https://merch.sleeper.app/" target="_blank">Merch</a> • <a href="https://angel.co/company/sleeperhq/jobs" target="_blank">Jobs</a></p>
+						</div>
 					</div>
 				</div>
 			</div>
