@@ -5,6 +5,7 @@ var viewport;
 var vidWidth = 700;
 var vidHeight = 400;
 var canvas = document.getElementById('exampleCanvas');
+var ctx = canvas.getContext('2d');
 
 $(document).ready(function(){
 	$('video').each(function(){
@@ -240,8 +241,6 @@ function initHermes(){
 	// console.log(video);
 	var bg = $('.hermes');
 	setVideoBgColor(video, bg);
-	var canvas = document.getElementById('exampleCanvas');
-	var ctx = canvas.getContext('2d');
 	canvas.width = 700;
 	canvas.height = 400;
 	canvas.style.width = "700px";
