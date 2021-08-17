@@ -4,6 +4,7 @@ var lcs_vid = 'https://www.youtube.com/embed/xu_iQr3dhTk';
 var viewport;
 var vidWidth = 700;
 var vidHeight = 400;
+var video = document.getElementById('NFL-video');
 var canvas = document.getElementById('exampleCanvas');
 var ctx = canvas.getContext('2d');
 
@@ -237,7 +238,6 @@ function initPoseidon(){
 
 function initHermes(){
 	setInterval(cycleSlides, 6000);
-	var video = document.getElementById('NFL-video');
 	// console.log(video);
 	var bg = $('.hermes');
 	setVideoBgColor(video, bg);
