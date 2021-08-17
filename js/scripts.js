@@ -7,6 +7,7 @@ var vidHeight = 400;
 var video = document.getElementById('NFL-video');
 var canvas = document.getElementById('exampleCanvas');
 var ctx = canvas.getContext('2d');
+var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
 
 $(document).ready(function(){
 	$('video').each(function(){
@@ -128,7 +129,7 @@ function initSlides(){
 
 function sizeSlides(){
 	viewport = parseInt($('.slideshow').css('width'),10);
-	console.log(viewport);
+	// console.log(viewport);
 	// if (viewport === 0){
 	// 	setTimeout(function(){
 	// 		viewport = parseInt($('.slideshow').css('width'),10);
@@ -240,14 +241,14 @@ function initHermes(){
 	setInterval(cycleSlides, 6000);
 	// console.log(video);
 	var bg = $('.hermes');
-	setVideoBgColor(video, bg);
-	canvas.width = 700;
-	canvas.height = 400;
-	canvas.style.width = "700px";
-	canvas.style.height = "400px";
-	ctx.drawImage(video, 0, 0, 700, 400, 0, 0, 700, 400);
+	if (!isMac) setVideoBgColor(video, bg);
+	// canvas.width = 700;
+	// canvas.height = 400;
+	// canvas.style.width = "700px";
+	// canvas.style.height = "400px";
+	// ctx.drawImage(video, 0, 0, 700, 400, 0, 0, 700, 400);
 
-	drawingLoop();
+	// drawingLoop();
 }
 
 function initApollo(){
