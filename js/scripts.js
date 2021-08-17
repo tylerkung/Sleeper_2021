@@ -237,6 +237,13 @@ function initHermes(){
 	// console.log(video);
 	var bg = $('.hermes');
 	setVideoBgColor(video, bg);
+	var exCanvas = document.getElementById('exampleCanvas');
+	var ctx = exCanvas.getContest('2d');
+	exCanvas.width = 100;
+	exCanvas.height = 100;
+	exCanvas.style.width = "100px";
+	exCanvas.style.height = "100px";
+	ctx.drawImage(video, 0, 0, 100, 100, 0, 0, 100, 100);
 }
 
 function initApollo(){
