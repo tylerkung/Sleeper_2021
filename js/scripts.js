@@ -239,11 +239,11 @@ function initHermes(){
 	setVideoBgColor(video, bg);
 	var exCanvas = document.getElementById('exampleCanvas');
 	var ctx = exCanvas.getContext('2d');
-	exCanvas.width = 100;
-	exCanvas.height = 100;
-	exCanvas.style.width = "100px";
-	exCanvas.style.height = "100px";
-	ctx.drawImage(video, 0, 0, 100, 100, 0, 0, 100, 100);
+	exCanvas.width = 700;
+	exCanvas.height = 400;
+	exCanvas.style.width = "700px";
+	exCanvas.style.height = "400px";
+	ctx.drawImage(video, 0, 0, 700, 400, 0, 0, 700, 400);
 }
 
 function initApollo(){
