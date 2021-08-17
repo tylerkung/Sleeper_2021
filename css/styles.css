@@ -3095,6 +3095,17 @@ table.comparison-chart tr.feature td:first-child {
 .side-nav .nav-item:hover .nav-title {
   color: #fff;
 }
+.side-nav .nav-item:hover svg > path,
+.side-nav .nav-item:hover svg > rect {
+  fill: #fff;
+}
+.side-nav .nav-item:hover svg.about > path {
+  fill: none;
+  stroke: #fff;
+}
+.side-nav .nav-item:hover svg.about > rect {
+  stroke: #fff;
+}
 .side-nav .nav-item .nav-title {
   color: #7988A1;
 }
