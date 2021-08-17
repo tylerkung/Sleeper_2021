@@ -58,7 +58,7 @@
     padding: 0 16px 16px;
   }
   .fluid-container .row:hover {
-    overflow-x: scroll;
+    overflow-x: overlay;
   }
   .fluid-container .col-4 {
     min-width: 453px !important;
@@ -85,7 +85,7 @@
   padding: 0 16px 16px;
 }
 .fluid-container.nowrap-always .row:hover {
-  overflow-x: scroll;
+  overflow-x: overlay;
 }
 .fluid-container.nowrap-always .col-3 {
   min-width: 324px !important;
@@ -470,7 +470,7 @@ section.pos-4:before {
   overflow: hidden;
 }
 .page-header .header-anchors .container:hover {
-  overflow-x: scroll;
+  overflow-x: overlay;
 }
 .page-header .header-anchors a {
   color: #7988A1;
@@ -719,7 +719,7 @@ body.lock-scroll {
     padding-top: 56px;
   }
 }
-.main.sticky-nav .page-header-wrapper + * {
+.main.sticky-nav .first-container {
   padding-top: 213px;
 }
 img {
