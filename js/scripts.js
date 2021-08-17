@@ -234,8 +234,9 @@ function initPoseidon(){
 function initHermes(){
 	setInterval(cycleSlides, 6000);
 	var video = document.getElementById('NFL-video');
-	console.log(video);
-	setVideoBgColor(video, $('.hermes'));
+	// console.log(video);
+	var bg = $('.hermes');
+	setVideoBgColor(video, bg);
 }
 
 function initApollo(){
