@@ -312,6 +312,7 @@ function setVideoBgColor(vid, backgroundElement) {
     ctx.drawImage(vid, 0, 0, 8, 8);
 
     var p = ctx.getImageData(0, 0, 8, 8).data;
+		console.log(p);
     //dont take the first but fourth pixel [r g b a]
     backgroundElement.css('backgroundColor', "rgb(" + p[60] + "," + p[61] + "," + p[62] + ")");
 }
