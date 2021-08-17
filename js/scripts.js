@@ -308,7 +308,7 @@ $('.fluid-container .prev').click(function(){
 
 function drawingLoop() {
     requestId = window.requestAnimationFrame(drawingLoop)
-    ctx.drawImage(vid, 0, 0, vidWidth, vidHeight, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(video, 0, 0, vidWidth, vidHeight, 0, 0, canvas.width, canvas.height);
 }
 
 function setVideoBgColor(vid, backgroundElement) {
