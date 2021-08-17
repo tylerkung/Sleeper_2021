@@ -233,6 +233,9 @@ function initPoseidon(){
 
 function initHermes(){
 	setInterval(cycleSlides, 6000);
+	var video = document.getElementById('NFL-video');
+	console.log(video);
+	setVideoBgColor(video, $('.hermes'));
 }
 
 function initApollo(){
@@ -290,3 +293,24 @@ $('.fluid-container .prev').click(function(){
 	TweenMax.to(container, 0.4, {scrollTo: {x: curPos - $(window).width() / 3}});
 	// controller.scrollFluid(container);
 })
+
+function drawingLoop() {
+    requestId = window.requestAnimationFrame(drawingLoop)
+    ctx.drawImage(vid, 0, 0, vidWidth, vidHeight, 0, 0, canvas.width, canvas.height);
+}
+
+function setVideoBgColor(vid, backgroundElement) {
+    // draw first four pixel of video to a canvas
+    // then get pixel color from that canvas
+    var canvas = document.createElement("canvas");
+		console.log(vid);
+    canvas.width = 8;
+    canvas.height = 8;
+
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(vid, 0, 0, 8, 8);
+
+    var p = ctx.getImageData(0, 0, 8, 8).data;
+    //dont take the first but fourth pixel [r g b a]
+    backgroundElement.style.backgroundColor = "rgb(" + p[60] + "," + p[61] + "," + p[62] + ")";
+}
