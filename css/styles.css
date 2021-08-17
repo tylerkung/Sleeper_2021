@@ -2696,12 +2696,9 @@ table.comparison-chart tr.feature td:first-child {
   margin: 4px 0 8px;
   font-weight: 700;
 }
-.league-preview .preview-ct .tag-ct {
-  display: flex;
-}
 .league-preview .preview-ct .league-tag {
   background-color: #1A2439;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   height: 24px;
   border-radius: 12px;
@@ -2709,6 +2706,7 @@ table.comparison-chart tr.feature td:first-child {
   font-weight: 600;
   padding: 0 12px;
   border: 1px solid rgba(96, 111, 140, 0.1);
+  margin: 4px 2px;
 }
 .league-preview .preview-ct .league-tag.tag-live {
   color: #FF2B6D;
@@ -2717,9 +2715,6 @@ table.comparison-chart tr.feature td:first-child {
 .league-preview .preview-ct .league-tag img {
   max-height: 16px;
   margin-right: 4px;
-}
-.league-preview .preview-ct .league-tag + .league-tag {
-  margin-left: 8px;
 }
 .league-preview .preview-secondary {
   background-color: #1A2439;
@@ -2855,14 +2850,17 @@ table.comparison-chart tr.feature td:first-child {
   background-image: linear-gradient(290deg, transparent 60%, rgba(130, 0, 255, 0.3));
 }
 .nav {
+  overflow-y: auto;
   padding-top: 20px;
   width: auto;
   height: 100%;
   min-height: 100vh;
-  display: block;
+  display: flex;
   flex-grow: 10;
   background-color: rgba(24, 28, 40, 0.4);
   position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
   transition: opacity 0.2s ease;
   border-right: 1px solid rgba(240, 240, 243, 0.2);
 }
@@ -2911,7 +2909,7 @@ table.comparison-chart tr.feature td:first-child {
   max-width: 100%;
 }
 .nav .nav-item {
-  padding: 16px 24px;
+  padding: 12px 16px;
   display: block;
   text-decoration: none;
   color: #B9C4D4;
@@ -2960,7 +2958,6 @@ table.comparison-chart tr.feature td:first-child {
 }
 .main-nav {
   display: block;
-  height: 100%;
 }
 .main-nav .primary-nav {
   display: block;
@@ -3068,10 +3065,9 @@ table.comparison-chart tr.feature td:first-child {
   }
 }
 .side-nav {
-  position: absolute;
-  bottom: 48px;
   width: 100%;
   left: 0;
+  padding-bottom: 48px;
 }
 .side-nav .nav-item {
   text-transform: none;
@@ -3082,6 +3078,7 @@ table.comparison-chart tr.feature td:first-child {
   align-items: center;
   text-decoration: none;
   border-radius: 8px;
+  margin: 0 16px;
 }
 @media (max-width: 1479px) {
   .side-nav .nav-item {
