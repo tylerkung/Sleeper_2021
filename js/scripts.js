@@ -2,6 +2,9 @@ var football_vid = 'https://www.youtube.com/embed/vcpV7IwNp_8';
 var basketball_vid = 'https://www.youtube.com/embed/e5vFZCGBXUY';
 var lcs_vid = 'https://www.youtube.com/embed/xu_iQr3dhTk';
 var viewport;
+var vidWidth = 700;
+var vidHeight = 400;
+var canvas = document.getElementById('exampleCanvas');
 
 $(document).ready(function(){
 	$('video').each(function(){
@@ -237,13 +240,15 @@ function initHermes(){
 	// console.log(video);
 	var bg = $('.hermes');
 	setVideoBgColor(video, bg);
-	var exCanvas = document.getElementById('exampleCanvas');
-	var ctx = exCanvas.getContext('2d');
-	exCanvas.width = 700;
-	exCanvas.height = 400;
-	exCanvas.style.width = "700px";
-	exCanvas.style.height = "400px";
+	var canvas = document.getElementById('exampleCanvas');
+	var ctx = canvas.getContext('2d');
+	canvas.width = 700;
+	canvas.height = 400;
+	canvas.style.width = "700px";
+	canvas.style.height = "400px";
 	ctx.drawImage(video, 0, 0, 700, 400, 0, 0, 700, 400);
+
+	drawingLoop();
 }
 
 function initApollo(){
@@ -310,12 +315,12 @@ function drawingLoop() {
 function setVideoBgColor(vid, backgroundElement) {
     // draw first four pixel of video to a canvas
     // then get pixel color from that canvas
-    var canvas = document.createElement("canvas");
+    var newCanvas = document.createElement("canvas");
 		console.log(vid);
-    canvas.width = 8;
-    canvas.height = 8;
+    newCanvas.width = 8;
+    newCanvas.height = 8;
 
-    var ctx = canvas.getContext("2d");
+    var ctx = newCanvas.getContext("2d");
     ctx.drawImage(vid, 0, 0, 8, 8);
 
     var p = ctx.getImageData(0, 0, 8, 8).data;
