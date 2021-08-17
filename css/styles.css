@@ -3213,7 +3213,7 @@ table.comparison-chart tr.feature td:first-child {
 }
 .top-nav .account-btns > * {
   margin: 0 16px;
-  display: block;
+  display: flex;
 }
 @media (max-width: 767px) {
   .top-nav .account-btns > * {

@@ -72,6 +72,7 @@ $('a.anchor').each(function(){
 			$('.header-anchors a.active').removeClass('active');
 			$('.header-anchors a[href="#' + thisId + '"]').addClass('active');
 		})
+		// .addIndicators()
 		.addTo(controller);
 });
 
