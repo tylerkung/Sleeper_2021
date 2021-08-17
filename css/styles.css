@@ -2158,7 +2158,7 @@ table.comparison-chart tr.feature td:first-child {
   left: 0;
   position: absolute;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   transform: translateX(0px);
 }
 .slideshow .slideshow-content:not(.no-anim) {
