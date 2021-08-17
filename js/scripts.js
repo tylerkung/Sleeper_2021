@@ -5,8 +5,8 @@ var viewport;
 var vidWidth = 700;
 var vidHeight = 400;
 var video = document.getElementById('NFL-video');
-var canvas = document.getElementById('exampleCanvas');
-var ctx = canvas.getContext('2d');
+// var canvas = document.getElementById('exampleCanvas');
+// var ctx = canvas.getContext('2d');
 var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
 
 $(document).ready(function(){
