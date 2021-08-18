@@ -415,6 +415,10 @@ img{
 	color: @btn-primary-txt;
 	background-image: linear-gradient(135deg, #4CE2B8, #07C5FF);
 }
+.btn-warning{
+	color: @btn-primary-txt;
+	background-image: linear-gradient(135deg, #FFAE58, #FF6F42);
+}
 .btn-round{
 	display: inline-flex;
 	height: 32px;
@@ -453,12 +457,21 @@ img{
 		background-repeat: no-repeat;
 		// background-size: 100%;
 	}
-	&.feature-football-ads:before{background-position:0px 0px}
-	&.feature-football-scoring:before{background-position:-80px 0px}
-	&.feature-football-research:before{background-position:-160px 0px}
-	&.feature-football-commish:before{background-position:0px -80px}
-	&.feature-football-team:before{background-position:-80px -80px}
-	&.feature-football-timer:before{background-position:-160px -80px}
+	&.feature-football:before{
+		background-image: url('/assets/old/icon/football_sprites.png');
+	}
+	&.feature-basketball:before{
+		background-image: url('/assets/img/bball/basketball_sprites.png');
+	}
+	&.feature-bracketmania:before{
+		background-image: url('/assets/img/bm/bracketmania_sprites.png');
+	}
+	&.feature-ads:before{background-position:0px 0px}
+	&.feature-scoring:before{background-position:-80px 0px}
+	&.feature-research:before{background-position:-160px 0px}
+	&.feature-commish:before{background-position:0px -80px}
+	&.feature-team:before{background-position:-80px -80px}
+	&.feature-timer:before{background-position:-160px -80px}
 	@media (max-width: 767px){
 		padding-left: 88px;
 		&:before{
@@ -466,12 +479,12 @@ img{
 			width: 64px;
 			background-size: 192px;
 		}
-		&.feature-football-ads:before{background-position:0px 0px}
-		&.feature-football-scoring:before{background-position:-64px 0px}
-		&.feature-football-research:before{background-position:-128px 0px}
-		&.feature-football-commish:before{background-position:0px -64px}
-		&.feature-football-team:before{background-position:-64px -64px}
-		&.feature-football-timer:before{background-position:-128px -64px}
+		&.feature-ads:before{background-position:0px 0px}
+		&.feature-scoring:before{background-position:-64px 0px}
+		&.feature-research:before{background-position:-128px 0px}
+		&.feature-commish:before{background-position:0px -64px}
+		&.feature-team:before{background-position:-64px -64px}
+		&.feature-timer:before{background-position:-128px -64px}
 	}
 }
 .badges-container{

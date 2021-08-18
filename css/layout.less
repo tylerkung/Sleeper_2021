@@ -367,6 +367,18 @@ section{
 		}
 	}
 }
+
+.football-layout{
+
+}
+
+.basketball-layout{
+	@media (min-width: 768px) and (max-width: 1479px){
+		.main-nav .sub-nav .sub-nav-item:after {
+    background-color: @yellow;
+		}
+	}
+}
 .page-header-wrapper{
 	min-height: 1px;
 	@media (max-width: 767px){
@@ -399,6 +411,22 @@ section{
 		.header-anchors a{
 			&.active, &:hover{
 				color: @mint;
+			}
+		}
+	}
+	&.header-basketball{
+		background-image: url('/assets/background/bg_bball.png');
+		.header-anchors a{
+			&.active, &:hover{
+				color: @yellow;
+			}
+		}
+	}
+	&.header-bracketmania{
+		background-image: url('/assets/background/bg_bball.png');
+		.header-anchors a{
+			&.active, &:hover{
+				color: @orange;
 			}
 		}
 	}
@@ -459,6 +487,11 @@ section{
 
 			}
 		}
+		@media (max-width: 767px){
+			> .container{
+				padding: 0 32px;
+			}
+		}
 	}
 	.header-anchors{
 		border-top: 1px solid rgba(240, 240, 243, 0.2);
@@ -489,6 +522,11 @@ section{
 			font-size: 0.875em;
 			display: inline-block;
 			white-space: nowrap;
+			@media (max-width: 767px){
+				&:first-of-type{
+					margin-left: 16px;
+				}
+			}
 			&.active{
 				color: @mint;
 			}
