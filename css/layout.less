@@ -430,6 +430,14 @@ section{
 			}
 		}
 	}
+	&.header-lcs{
+		background-image: url('/assets/background/bg_lcs.png');
+		.header-anchors a{
+			&.active, &:hover{
+				color: @aqua;
+			}
+		}
+	}
 	.badge{
 		position: absolute;
 		right: 32px;
@@ -437,6 +445,7 @@ section{
 		transform: translateY(-50%);
 		margin: 0;
 		z-index: 1;
+		max-width: 180px;
 		@media (max-width: 767px){
 			right: 16px;
 			img{
