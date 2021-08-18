@@ -10,13 +10,27 @@
 	<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 	<link rel="stylesheet/less" type="text/css" href="/css/styles.less" />
 	<title>Sleeper Fantasy Basketball</title>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5FKBWR7172"></script>
+	<!-- Global site tag (gtag.js) - Google Ads: 975847822 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-975847822"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
-	  gtag('config', 'G-5FKBWR7172');
+
+	  gtag('config', 'AW-975847822');
+
+	function gtag_report_conversion(url) {
+	  var callback = function () {
+	    if (typeof(url) != 'undefined') {
+	      window.location = url;
+	    }
+	  };
+	  gtag('event', 'conversion', {
+	      'send_to': 'AW-975847822/jCLnCKTIw-kCEI6DqdED',
+	      'event_callback': callback
+	  });
+	  return false;
+	}
 	</script>
 </head>
 <body class="">
@@ -55,7 +69,7 @@
 				<div class="site-logo web-only">
 					<a href="/">
 						<div class="logo-lg">
-							<img src="/assets/old/img/sleeper-logo-w.png" alt="Sleeper" />
+							<img src="/assets/img/sleeper-logo-w.png" alt="Sleeper" />
 						</div>
 						<div class="logo-sm">
 							<img src="/assets/img/logo-mobile.png" alt="Sleeper" />
@@ -226,7 +240,7 @@
 						</div>
 						<div class="site-logo mobile-only">
 							<a href="/">
-								<img src="/assets/old/img/Sleeper-app-logo.png" alt="Sleeper" />
+								<img src="/assets/img/Sleeper-app-logo.png" alt="Sleeper" />
 							</a>
 						</div>
 						<div class="account-btns">
@@ -590,21 +604,21 @@
 					<div class="row flex-stretch">
 						<div class="testimonial col">
 							<div class="testimonial-image">
-								<img src="/assets/old/img/Avatar.png" alt="avatar"/>
+								<img src="/assets/img/Avatar.png" alt="avatar"/>
 							</div>
 							<div class="testimonial-quote">“Honestly making the move and bringing my league to be on the sleeper app has to be the best decision I have made fantasy football wise!” <span class="testimonial-user">- AustintheMaleNurse</span>
 							</div>
 						</div>
 						<div class="testimonial col">
 							<div class="testimonial-image">
-								<img src="/assets/old/img/Avatar-1.png" alt="avatar"/>
+								<img src="/assets/img/Avatar-1.png" alt="avatar"/>
 							</div>
 							<div class="testimonial-quote">“Sleeper had everything we had been saying a fantasy app should have and more. Genuinely was blown away by how smooth it runs” <span class="testimonial-user">- Asleeper7</span>
 							</div>
 						</div>
 						<div class="testimonial col">
 							<div class="testimonial-image">
-								<img src="/assets/old/img/Avatar-2.png" alt="avatar"/>
+								<img src="/assets/img/Avatar-2.png" alt="avatar"/>
 							</div>
 							<div class="testimonial-quote">“From trading rookie draft picks to multi team trades to its interactive and helpful customer service, our league has never regretted switching.” <span class="testimonial-user">- ChemistryWiz17</span>
 							</div>
@@ -626,7 +640,7 @@
 									<th><img src="/assets/img/sleeper-logo-text.png" alt="Sleeper App" />
 									</th>
 									<th>
-										<img src="/assets/old/img/other-apps.png" alt="Sleeper App" />
+										<img src="/assets/img/other-apps.png" alt="Sleeper App" />
 										<div>Other Apps</div>
 									</th>
 								</tr>
@@ -708,22 +722,22 @@
 								<tr class="feature">
 									<td class="title">Player Transaction History</td>
 									<td><img src="/assets/img/checkmark_yellow.png" alt="check"/></td>
-									<td><img src="/assets/old/icon/checkmark-gray.png" alt="check"/></td>
+									<td><img src="/assets/img/checkmark-gray.png" alt="check"/></td>
 								</tr>
 								<tr class="feature">
 									<td class="title">Scoring Bonuses</td>
 									<td><img src="/assets/img/checkmark_yellow.png" alt="check"/></td>
-									<td><img src="/assets/old/icon/checkmark-gray.png" alt="check"/></td>
+									<td><img src="/assets/img/checkmark-gray.png" alt="check"/></td>
 								</tr>
 								<tr class="feature">
 									<td class="title">FAAB / WAB</td>
 									<td><img src="/assets/img/checkmark_yellow.png" alt="check"/></td>
-									<td><img src="/assets/old/icon/checkmark-gray.png" alt="check"/></td>
+									<td><img src="/assets/img/checkmark-gray.png" alt="check"/></td>
 								</tr>
 								<tr class="feature">
 									<td class="title">Live Drafts</td>
 									<td><img src="/assets/img/checkmark_yellow.png" alt="check"/></td>
-									<td><img src="/assets/old/icon/checkmark-gray.png" alt="check"/></td>
+									<td><img src="/assets/img/checkmark-gray.png" alt="check"/></td>
 								</tr>
 								<tr class="feature">
 									<td class="title">Draft Types</td>

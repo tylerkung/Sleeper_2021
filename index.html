@@ -11,13 +11,27 @@
 	<link rel="stylesheet" type="text/css" href="/css/styles.css" />
 	<!-- <link rel="stylesheet/less" type="text/less" href="/css/styles.less" /> -->
 	<title>Sleeper</title>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5FKBWR7172"></script>
+	<!-- Global site tag (gtag.js) - Google Ads: 975847822 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-975847822"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
-	  gtag('config', 'G-5FKBWR7172');
+
+	  gtag('config', 'AW-975847822');
+
+	function gtag_report_conversion(url) {
+	  var callback = function () {
+	    if (typeof(url) != 'undefined') {
+	      window.location = url;
+	    }
+	  };
+	  gtag('event', 'conversion', {
+	      'send_to': 'AW-975847822/jCLnCKTIw-kCEI6DqdED',
+	      'event_callback': callback
+	  });
+	  return false;
+	}
 	</script>
 </head>
 
@@ -57,7 +71,7 @@
 				<div class="site-logo web-only">
 					<a href="/">
 						<div class="logo-lg">
-							<img src="/assets/old/img/sleeper-logo-w.png" alt="Sleeper" />
+							<img src="/assets/img/sleeper-logo-w.png" alt="Sleeper" />
 						</div>
 						<div class="logo-sm">
 							<img src="/assets/img/logo-mobile.png" alt="Sleeper" />
@@ -228,7 +242,7 @@
 						</div>
 						<div class="site-logo mobile-only">
 							<a href="/">
-								<img src="/assets/old/img/Sleeper-app-logo.png" alt="Sleeper" />
+								<img src="/assets/img/Sleeper-app-logo.png" alt="Sleeper" />
 							</a>
 						</div>
 						<div class="account-btns">
@@ -273,7 +287,7 @@
 							<img src="/assets/background/NFL_mobile.jpg" alt="Fantasy Football" class="mobile-bg"/>
 							<div class="content">
 								<div class="game-badge">
-									<img src="/assets/old/img/game-football.jpg" alt="Fantasy Football" />
+									<img src="/assets/img/game-football.jpg" alt="Fantasy Football" />
 								</div>
 								<div class="subtitle txt-mint">
 									Draft Open • Season Starts 9/9
