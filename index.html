@@ -33,6 +33,30 @@
 	  return false;
 	}
 	</script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBAMqDQiHzjsX9L77H8k0OASAZnJRb5Yk8",
+      authDomain: "blitzstudios-sleeperbot.firebaseapp.com",
+      databaseURL: "https://blitzstudios-sleeperbot.firebaseio.com",
+      projectId: "blitzstudios-sleeperbot",
+      storageBucket: "blitzstudios-sleeperbot.appspot.com",
+      messagingSenderId: "217769016823",
+      appId: "1:217769016823:web:afc2cc73994dc2e3c9c2f2",
+      measurementId: "G-1LF1E2KJ1W"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 </head>
 
 <body class="home-layout">
@@ -284,7 +308,7 @@
 					<div class="slideshow-content no-anim">
 						<a href="/fantasy-football" class="slide slide-1 first">
 							<img src="/assets/img/banner_football.png" alt="Fantasy Football" class="web-bg"/>
-							<img src="/assets/background/NFL_mobile.jpg" alt="Fantasy Football" class="mobile-bg"/>
+							<img src="/assets/background/nfl_mobile.jpg" alt="Fantasy Football" class="mobile-bg"/>
 							<div class="content">
 								<div class="game-badge">
 									<img src="/assets/img/game-football.jpg" alt="Fantasy Football" />
@@ -307,7 +331,7 @@
 						</a>
 						<a href="/fantasy-basketball" class="slide slide-2">
 							<img src="/assets/img/banner_bball.png" alt="Fantasy Basketball" class="web-bg"/>
-							<img src="/assets/background/NBA_mobile.jpg" alt="Fantasy Basketball" class="mobile-bg"/>
+							<img src="/assets/background/nba_mobile.jpg" alt="Fantasy Basketball" class="mobile-bg"/>
 							<div class="content">
 								<div class="subtitle txt-yellow">
 									OPEN AUG 12th
@@ -327,10 +351,10 @@
 						</a>
 						<a href="/fantasy-lcs" class="slide slide-3">
 							<img src="/assets/img/banner_lcs.png" alt="Fantasy LCS" class="web-bg"/>
-							<img src="/assets/background/LCS_mobile.jpg" alt="Fantasy LCS" class="mobile-bg"/>
+							<img src="/assets/background/lcs_mobile.jpg" alt="Fantasy LCS" class="mobile-bg"/>
 							<div class="content">
 								<div class="game-badge">
-									<img src="/assets/img/LCS.png" alt="Fantasy LCS" />
+									<img src="/assets/img/lcs.png" alt="Fantasy LCS" />
 								</div>
 								<div class="subtitle" style="color: #A3BBD3;">
 									OPEN AUG 12th
@@ -350,7 +374,7 @@
 						</a>
 						<a href="/bracket-mania" class="slide slide-4 last">
 							<img src="/assets/img/banner_bracketmania.png" alt="Bracket Mania" class="web-bg"/>
-							<img src="/assets/background/BM_mobile.jpg" alt="Bracket Mania" class="mobile-bg"/>
+							<img src="/assets/background/bm_mobile.jpg" alt="Bracket Mania" class="mobile-bg"/>
 							<div class="content">
 								<div class="subtitle txt-red">
 									Season Starts March 2022
