@@ -32,6 +32,30 @@
 	  return false;
 	}
 	</script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBAMqDQiHzjsX9L77H8k0OASAZnJRb5Yk8",
+      authDomain: "blitzstudios-sleeperbot.firebaseapp.com",
+      databaseURL: "https://blitzstudios-sleeperbot.firebaseio.com",
+      projectId: "blitzstudios-sleeperbot",
+      storageBucket: "blitzstudios-sleeperbot.appspot.com",
+      messagingSenderId: "217769016823",
+      appId: "1:217769016823:web:afc2cc73994dc2e3c9c2f2",
+      measurementId: "G-1LF1E2KJ1W"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 </head>
 <body class="">
 	<noscript>You need to enable JavaScript to run this app.</noscript>
@@ -676,7 +700,7 @@
 					<div class="row">
 						<div class="col col-12">
 							<div class="card-promo">
-								<img src="/assets/img/lcs/Category-Card.jpg" class="card-bg" />
+								<img src="/assets/img/lcs/category-card.jpg" class="card-bg" />
 								<div class="card-content">
 									<h6 class="txt-light">Get The App</h6>
 									<h3 class="card-title">Play on web, iPad & mobile app</h3>
