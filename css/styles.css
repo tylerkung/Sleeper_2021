@@ -122,7 +122,7 @@
   display: block;
   z-index: 9;
   cursor: pointer;
-  background-image: url('/assets/icon/carat_left.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/carat_left.png');
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: center;
@@ -135,7 +135,7 @@
   background-color: #475463;
 }
 .fluid-container .controls .next {
-  background-image: url('/assets/icon/carat_right.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/carat_right.png');
   left: auto;
   right: 32px;
 }
@@ -389,28 +389,28 @@ section.pos-4:before {
   }
 }
 .page-header.header-football {
-  background-image: url('/assets/background/bg_head.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/background/bg_head.png');
 }
 .page-header.header-football .header-anchors a.active,
 .page-header.header-football .header-anchors a:hover {
   color: #00CEB8;
 }
 .page-header.header-basketball {
-  background-image: url('/assets/background/bg_bball.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/background/bg_bball.png');
 }
 .page-header.header-basketball .header-anchors a.active,
 .page-header.header-basketball .header-anchors a:hover {
   color: #FFAE58;
 }
 .page-header.header-bracketmania {
-  background-image: url('/assets/background/bg_bball.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/background/bg_bball.png');
 }
 .page-header.header-bracketmania .header-anchors a.active,
 .page-header.header-bracketmania .header-anchors a:hover {
   color: #FF5C00;
 }
 .page-header.header-lcs {
-  background-image: url('/assets/background/bg_lcs.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/background/bg_lcs.png');
 }
 .page-header.header-lcs .header-anchors a.active,
 .page-header.header-lcs .header-anchors a:hover {
@@ -461,7 +461,7 @@ section.pos-4:before {
   content: '';
   height: 12px;
   width: 12px;
-  background-image: url('/assets/icon/carat_right_sm.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/carat_right_sm.png');
   background-size: contain;
   display: block;
   position: absolute;
@@ -965,20 +965,20 @@ img {
   left: 0;
   background-color: rgba(50, 70, 91, 0.5);
   border-radius: 50%;
-  background-image: url('/assets/img/football_sprites.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/img/football_sprites.png');
   background-repeat: no-repeat;
 }
 .feature-title.feature-football:before {
-  background-image: url('/assets/img/football_sprites.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/img/football_sprites.png');
 }
 .feature-title.feature-basketball:before {
-  background-image: url('/assets/img/bball/basketball_sprites.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/img/bball/basketball_sprites.png');
 }
 .feature-title.feature-bracketmania:before {
-  background-image: url('/assets/img/bm/bracketmania_sprites.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/img/bm/bracketmania_sprites.png');
 }
 .feature-title.feature-lcs:before {
-  background-image: url('/assets/img/lcs/lcs_sprites.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/img/lcs/lcs_sprites.png');
 }
 .feature-title.feature-ads:before {
   background-position: 0px 0px;
@@ -1040,7 +1040,7 @@ img {
   height: 96px;
   width: 96px;
   border-radius: 50%;
-  background-image: url('/assets/icon/Sprites96x96.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/Sprites96x96.png');
   background-repeat: no-repeat;
 }
 .badge .badge-img.badge-ff-chat {
@@ -1697,7 +1697,7 @@ table.comparison-chart tr.feature td:first-child {
   display: block;
   top: 0;
   left: 0;
-  background-image: url('/assets/icon/play-icon.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/play-icon.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30%;
@@ -1736,7 +1736,7 @@ table.comparison-chart tr.feature td:first-child {
   display: block;
   top: 0;
   left: 0;
-  background-image: url('/assets/icon/play-icon.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/play-icon.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30%;
@@ -1868,7 +1868,7 @@ table.comparison-chart tr.feature td:first-child {
   background-color: #fff;
 }
 .banner.lcs-banner:before {
-  background-image: url('/assets/background/fantasy-lcs-banner.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/background/fantasy-lcs-banner.png');
 }
 .banner .banner-content h3 {
   color: #022047;
@@ -1965,7 +1965,7 @@ table.comparison-chart tr.feature td:first-child {
   display: block;
   z-index: 9;
   cursor: pointer;
-  background-image: url('/assets/icon/carat_left.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/carat_left.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1974,7 +1974,7 @@ table.comparison-chart tr.feature td:first-child {
   opacity: 0.7;
 }
 .slideshow .next {
-  background-image: url('/assets/icon/carat_right.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/carat_right.png');
   left: auto;
   right: 32px;
 }
@@ -2034,7 +2034,8 @@ table.comparison-chart tr.feature td:first-child {
 .slideshow .slideshow-content .slide.slide-3 {
   background-color: #111;
 }
-.slideshow .slideshow-content .slide img {
+.slideshow .slideshow-content .slide img,
+.slideshow .slideshow-content .slide picture {
   object-fit: cover;
   object-position: center center;
   height: 100%;
@@ -2454,13 +2455,13 @@ table.comparison-chart tr.feature td:first-child {
   z-index: 9;
 }
 .tag-fb:before {
-  background-image: url('/assets/icon/tag-fb.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/tag-fb.png');
 }
 .tag-bm:before {
-  background-image: url('/assets/icon/tag-bm.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/tag-bm.png');
 }
 .tag-lcs:before {
-  background-image: url('/assets/icon/tag-lcs.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/tag-lcs.png');
 }
 @media (max-width: 767px) {
   .league-badge {
@@ -2830,7 +2831,7 @@ table.comparison-chart tr.feature td:first-child {
   top: 0;
   right: 0;
   transform: rotate(180deg);
-  background-image: url('/assets/icon/carat_up.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/icon/carat_up.png');
 }
 .main-nav .primary-nav.has-children .nav-item {
   display: inline-block;
