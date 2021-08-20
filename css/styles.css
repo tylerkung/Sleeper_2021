@@ -624,7 +624,7 @@ a {
   text-decoration: none;
   color: #fff;
 }
-a:hover:not(.btn) {
+a:hover:not(.btn):not(.anchor) {
   color: #00CEB8;
 }
 h1 {
