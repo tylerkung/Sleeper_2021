@@ -3156,7 +3156,7 @@ table.comparison-chart tr.feature td:first-child {
   margin-left: 16px;
 }
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
   box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 8px;
 }
 .btn.tag {
