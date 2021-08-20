@@ -622,9 +622,10 @@ p {
 }
 a {
   text-decoration: none;
+  color: #fff;
 }
 a:hover:not(.btn) {
-  color: mint;
+  color: #00CEB8;
 }
 h1 {
   font-family: "Poppins", Helvetica, Arial, sans-serif;
@@ -3218,4 +3219,8 @@ table.comparison-chart tr.feature td:first-child {
 }
 .btn-round:hover {
   border: 3px solid #fff;
+}
+.btn-round:hover svg path {
+  transition: all 0.2s ease;
+  stroke: #fff;
 }
