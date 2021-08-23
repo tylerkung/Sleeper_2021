@@ -582,11 +582,13 @@ table.comparison-chart{
 }
 
 .footer{
-	// border-top: 1px solid #677897;
+	border-top: 1px solid rgba(96,111,140,0.4);
 	padding-top: 16px;
 	.footer-main{
-		border-bottom: 1px solid #677897;
-		padding-bottom: 64px;
+		// border-bottom: 1px solid rgba(96,111,140,0.4);
+		@media (min-width: @width-s){
+			padding-bottom: 40px;
+		}
 	}
 	.footer-secondary{
 		display: flex;
@@ -702,7 +704,7 @@ table.comparison-chart{
 		border-radius: 16px;
 		overflow: hidden;
 		background-color: #152238;
-		border: 1px solid #485770;
+		border: 1px solid rgba(96,111,140,0.4);
 		.header{
 			position: relative;
 			padding-bottom: 60%;
@@ -954,7 +956,7 @@ table.comparison-chart{
 }
 .video-item{
 	border-radius: 16px;
-	border: 1px solid #48566F;
+	border: 1px solid rgba(96,111,140,0.4);
 	overflow: hidden;
 	.thumbnail{
 		height: 0;
@@ -1042,7 +1044,7 @@ table.comparison-chart{
 	border-radius: 16px;
 	overflow: hidden;
 	padding: 40px;
-	border: 1px solid #48566F;
+	border: 1px solid rgba(96,111,140,0.4);
 	@media (min-width: @width-s) and (max-width: 1023px){
 		background-size: cover;
 		background-position: center left;
@@ -1299,6 +1301,7 @@ table.comparison-chart{
 		padding-top: 25%;
 		margin-top: 16px;
 		position: relative;
+		cursor: pointer;
 		.mobile-bg{
 			display:none;
 			object-position: center bottom;
@@ -1372,6 +1375,9 @@ table.comparison-chart{
 				border-radius: 6px;
 				&:not(:first-of-type){
 					margin-left: 8px;
+				}
+				&:hover{
+					background-color: @white;
 				}
 				&.active{
 					background-color: @white;
@@ -1452,7 +1458,7 @@ table.comparison-chart{
 		background-color: #17263e;
 		padding-top: 34.54%;
 		margin-top: 48px;
-		border: 1px solid #495872;
+		border: 1px solid rgba(96,111,140,0.4);
 		.slideshow-content{
 			z-index: 8;
 		}
@@ -1608,7 +1614,7 @@ table.comparison-chart{
 	} //end .hermes
 }
 .preview-slideshow{
-	border: 1px solid rgba(96,111,140,0.7);
+	border: 1px solid rgba(96,111,140,0.4);
 	border-radius: 16px;
 	overflow: hidden;
 	padding: 24px;
@@ -1734,7 +1740,7 @@ table.comparison-chart{
 	position: relative;
 	border-radius: 16px;
 	overflow: hidden;
-	border: 1px solid rgba(96,111,140,0.7);
+	border: 1px solid rgba(96,111,140,0.4);
 	.card-bg{
 		position: absolute;
 		height: 100%;
@@ -1759,7 +1765,7 @@ table.comparison-chart{
 
 .league-preview{
 	// padding: 24px;
-	border: 1px solid rgba(96,111,140,0.7);
+	border: 1px solid rgba(96,111,140,0.4);
 	border-radius: 16px;
 	overflow: hidden;
 	display: flex;

@@ -232,9 +232,39 @@ function selectSlide(){
 
 function initPoseidon(){
 	initSlides();
-	setInterval(function(){
+	var timer = setInterval(function(){
 		slideNext();
 	}, 6000);
+
+	$('.poseidon .pagination .page').click(function(){
+		var selectedPage = $(this).attr('aria-id')
+		console.log(selectedPage);
+		$('.poseidon .pagination .page.active').removeClass('active');
+		$('.poseidon .pagination .page.page-' + selectedPage).addClass('active');
+		clearInterval(timer);
+		timer = setInterval(function(){
+			slideNext();
+		}, 6000);
+
+		var current = parseInt($('.poseidon .slideshow-content').attr('aria-current'), 10);
+		var max = parseInt($('.poseidon .slideshow-content').attr('aria-count'),10);
+		var curTransform;
+		var matrix = $('.poseidon .slideshow-content').css('transform');
+		var values = matrix.split('(')[1].match(/-?[\d\.]+/g);
+		console.log(viewport);
+		curTransform = parseInt(values[4],10);
+		console.log(curTransform);
+
+		$('.poseidon .slideshow-content').removeClass('no-anim');
+		$('.poseidon .slideshow').addClass('lock');
+		$('.poseidon .slideshow-content').css('transform', 'translateX(' + (selectedPage * (-1 * viewport)) + 'px' + ')');
+		$('.slideshow-content').attr('aria-current', selectedPage);
+		// console.log(current++)
+		setTimeout(function(){
+			$('.slideshow-content').addClass('no-anim');
+			$('.slideshow').removeClass('lock');
+		}, 400);
+	});
 }
 
 function initHermes(){

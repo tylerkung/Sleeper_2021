@@ -110,6 +110,15 @@
   width: 128px;
   top: -64px;
   right: 0;
+  display: none;
+}
+@media (max-width: 1479px) {
+  .fluid-container .controls {
+    display: block;
+  }
+}
+.fluid-container .controls.show-always {
+  display: block;
 }
 .fluid-container .controls .prev,
 .fluid-container .controls .next {
@@ -482,8 +491,8 @@ section.pos-4:before {
   }
 }
 .page-header .header-anchors {
-  border-top: 1px solid rgba(240, 240, 243, 0.2);
-  border-bottom: 1px solid rgba(240, 240, 243, 0.2);
+  border-top: 1px solid rgba(96, 111, 140, 0.4);
+  border-bottom: 1px solid rgba(96, 111, 140, 0.4);
   position: relative;
 }
 .page-header .header-anchors:before {
@@ -1338,11 +1347,13 @@ table.comparison-chart tr.feature td:first-child {
   font-size: 0.75em;
 }
 .footer {
+  border-top: 1px solid rgba(96, 111, 140, 0.4);
   padding-top: 16px;
 }
-.footer .footer-main {
-  border-bottom: 1px solid #677897;
-  padding-bottom: 64px;
+@media (min-width: 768px) {
+  .footer .footer-main {
+    padding-bottom: 40px;
+  }
 }
 .footer .footer-secondary {
   display: flex;
@@ -1463,7 +1474,7 @@ table.comparison-chart tr.feature td:first-child {
   border-radius: 16px;
   overflow: hidden;
   background-color: #152238;
-  border: 1px solid #485770;
+  border: 1px solid rgba(96, 111, 140, 0.4);
 }
 .game-grid.featured .header {
   position: relative;
@@ -1706,7 +1717,7 @@ table.comparison-chart tr.feature td:first-child {
 }
 .video-item {
   border-radius: 16px;
-  border: 1px solid #48566F;
+  border: 1px solid rgba(96, 111, 140, 0.4);
   overflow: hidden;
 }
 .video-item .thumbnail {
@@ -1780,7 +1791,7 @@ table.comparison-chart tr.feature td:first-child {
   border-radius: 16px;
   overflow: hidden;
   padding: 40px;
-  border: 1px solid #48566F;
+  border: 1px solid rgba(96, 111, 140, 0.4);
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .banner-tk {
@@ -2047,6 +2058,7 @@ table.comparison-chart tr.feature td:first-child {
   padding-top: 25%;
   margin-top: 16px;
   position: relative;
+  cursor: pointer;
 }
 .slideshow.poseidon .mobile-bg {
   display: none;
@@ -2129,6 +2141,9 @@ table.comparison-chart tr.feature td:first-child {
 }
 .slideshow.poseidon .pagination > div:not(:first-of-type) {
   margin-left: 8px;
+}
+.slideshow.poseidon .pagination > div:hover {
+  background-color: #fff;
 }
 .slideshow.poseidon .pagination > div.active {
   background-color: #fff;
@@ -2216,7 +2231,7 @@ table.comparison-chart tr.feature td:first-child {
   background-color: #17263e;
   padding-top: 34.54%;
   margin-top: 48px;
-  border: 1px solid #495872;
+  border: 1px solid rgba(96, 111, 140, 0.4);
 }
 .slideshow.hermes .slideshow-content {
   z-index: 8;
@@ -2377,7 +2392,7 @@ table.comparison-chart tr.feature td:first-child {
   }
 }
 .preview-slideshow {
-  border: 1px solid rgba(96, 111, 140, 0.7);
+  border: 1px solid rgba(96, 111, 140, 0.4);
   border-radius: 16px;
   overflow: hidden;
   padding: 24px;
@@ -2495,7 +2510,7 @@ table.comparison-chart tr.feature td:first-child {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(96, 111, 140, 0.7);
+  border: 1px solid rgba(96, 111, 140, 0.4);
 }
 .card-promo .card-bg {
   position: absolute;
@@ -2518,7 +2533,7 @@ table.comparison-chart tr.feature td:first-child {
   width: 60%;
 }
 .league-preview {
-  border: 1px solid rgba(96, 111, 140, 0.7);
+  border: 1px solid rgba(96, 111, 140, 0.4);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -2710,7 +2725,7 @@ table.comparison-chart tr.feature td:first-child {
   flex-direction: column;
   justify-content: space-between;
   transition: opacity 0.2s ease;
-  border-right: 1px solid rgba(240, 240, 243, 0.2);
+  border-right: 1px solid rgba(96, 111, 140, 0.4);
 }
 @media (min-width: 768px) {
   .nav {
@@ -3014,7 +3029,7 @@ table.comparison-chart tr.feature td:first-child {
 .top-nav-wrapper {
   position: relative;
   width: 100%;
-  border-bottom: 1px solid rgba(240, 240, 243, 0.2);
+  border-bottom: 1px solid rgba(96, 111, 140, 0.4);
 }
 @media (max-width: 767px) {
   .top-nav-wrapper {

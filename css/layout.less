@@ -128,6 +128,13 @@
 		width: 128px;
 		top: -64px;
 		right: 0;
+		display: none;
+		@media (max-width: 1479px){
+			display: block;
+		}
+		&.show-always{
+			display: block;
+		}
 		.prev, .next{
 			height: 40px;
 			width: 40px;
@@ -503,8 +510,8 @@ section{
 		}
 	}
 	.header-anchors{
-		border-top: 1px solid rgba(240, 240, 243, 0.2);
-		border-bottom: 1px solid rgba(240, 240, 243, 0.2);
+		border-top: 1px solid rgba(96,111,140,0.4);
+		border-bottom: 1px solid rgba(96,111,140,0.4);
 		position: relative;
 		&:before{
 			content: '';
