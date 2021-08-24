@@ -161,11 +161,11 @@
 			left: auto;
 			right: 32px;
 		}
-		// + .row{
-		// 	padding-top: 40px;
-		// }
 		@media (max-width: 767px){
 			display: none;
+			&.show-always{
+				display: none;
+			}
 		}
 	}
 }
@@ -442,6 +442,14 @@ section{
 		.header-anchors a{
 			&.active, &:hover{
 				color: @aqua;
+			}
+		}
+	}
+	&.header-mockdraft{
+		background-image: url('https://sleepercdn.com/landing/web2021/background/bg_head.png');
+		.header-anchors a{
+			&.active, &:hover{
+				color: @lilac;
 			}
 		}
 	}

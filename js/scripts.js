@@ -268,17 +268,19 @@ function initPoseidon(){
 }
 
 function initHermes(){
-	setInterval(cycleSlides, 6000);
-	// console.log(video);
-	var bg = $('.hermes');
-	if (!isMac) setVideoBgColor(video, bg);
-	// canvas.width = 700;
-	// canvas.height = 400;
-	// canvas.style.width = "700px";
-	// canvas.style.height = "400px";
-	// ctx.drawImage(video, 0, 0, 700, 400, 0, 0, 700, 400);
+	if (!$('.hermes:not(.no-anim)').length){
+		setInterval(cycleSlides, 6000);
+		// console.log(video);
+		var bg = $('.hermes');
+		if (!isMac) setVideoBgColor(video, bg);
+		// canvas.width = 700;
+		// canvas.height = 400;
+		// canvas.style.width = "700px";
+		// canvas.style.height = "400px";
+		// ctx.drawImage(video, 0, 0, 700, 400, 0, 0, 700, 400);
 
-	// drawingLoop();
+		// drawingLoop();
+	}
 }
 
 function initApollo(){

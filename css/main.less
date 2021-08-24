@@ -270,6 +270,9 @@ img{
 	&.feature-lcs:before{
 		background-image: url('https://sleepercdn.com/landing/web2021/img/lcs/lcs_sprites.png');
 	}
+	&.feature-mockdraft:before{
+		background-image: url('/assets/img/mockdraft/mockdraft_sprites.png');
+	}
 	&.feature-ads:before{background-position:0px 0px}
 	&.feature-scoring:before{background-position:-80px 0px}
 	&.feature-research:before{background-position:-160px 0px}
@@ -1570,6 +1573,20 @@ table.comparison-chart{
 				float: right;
 			}
 		}
+		.slideshow-bg{
+			position: absolute;
+			z-index: 7;
+			max-width: 40%;
+			bottom: -8px;
+			right: 0;
+			width: 100%;
+			img{
+				object-fit: contain;
+				height: 100%;
+				width: 100%;
+				object-position: bottom right;
+			}
+		}
 		@media (max-width: 964px){
 			padding-top: 60%;
 			.content{
@@ -1595,6 +1612,14 @@ table.comparison-chart{
 			.slideshow-video{
 				max-width: unset;
 				width: 120%;
+				left: 50%;
+				transform: translateX(-50%);
+				right: auto;
+			}
+
+			.slideshow-bg{
+				max-width: unset;
+				width: 100%;
 				left: 50%;
 				transform: translateX(-50%);
 				right: auto;
@@ -1763,6 +1788,35 @@ table.comparison-chart{
 	}
 }
 
+.card{
+	background-color: #142136;
+	display: flex;
+	flex-direction: column;
+	// align-items: center;
+	// justify-content: center;
+	padding: 32px 24px;
+	height: 100%;
+	width: 100%;
+	border-radius: 24px;
+	border: 1px solid rgba(96,111,140,0.4);
+	@media (min-width: @width-s){
+		margin: 0 16px;
+	}
+	img{
+		align-self: center;
+	}
+	h5{
+		margin-bottom: 0;
+	}
+	&.highlight{
+		background-image: linear-gradient(to bottom, #3C4963, #141C30);
+		box-shadow: 0 -4px 30px 0 rgba(163, 187, 211, 0.25);
+		color: #fff;
+		.compare{
+			color: #fff;
+		}
+	}
+}
 .league-preview{
 	// padding: 24px;
 	border: 1px solid rgba(96,111,140,0.4);
@@ -1961,5 +2015,27 @@ table.comparison-chart{
 				background-image: linear-gradient(290deg, transparent 60%, rgba(130, 0, 255, 0.3));
 			}
 		}
+	}
+}
+
+.compare{
+	padding-left: 36px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	width: 100%;
+	font-size: 0.875em;
+	line-height: 2.2;
+	color: #677897;
+	&:first-of-type{
+		margin-top: 32px;
+	}
+	&.green{
+		background-image: url('https://sleepercdn.com/images/landing/v3/icons/icon_check_green-f3c176af780673cb57402840a50b3fd2.png?vsn=d');
+		+ .yellow{
+			margin-top: 40px;
+		}
+	}
+	&.yellow{
+		background-image: url('https://sleepercdn.com/images/landing/v3/icons/icon_check_orange-0c0736f87d719cd55dbbab86e1228673.png?vsn=d');
 	}
 }

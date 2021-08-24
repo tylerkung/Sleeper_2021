@@ -152,6 +152,9 @@
   .fluid-container .controls {
     display: none;
   }
+  .fluid-container .controls.show-always {
+    display: none;
+  }
 }
 .col {
   position: relative;
@@ -425,6 +428,13 @@ section.pos-4:before {
 .page-header.header-lcs .header-anchors a:hover {
   color: #00BAFF;
 }
+.page-header.header-mockdraft {
+  background-image: url('https://sleepercdn.com/landing/web2021/background/bg_head.png');
+}
+.page-header.header-mockdraft .header-anchors a.active,
+.page-header.header-mockdraft .header-anchors a:hover {
+  color: #BD66FF;
+}
 .page-header .badge {
   position: absolute;
   right: 32px;
@@ -650,6 +660,7 @@ h2 {
   letter-spacing: -1px;
   font-size: 1.5em;
   line-height: 1.2;
+  margin-bottom: 12px;
 }
 h3 {
   font-family: "Poppins", Helvetica, Arial, sans-serif;
@@ -669,6 +680,7 @@ h5 {
   line-height: 20px;
   font-size: 1em;
   letter-spacing: -0.5px;
+  margin-top: 8px;
 }
 h6 {
   font-family: "Poppins", Helvetica, Arial, sans-serif;
@@ -714,6 +726,9 @@ h6 {
 }
 .txt-yellow {
   color: #FFAE58 !important;
+}
+.txt-lilac {
+  color: #BD66FF !important;
 }
 @media (max-width: 767px) {
   .txt-center-mobile {
@@ -989,6 +1004,9 @@ img {
 }
 .feature-title.feature-lcs:before {
   background-image: url('https://sleepercdn.com/landing/web2021/img/lcs/lcs_sprites.png');
+}
+.feature-title.feature-mockdraft:before {
+  background-image: url('/assets/img/mockdraft/mockdraft_sprites.png');
 }
 .feature-title.feature-ads:before {
   background-position: 0px 0px;
@@ -2344,6 +2362,20 @@ table.comparison-chart tr.feature td:first-child {
   width: 100%;
   float: right;
 }
+.slideshow.hermes .slideshow-bg {
+  position: absolute;
+  z-index: 7;
+  max-width: 40%;
+  bottom: -8px;
+  right: 0;
+  width: 100%;
+}
+.slideshow.hermes .slideshow-bg img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  object-position: bottom right;
+}
 @media (max-width: 964px) {
   .slideshow.hermes {
     padding-top: 60%;
@@ -2373,6 +2405,13 @@ table.comparison-chart tr.feature td:first-child {
   .slideshow.hermes .slideshow-video {
     max-width: unset;
     width: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+  }
+  .slideshow.hermes .slideshow-bg {
+    max-width: unset;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
     right: auto;
@@ -2531,6 +2570,26 @@ table.comparison-chart tr.feature td:first-child {
   position: relative;
   z-index: 1;
   width: 60%;
+}
+.card {
+  background-color: #142136;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  margin: 0 16px;
+  height: 100%;
+  width: 100%;
+  border-radius: 24px;
+  border: 1px solid rgba(96, 111, 140, 0.4);
+}
+.card img {
+  align-self: center;
+}
+.card h5 {
+  margin-bottom: 0;
+}
+.card.highlight {
+  background-image: linear-gradient(to bottom, #3C4963, #141C30);
 }
 .league-preview {
   border: 1px solid rgba(96, 111, 140, 0.4);
@@ -2711,6 +2770,21 @@ table.comparison-chart tr.feature td:first-child {
 }
 .league-preview.preview-dfs.away-lal:before {
   background-image: linear-gradient(290deg, transparent 60%, rgba(130, 0, 255, 0.3));
+}
+.compare {
+  padding-left: 36px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 100%;
+}
+.compare:first-of-type {
+  margin-top: 16px;
+}
+.compare.green {
+  background-image: url('https://sleepercdn.com/images/landing/v3/icons/icon_check_green-f3c176af780673cb57402840a50b3fd2.png?vsn=d');
+}
+.compare.yellow {
+  background-image: url('https://sleepercdn.com/images/landing/v3/icons/icon_check_orange-0c0736f87d719cd55dbbab86e1228673.png?vsn=d');
 }
 .nav {
   overflow-y: auto;
