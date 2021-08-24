@@ -67,12 +67,8 @@
 		padding: 0;
 		.row{
 			flex-wrap: nowrap;
-			overflow: hidden;
 			margin: 0;
 			padding: 0 16px 16px;
-			&:hover{
-				overflow-x: overlay;
-			}
 		}
 		.col-4{
 			min-width: 453px !important;
@@ -91,15 +87,27 @@
 			}
 		}
 	}
+	overflow-x: overlay;
+	@media (min-width: @width-s) and (max-width: 1479px){
+		.row{
+			overflow: hidden;
+			&:hover{
+				overflow-x: overlay;
+			}
+		}
+	}
 	&.nowrap-always{
 		padding: 0;
 		.row{
 			flex-wrap: nowrap;
-			overflow: hidden;
 			margin: 0;
 			padding: 0 16px 16px;
-			&:hover{
-				overflow-x: overlay;
+			overflow-x: overlay;
+			@media (min-width: @width-s){
+				overflow: hidden;
+				&:hover{
+					overflow-x: overlay;
+				}
 			}
 		}
 		.col-3{
@@ -534,9 +542,12 @@ section{
 			padding-top: 20px;
 			padding-bottom: 20px;
 			white-space: nowrap;
-			overflow: hidden;
-			&:hover{
-				overflow-x: overlay;
+			overflow-x: overlay;
+			@media (min-width: @width-s){
+				overflow: hidden;
+				&:hover{
+					overflow-x: overlay;
+				}
 			}
 		}
 		a{
