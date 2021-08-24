@@ -273,12 +273,17 @@ img{
 	&.feature-mockdraft:before{
 		background-image: url('/assets/img/mockdraft/mockdraft_sprites.png');
 	}
+	&.feature-about:before{
+		background-image: url('/assets/img/about_sprites.png');
+	}
 	&.feature-ads:before{background-position:0px 0px}
 	&.feature-scoring:before{background-position:-80px 0px}
 	&.feature-research:before{background-position:-160px 0px}
 	&.feature-commish:before{background-position:0px -80px}
 	&.feature-team:before{background-position:-80px -80px}
 	&.feature-timer:before{background-position:-160px -80px}
+	&.feature-finances:before{background-position:0px -160px}
+	&.feature-operations:before{background-position:-80px -160px}
 	@media (max-width: 767px){
 		padding-left: 88px;
 		&:before{
@@ -292,6 +297,8 @@ img{
 		&.feature-commish:before{background-position:0px -64px}
 		&.feature-team:before{background-position:-64px -64px}
 		&.feature-timer:before{background-position:-128px -64px}
+		&.feature-finances:before{background-position:0px -128px}
+		&.feature-operations:before{background-position:-64px -128px}
 	}
 }
 .badges-container{
@@ -1705,6 +1712,124 @@ table.comparison-chart{
 		}
 	}
 }
+
+.zeus{
+	border-radius: 24px;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid rgba(96,111,140,0.4);
+	padding: 32px;
+	margin-top: 48px;
+	padding-bottom: 45%;
+	@media (min-width: @width-m){
+		padding-bottom: 32px;
+	}
+	.banner-content{
+		position: relative;
+		z-index: 1;
+		@media (min-width: @width-m){
+			max-width: 60%;
+			.title{
+				max-width: 60%;
+			}
+		}
+		.description{
+			font-family: @inter;
+			font-size: 0.875em;
+			color: @secondary-dm;
+			margin-bottom: 16px;
+			line-height: 1.5;
+		}
+	}
+	.banner-bg{
+		position: absolute;
+		z-index: 0;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		img{
+			object-fit: contain;
+			object-position: center bottom;
+			height: 100%;
+			width: 100%;
+	    right: 0;
+	    position: absolute;
+			@media (min-width: @width-m){
+				width: 80%;
+				object-fit: cover;
+				object-position: center right;
+			}
+		}
+		.web-only{
+			@media (max-width: 1023px){
+				display: none !important;
+			}
+		}
+		.mobile-only{
+			@media (min-width: @width-s) and (max-width: 1023px){
+				display: block !important;
+			}
+		}
+	}
+}
+
+.athena{
+	position: relative;
+	padding: 32px 32px 128px;
+	margin-top: 48px;
+	.banner-content{
+		position: relative;
+		z-index: 1;
+		@media (min-width: @width-s){
+			max-width: 60%;
+		}
+		@media (min-width: @width-m){
+			max-width: 40%;
+		}
+		.title{
+			// max-width: 60%;
+		}
+	}
+	.banner-bg{
+		position: absolute;
+		z-index: 0;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		img{
+			object-fit: contain;
+			object-position: center right;
+			height: 100%;
+			width: 100%;
+	    right: 0;
+	    position: absolute;
+			@media (min-width: @width-s){
+				width: 60%;
+			}
+			@media (min-width: @width-m){
+				width: 80%;
+			}
+		}
+	}
+	@media (max-width: 767px){
+		padding-bottom: 40%;
+		.banner-content{
+			max-width: unset;
+		}
+		.banner-bg{
+			bottom: 0;
+
+			img{
+				width: 100%;
+				bottom: 0;
+				object-position: center bottom;
+			}
+		}
+	}
+}
+
 &.tag{
 	&:before{
 		content: '';
@@ -1799,8 +1924,13 @@ table.comparison-chart{
 	width: 100%;
 	border-radius: 24px;
 	border: 1px solid rgba(96,111,140,0.4);
+	min-height: 120px;
+	&.center-card{
+		justify-content: center;
+	}
 	@media (min-width: @width-s){
-		margin: 0 16px;
+		// margin: 0 16px;
+		min-height: 240px;
 	}
 	img{
 		align-self: center;
@@ -2037,5 +2167,12 @@ table.comparison-chart{
 	}
 	&.yellow{
 		background-image: url('https://sleepercdn.com/images/landing/v3/icons/icon_check_orange-0c0736f87d719cd55dbbab86e1228673.png?vsn=d');
+	}
+}
+
+.fluid-container div.col-3.compare-card{
+	@media (max-width: 767px){
+		max-width: 324px;
+		min-width: unset !important;
 	}
 }

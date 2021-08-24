@@ -69,9 +69,10 @@
 			flex-wrap: nowrap;
 			margin: 0;
 			padding: 0 16px 16px;
+			overflow-x: overlay;
 		}
 		.col-4{
-			min-width: 453px !important;
+			// min-width: 453px !important;
 		}
 		.col-3{
 			min-width: 324px !important;
@@ -87,7 +88,6 @@
 			}
 		}
 	}
-	overflow-x: overlay;
 	@media (min-width: @width-s) and (max-width: 1479px){
 		.row{
 			overflow: hidden;
@@ -458,6 +458,14 @@ section{
 		.header-anchors a{
 			&.active, &:hover{
 				color: @lilac;
+			}
+		}
+	}
+	&.header-about{
+		background-image: url('https://sleepercdn.com/landing/web2021/background/bg_head.png');
+		.header-anchors a{
+			&.active, &:hover{
+				color: @green;
 			}
 		}
 	}
