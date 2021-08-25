@@ -8,8 +8,8 @@
 	<meta name="theme-color" content="#000000" />
 	<meta name="description" content="Start a fantasy league today on Sleeper" />
 	<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-	<link rel="stylesheet" type="text/css" href="/css/styles.css" />
-	<!-- <link rel="stylesheet/less" type="text/less" href="/css/styles.less" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/css/styles.css" /> -->
+	<link rel="stylesheet/less" type="text/less" href="/css/styles.less" />
 	<title>Sleeper Fantasy Football</title>
 	<!-- Global site tag (gtag.js) - Google Ads: 975847822 -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-975847822"></script>
@@ -338,6 +338,15 @@
 								<div class="description">
 									Sleeper’s mock drafts allow you to quickly test different draft strategies in minutes. Mock with real users or against powerful A.I. instantly. Available free on Desktop, iOS, and Android.
 								</div>
+								<form id="form">
+									<div id="error" class="error hide">We were unable to send the link to your phone.</div>
+									<div class="box-input">
+										<input id="phone" name="phone" class="input-phone" type="tel" placeholder="Email or Phone" value="">
+										<div class="button-wrap">
+											<input class="btn btn-lilac recaptcha" type="submit" id="button" disabled="" data-sitekey="6Lc_jOYZAAAAAG6kLXDElr2uazchReIPzT6DneVE" data-callback="onSubmitSms" data-action="submit" value="GET STARTED">
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -522,10 +531,15 @@
 			<section>
 				<div class="container">
 					<div class="row">
-						<div class="col col-10">
+						<div class="col col-8 col-lg-6 col-sm-12">
 							<a id="why-sleeper" class="anchor">
-								<h2 class="txt-center-mobile">Over 10,000,000 successful drafts</h2>
+								<h2 class="txt-center-mobile">Mock drafting on Sleeper is faster</h2>
 								<h5 class="txt-secondary txt-center-mobile">Mock draft with who you want, when you want, and how you want.</h5>
+							</a>
+						</div>
+						<div class="col col-3 col-lg-4 col-sm-12 self-center txt-center-mobile">
+							<a href="" class="btn btn-outline txt-right">
+								View Docs<span>Check out full draftboard docs</span>
 							</a>
 						</div>
 					</div>

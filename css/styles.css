@@ -44,6 +44,9 @@
 .row.flex-stretch {
   align-items: stretch;
 }
+.self-center {
+  align-self: center;
+}
 .fluid-container {
   position: relative;
 }
@@ -773,6 +776,10 @@ body {
 }
 body.lock-scroll {
   overflow: hidden;
+}
+.hide {
+  display: none;
+  visibility: hidden;
 }
 .flex-center {
   display: flex;
@@ -2383,7 +2390,7 @@ table.comparison-chart tr.feature td:first-child {
   opacity: 0;
   transform: translateY(8px);
   transition: all 0.3s ease-out;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 .slideshow.hermes .slideshow-video {
   position: absolute;
@@ -2536,13 +2543,13 @@ table.comparison-chart tr.feature td:first-child {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(96, 111, 140, 0.4);
-  padding: 32px;
+  padding: 54px;
   margin-top: 48px;
   padding-bottom: 45%;
 }
 @media (min-width: 1024px) {
   .zeus {
-    padding-bottom: 32px;
+    padding-bottom: 54px;
   }
 }
 .zeus .banner-content {
@@ -2971,6 +2978,43 @@ table.comparison-chart tr.feature td:first-child {
     max-width: 324px;
     min-width: unset !important;
   }
+}
+form#form {
+  margin-top: 2em;
+}
+.box-input {
+  position: relative;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 27px;
+}
+.box-input input {
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+.box-input input:not(.btn) {
+  border-radius: 27px;
+  height: 54px;
+  padding: 15px 20px;
+  background-color: #283547;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #B9C4D4;
+  caret-color: #00ceb8;
+  width: 100%;
+}
+.box-input .btn {
+  margin: 0;
+  height: 54px;
+  position: absolute;
+  right: -1px;
+  top: 0;
+  padding-left: 2.3rem;
+  padding-right: 2.3rem;
+  border: 0;
+  cursor: pointer;
 }
 .nav {
   overflow-y: auto;
@@ -3432,6 +3476,13 @@ table.comparison-chart tr.feature td:first-child {
   color: #fff;
   background-color: #fff;
   transition: all 0.2s ease;
+  text-align: center;
+}
+.btn span {
+  font-size: 0.7em;
+  display: block;
+  font-weight: 500;
+  margin-top: 4px;
 }
 .btn + .btn {
   margin-left: 16px;
@@ -3475,6 +3526,10 @@ table.comparison-chart tr.feature td:first-child {
 .btn-aqua {
   color: #022047;
   background-image: linear-gradient(135deg, #70F6FF, #00BAFF);
+}
+.btn-lilac {
+  color: #fff;
+  background-image: linear-gradient(135deg, #DB84FF, #9139FF);
 }
 .btn-success {
   color: #022047;

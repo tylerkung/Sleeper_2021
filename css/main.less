@@ -21,6 +21,10 @@ body{
 	}
 }
 
+.hide{
+	display: none;
+	visibility: hidden;
+}
 .flex-center{
 	display: flex;
 	align-items: center;
@@ -1565,7 +1569,7 @@ table.comparison-chart{
 				opacity: 0;
 				transform: translateY(8px);
 				transition: all 0.3s ease-out;
-				line-height: 1.5;
+				line-height: 1.7;
 			}
 		}
 		.slideshow-video{
@@ -1718,11 +1722,11 @@ table.comparison-chart{
 	position: relative;
 	overflow: hidden;
 	border: 1px solid rgba(96,111,140,0.4);
-	padding: 32px;
+	padding: 54px;
 	margin-top: 48px;
 	padding-bottom: 45%;
 	@media (min-width: @width-m){
-		padding-bottom: 32px;
+		padding-bottom: 54px;
 	}
 	.banner-content{
 		position: relative;
@@ -2174,5 +2178,43 @@ table.comparison-chart{
 	@media (max-width: 767px){
 		max-width: 324px;
 		min-width: unset !important;
+	}
+}
+
+form#form{
+	margin-top: 2em;
+}
+.box-input{
+	position: relative;
+	width: 100%;
+	border: 1px solid #fff;
+	border-radius: 27px;
+	input{
+		font-family: @poppins;
+		font-weight: 500;
+		&:not(.btn){
+			border-radius: 27px;
+	    height: 54px;
+	    padding: 15px 20px;
+	    background-color: #283547;
+	    box-sizing: border-box;
+	    outline: none;
+	    border: none;
+	    font-size: 18px;
+	    color: #B9C4D4;
+	    caret-color: #00ceb8;
+	    width: 100%;
+		}
+	}
+	.btn{
+		margin: 0;
+		height: 54px;
+		position: absolute;
+		right: -1px;
+		top: 0;
+		padding-left: 2.3rem;
+		padding-right: 2.3rem;
+		border: 0;
+		cursor: pointer;
 	}
 }
