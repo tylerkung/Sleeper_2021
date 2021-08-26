@@ -151,7 +151,7 @@
 						</a>
 					</div>
 					<div class="sub-nav">
-						<a href="/mockdraft" class="sub-nav-item active">
+						<a href="/mockdraft" class="sub-nav-item">
 							<div class="nav-icon">
 								<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4283 17.9623C13.4231 18.0132 10.473 18.0111 7.57275 17.9623C4.3535 17.9623 2 15.666 2 12.5109V7.86137C2 4.70627 4.3535 2.41005 7.57275 2.41005C10.4889 2.3602 13.4411 2.36123 16.4283 2.41005C19.6476 2.41005 22 4.70731 22 7.86137V12.5109C22 15.666 19.6476 17.9623 16.4283 17.9623Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -189,7 +189,7 @@
 			</div> <!-- end main nav -->
 			<div class="side-nav">
 				<div class="secondary-nav">
-					<a href="/download" class="nav-item">
+					<a href="/download" class="nav-item active">
 						<div class="nav-icon">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M2 13C2 12.5 2.5 12 3 12C3.5 12 4 12.5 4 13C4 13.5 4 18 4 18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V13C20 12.4477 20.4477 12 21 12C21.5523 12 22 12.4477 22 13V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18C2 18 2 13.5 2 13Z" fill="#A3BBD3"/>
@@ -261,7 +261,7 @@
 				</div>
 			</div>
 		</div> <!-- end NAV -->
-		<div class="main mockdraft-layout">
+		<div class="main mockdraft-layout no-anchors">
 			<div class="top-nav-wrapper">
 				<div class="container">
 					<div class="top-nav">
@@ -296,7 +296,7 @@
 				</div>
 			</div>
 			<div class="page-header-wrapper">
-				<div class="page-header header-mockdraft">
+				<div class="page-header">
 					<!-- <div class="badge">
 						<img src="https://sleepercdn.com/landing/web2021/img/badge_fball.png" alt="Fantasy Football" />
 					</div> -->
@@ -307,52 +307,76 @@
 									<a href="/">Home</a>
 								</li>
 								<li>
-									Mockdraft
+									Download
 								</li>
 							</ul>
-							<h1>Mockdraft</h1>
-						</div>
-					</div>
-					<div class="header-anchors">
-						<div class="container">
-							<a href="#features" aria-label="features" class="active">Features</a>
-							<a href="#how-to" aria-label="how-to">How To Play</a>
-							<a href="#game-modes" aria-label="game-modes" class="web-only">Game Modes</a>
-							<a href="#testimonials" aria-label="testimonials">Testimonials</a>
-							<a href="#why-sleeper" aria-label="why-sleeper" class="web-only">Why Sleeper</a>
+							<h1>Download Sleeper</h1>
 						</div>
 					</div>
 				</div>
 			</div>
 			<a id="features" class="anchor" style="height: 1px;"></a>
-			<div class="container first-container">
-				<div class="slideshow hermes no-anim">
-					<div class="pagination">
-					</div>
-					<div class="slideshow-content no-anim">
-						<div class="slide slide-1 first active">
-							<div class="content">
-								<h1 class="title">
-									The easiest way to practice your draft strategy</span>
-								</h1>
-								<div class="description">
-									Sleeper’s mock drafts allow you to quickly test different draft strategies in minutes. Mock with real users or against powerful A.I. instantly. Available free on Desktop, iOS, and Android.
+			<div class="first-container">
+				<div class="hades">
+					<div class="banner-content no-anim">
+						<div class="floating-ui web-only">
+							<img src="/assets/img/download_ui.png" alt="Download"/>
+						</div>
+						<div class="content">
+							<div class="row">
+								<div class="col col-6 col-md-12">
+									<h1 class="title">
+										Next-level Fantasy Sports App
+									</h1>
+									<form id="form">
+										<div id="error" class="error hide">We were unable to send the link to your phone.</div>
+										<div class="box-input">
+											<input id="phone" name="phone" class="input-phone" type="tel" placeholder="Enter your mobile #" value="">
+											<div class="button-wrap">
+												<input class="btn btn-mint recaptcha" type="submit" id="button" disabled="" data-sitekey="6Lc_jOYZAAAAAG6kLXDElr2uazchReIPzT6DneVE" data-callback="onSubmitSms" data-action="submit" value="TEXT ME">
+											</div>
+										</div>
+									</form>
 								</div>
-								<form id="form">
-									<div id="error" class="error hide">We were unable to send the link to your phone.</div>
-									<div class="box-input">
-										<input id="phone" name="phone" class="input-phone" type="tel" placeholder="Email or Phone" value="">
-										<div class="button-wrap">
-											<input class="btn btn-lilac recaptcha" type="submit" id="button" disabled="" data-sitekey="6Lc_jOYZAAAAAG6kLXDElr2uazchReIPzT6DneVE" data-callback="onSubmitSms" data-action="submit" value="GET STARTED">
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="callout">
+										<div class="features">
+											<div class="feature">
+												<h2>21<span class="bottom">NEW</span></h2>
+												<div class="description">
+													<p>Features<br/>in 2021</p>
+												</div>
+											</div>
+											<div class="feature">
+												<h2>3M<span class="top">+</span></h2>
+												<div class="description">
+													<p>App<br/>Downloads</p>
+												</div>
+											</div>
+											<div class="feature">
+												<h2>4.7</h2>
+												<div class="description">
+													<p><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star partial"></span><br/>Ratings</p>
+												</div>
+											</div>
+										</div>
+										<div class="download-ct">
+											<a href="/#need-link" class="btn-download">
+												<img src="https://sleepercdn.com/landing/web2021/img/btn_google.png" alt="Download on Google Play" />
+											</a>
+											<a href="/#need-link" class="btn-download">
+												<img src="https://sleepercdn.com/landing/web2021/img/btn_apple.png" alt="Download on App Store" />
+											</a>
 										</div>
 									</div>
-								</form>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="slideshow-bg">
-						<img src="/assets/background/bg_mockdraft.png" class="web-only"/>
-						<img src="/assets/background/bg_mockdraft_mobile.png" class="mobile-only"/>
+					<div class="banner-bg">
+						<img src="/assets/background/bg_download.png"/>
 					</div>
 				</div>
 			</div>
@@ -360,169 +384,19 @@
 				<div class="container">
 					<div class="row">
 						<div class="col col-12">
-							<h2 class="web-only">The most engaging fantasy app</h2>
-							<h2 class="mobile-only txt-center">The most engaging Fantasy Sports app</h2>
-							<h5 class="txt-secondary txt-center-mobile">See why millions of users play and chat with friends on Sleeper</h5>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container">
-					<div class="row">
-						<div class="col col-4 col-sm-12">
-							<div class="feature-title feature-mockdraft feature-ads">
-								<h4>Sleeper A.I.</h4>
-							</div>
-							<p class="txt-secondary web-only">
-								Our powerful A.I. learns from toher player draft tendencies and strategies to give you a realistic mock draft experience at all times.
-							</p>
-						</div>
-						<div class="col col-4 col-sm-12">
-							<div class="feature-title feature-mockdraft feature-scoring">
-								<h4>Draftboard View</h4>
-							</div>
-							<p class="txt-secondary web-only">
-								Our draftboard view gives you extra context on opponent moves so you can adapt quickly to position runs and team needs.
-							</p>
-						</div>
-						<div class="col col-4 col-sm-12">
-							<div class="feature-title feature-mockdraft feature-research">
-								<h4>Mock Together</h4>
-							</div>
-							<p class="txt-secondary web-only">
-								Instantly mock with others by sharing your unique draftboard link. Friends who have the link will be able to join you immediately on either web or mobile.
-							</p>
-						</div>
-						<div class="col col-4 col-sm-12">
-							<div class="feature-title feature-mockdraft feature-commish">
-								<h4>Custom Settings</h4>
-							</div>
-							<p class="txt-secondary web-only">
-								Every league is different. On Sleeper, you can mock draft according to specific league types and settings. Adjust roster positions and use custom ADPs.
-							</p>
-						</div>
-						<div class="col col-4 col-sm-12">
-							<div class="feature-title feature-mockdraft feature-team">
-								<h4>Keeper Mocks</h4>
-							</div>
-							<p class="txt-secondary web-only">
-								Our draftboards are fully editable, meaning you can set keepers pre-draft. You can also copy draftboards to create templates for future mocks.
-							</p>
-						</div>
-						<div class="col col-4 col-sm-12">
-							<div class="feature-title feature-mockdraft feature-timer">
-								<h4>Dynasty Mocks</h4>
-							</div>
-							<p class="txt-secondary web-only">
-								Whether you are preparing for a dynasty startup draft, a rookie draft, or a vets-only draft, Sleeper’s mock system has dynasty leagues fully covered.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container">
-					<div class="row">
-						<a id="how-to" class="anchor"><div class="col col-10">
-							<h2>Over 10,000,000 successful drafts</h2>
-							<h5 class="txt-secondary">Mock draft with who you want, when you want, and how you want.</h5>
-						</div></a>
-					</div>
-				</div>
-				<div class="container">
-					<div class="row row-stretch">
-						<div class="col col-4">
-							<div class="card">
-								<img src="/assets/img/mockdraft/mock_together.png"/>
-								<h5 class="txt-center"><strong>Mock Together</strong></h5>
-								<p class="txt-center">Invite real users to mock with you with a simple invite link. Your friends can join you and mock instantly.</p>
-							</div>
-						</div>
-						<div class="col col-4">
-							<div class="card">
-								<img src="/assets/img/mockdraft/mock_ai.png"/>
-								<h5 class="txt-center"><strong>Mock Against A.I.</strong></h5>
-								<p class="txt-center">Our powerful A.I. learns from everyone's drafts, so your mock will always reflect the realistic behavior.</p>
-							</div>
-						</div>
-						<div class="col col-4">
-							<div class="card">
-								<img src="/assets/img/mockdraft/mock_customization.png"/>
-								<h5 class="txt-center"><strong>Powerful Customization</strong></h5>
-								<p class="txt-center">Setup your mock draft to reflect your league type and settings. Redraft, keeper, dynasty, PPR, Standard, we have it all.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="web-only">
-				<div class="container">
-					<div class="row">
-						<div class="col col-12">
-							<h2><a id="game-modes" class="anchor">Full support for every game mode</a></h2>
-							<h5 class="txt-secondary">Sleeper lets you play the way you want, whether it's Redraft, Keeper, or Dynasty</h5>
-						</div>
-					</div>
-					<div class="row flex-stretch">
-						<div class="col col-4 txt-center">
-							<img src="/assets/img/mockdraft/mock_linear.png" class="league-badge" alt="Redraft"/>
-							<h1 class="draft-header">Redraft</h1>
-							<p>All rosters from this season are reset. Owners must participate ina draft where all players are available.</p>
-							<a href="/download" class="btn btn-dark txt-lilac">Play Now</a>
-						</div>
-						<div class="col col-4 txt-center">
-							<img src="/assets/img/mockdraft/mock_linear.png" class="league-badge" alt="Keeper"/>
-							<h1 class="draft-header">Keeper</h1>
-							<p>Each owner can designate players to keep on their roster for next season. The number of keepers is customizable.</p>
-							<a href="/download" class="btn btn-dark txt-lilac">Play Now</a>
-						</div>
-						<div class="col col-4 txt-center">
-							<img src="/assets/img/mockdraft/mock_linear.png" class="league-badge" alt="Dynasty"/>
-							<h1 class="draft-header">Dynasty</h1>
-							<p>All rosters stay with owners. Owners will need to conduct a draft from the new rookies and free agent pool.</p>
-							<a href="/download" class="btn btn-dark txt-lilac">Play Now</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div class="container">
-					<div class="row">
-						<div class="col col-12">
-							<a id="testimonials" class="anchor">
-								<h2 class="web-only">The most engaging fantasy app</h2>
-								<h2 class="mobile-only txt-center">The most engaging Fantasy Sports app</h2>
-							</a>
-							<h5 class="txt-secondary txt-center-mobile">See why millions of users play and chat with friends on Sleeper</h5>
-						</div>
-					</div>
-				</div>
-				<div class="container fluid-container nowrap-always extra-padding">
-					<div class="controls">
-						<div class="prev"></div>
-						<div class="next"></div>
-					</div>
-					<div class="row flex-stretch">
-						<div class="testimonial col">
-							<div class="testimonial-image">
-								<img src="https://sleepercdn.com/landing/web2021/img/avatar.png" alt="avatar"/>
-							</div>
-							<div class="testimonial-quote">“Honestly making the move and bringing my league to be on the sleeper app has to be the best decision I have made fantasy football wise!” <span class="testimonial-user">- AustintheMaleNurse</span>
-							</div>
-						</div>
-						<div class="testimonial col">
-							<div class="testimonial-image">
-								<img src="https://sleepercdn.com/landing/web2021/img/avatar-1.png" alt="avatar"/>
-							</div>
-							<div class="testimonial-quote">“Sleeper had everything we had been saying a fantasy app should have and more. Genuinely was blown away by how smooth it runs” <span class="testimonial-user">- Asleeper7</span>
-							</div>
-						</div>
-						<div class="testimonial col">
-							<div class="testimonial-image">
-								<img src="https://sleepercdn.com/landing/web2021/img/avatar-2.png" alt="avatar"/>
-							</div>
-							<div class="testimonial-quote">“From trading rookie draft picks to multi team trades to its interactive and helpful customer service, our league has never regretted switching.” <span class="testimonial-user">- ChemistryWiz17</span>
+							<div class="video-item wide" aria-video="https://www.youtube.com/embed/e4ZdOcAXVCc">
+								<div class="thumbnail">
+									<div class="play-btn">
+									</div>
+									<img src="/assets/img/thumb_21-features.jpg" alt="21 New Features on Sleeper" />
+									<div class="play-btn">
+									</div>
+								</div>
+								<div class="vid-content">
+									<h2>Join more than a miliion fans on Sleeper!</h2>
+									<p>Learn more about 21 new features in the Sleeper app</p>
+									<a href="https://sleeper.app/create?type=league" class="btn btn-mint">Play Now</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -531,135 +405,7 @@
 			<section>
 				<div class="container">
 					<div class="row">
-						<div class="col col-8 col-lg-6 col-sm-12">
-							<a id="why-sleeper" class="anchor">
-								<h2 class="txt-center-mobile">Mock drafting on Sleeper is faster</h2>
-								<h5 class="txt-secondary txt-center-mobile">Mock draft with who you want, when you want, and how you want.</h5>
-							</a>
-						</div>
-						<div class="col col-3 col-lg-4 col-sm-12 self-center txt-center-mobile">
-							<a href="https://support.sleeper.app/collections/410900-fantasy-football#drafting" class="btn btn-outline txt-right">
-								View Docs<span>Check out full draftboard docs</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="container fluid-container">
-					<div class="controls">
-						<div class="prev"></div>
-						<div class="next"></div>
-					</div>
-					<div class="row row-stretch">
-						<div class="col col-3 compare-card">
-							<div class="card highlight">
-								<img src="https://sleepercdn.com/images/landing/v3/icons/appicon_sleeper-c19639eaef1aee06143007521e40a7e6.png?vsn=d"/>
-								<div class="compare green">
-									FREE (no ads)
-								</div>
-								<div class="compare green">
-									Mobile app
-								</div>
-								<div class="compare green">
-									Real-time
-								</div>
-								<div class="compare green">
-									Invite others
-								</div>
-								<div class="compare green">
-									Solo option
-								</div>
-								<div class="compare green">
-									Start anytime
-								</div>
-								<div class="compare green">
-									Unlimited pause
-								</div>
-								<div class="compare green">
-									Rookie-only option
-								</div>
-								<div class="compare green">
-									Customize positions
-								</div>
-								<div class="compare green">
-									Copy draftboards
-								</div>
-								<div class="compare green">
-									Pre-select keepers
-								</div>
-							</div>
-						</div>
-						<div class="col col-3 compare-card">
-							<div class="card">
-								<img src="https://sleepercdn.com/images/landing/v3/icons/appicon_yahoo-14deb0ada22897e1939053cf66fa5ca2.png?vsn=d"/>
-								<div class="compare green">
-									Ad-supported
-								</div>
-								<div class="compare green">
-									Mobile app
-								</div>
-								<div class="compare green">
-									Real-time
-								</div>
 
-								<div class="compare yellow">
-									Must queue up
-								</div>
-							</div>
-						</div>
-						<div class="col col-3 compare-card">
-							<div class="card">
-								<img src="https://sleepercdn.com/images/landing/v3/icons/appicon_espn-1a9e9c48369d396173caa317a317edb5.png?vsn=d"/>
-								<div class="compare green">
-									Ad-supported
-								</div>
-								<div class="compare green">
-									Mobile app
-								</div>
-								<div class="compare green">
-									Real-time
-								</div>
-
-								<div class="compare yellow">
-									Must queue up
-								</div>
-							</div>
-						</div>
-						<div class="col col-3 compare-card">
-							<div class="card">
-								<img src="https://sleepercdn.com/images/landing/v3/icons/appicon_nfl-524c75d1e4c37431676c7ac4e062ef94.png?vsn=d"/>
-								<div class="compare green">
-									Ad-supported
-								</div>
-								<div class="compare green">
-									Mobile app
-								</div>
-								<div class="compare green">
-									Real-time
-								</div>
-
-								<div class="compare yellow">
-									Must queue up
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="mobile-only">
-				<div class="container">
-					<div class="row">
-						<div class="col col-12">
-							<div class="card-promo">
-								<img src="https://sleepercdn.com/landing/web2021/img/category-card.jpg" class="card-bg" />
-								<div class="card-content">
-									<h6 class="txt-light">#1 Dynasty Platform</h6>
-									<h3 class="card-title">Play on web, iPad & mobile app</h3>
-									<a href="/download">
-										<img src="https://sleepercdn.com/landing/web2021/img/btn_download.png" alt="Download" />
-									</a>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</section>
