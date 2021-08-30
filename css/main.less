@@ -423,12 +423,23 @@ table.comparison-chart{
 		}
 		td:first-child{
 			border-left: 0;
+			// min-width: 240px;
 		}
 		&:last-child td{
 			// border-bottom: 0;
 		}
 		td:last-child{
 			// border-right: 0;
+		}
+		@media (max-width: 767px){
+			img{
+				height: 24px;
+				width: 24px;
+			}
+			td:first-child{
+				min-width: 160px;
+				font-size: 0.875em;
+			}
 		}
 	}
 }
@@ -1503,6 +1514,17 @@ table.comparison-chart{
 		padding-top: 34.54%;
 		margin-top: 48px;
 		border: 1px solid rgba(96,111,140,0.4);
+		@media (min-width: @width-l){
+			padding-top: 0;
+			height: 480px;
+			.slideshow-video{
+				max-width: unset !important;
+				height: 100%;
+				video{
+					height: 100%;
+				}
+			}
+		}
 		.slideshow-content{
 			z-index: 8;
 		}
@@ -1656,6 +1678,9 @@ table.comparison-chart{
 				left: 50%;
 				transform: translateX(-50%);
 				right: auto;
+				&.mockdraft{
+					width: 110%;
+				}
 			}
 
 			.slideshow-bg{
@@ -1670,6 +1695,9 @@ table.comparison-chart{
 			padding-top: 140%;
 			.slideshow-video{
 				width: 140%;
+				&.mockdraft{
+					width: 115%;
+				}
 			}
 		}
 		@media (max-width: 414px){

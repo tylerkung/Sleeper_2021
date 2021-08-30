@@ -268,11 +268,11 @@ function initPoseidon(){
 }
 
 function initHermes(){
-	if (!$('.hermes:not(.no-anim)').length){
+	if ($('.hermes:not(.no-anim)').length){
 		setInterval(cycleSlides, 6000);
 		// console.log(video);
 		var bg = $('.hermes');
-		if (!isMac) setVideoBgColor(video, bg);
+		setVideoBgColor(video, bg);
 		// canvas.width = 700;
 		// canvas.height = 400;
 		// canvas.style.width = "700px";
