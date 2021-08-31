@@ -5,7 +5,7 @@ var viewport;
 var vidWidth = 700;
 var vidHeight = 400;
 var video = document.getElementById('NFL-video');
-// var canvas = document.getElementById('exampleCanvas');
+var canvas = document.getElementById('exampleCanvas');
 // var ctx = canvas.getContext('2d');
 var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
 
@@ -343,10 +343,9 @@ var newCanvas = document.createElement("canvas");
 var ctx = newCanvas.getContext("2d");
 
 function drawingLoop() {
-	console.log('drawing');
-    requestId = window.requestAnimationFrame(drawingLoop)
-    ctx.drawImage(video, 0, 0, vidWidth, vidHeight, 0, 0, newCanvas.width, newCanvas.height);
-		video.remove();
+  requestId = window.requestAnimationFrame(drawingLoop);
+  ctx.drawImage(video, 0, 0, vidWidth, vidHeight, 0, 0, canvas.width, canvas.height);
+	// video.remove();
 }
 
 function setVideoBgColor(vid, backgroundElement) {
@@ -361,5 +360,5 @@ function setVideoBgColor(vid, backgroundElement) {
 		console.log(p);
     //dont take the first but fourth pixel [r g b a]
     backgroundElement.css('backgroundColor', "rgb(" + p[60] + "," + p[61] + "," + p[62] + ")");
-		$('.slideshow-video').append(newCanvas);
+		// $('.slideshow-video').append(newCanvas);
 }
