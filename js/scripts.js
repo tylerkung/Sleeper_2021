@@ -5,8 +5,11 @@ var viewport;
 var vidWidth = 700;
 var vidHeight = 400;
 var video = document.getElementById('NFL-video');
+video.play();
 var canvas = document.getElementById('exampleCanvas');
-// var ctx = canvas.getContext('2d');
+canvas.width = 700;
+canvas.height = 400;
+var ctx = canvas.getContext('2d');
 var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
 
 $(document).ready(function(){
@@ -340,12 +343,11 @@ $('.fluid-container .prev').click(function(){
 })
 
 var newCanvas = document.createElement("canvas");
-var ctx = newCanvas.getContext("2d");
 
 function drawingLoop() {
   requestId = window.requestAnimationFrame(drawingLoop);
   ctx.drawImage(video, 0, 0, vidWidth, vidHeight, 0, 0, canvas.width, canvas.height);
-	// video.remove();
+	video.remove();
 }
 
 function setVideoBgColor(vid, backgroundElement) {
