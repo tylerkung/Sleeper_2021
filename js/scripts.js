@@ -349,7 +349,6 @@ function setVideoBgColor(vid, backgroundElement) {
     // draw first four pixel of video to a canvas
     // then get pixel color from that canvas
     var newCanvas = document.createElement("canvas");
-		console.log(vid);
     newCanvas.width = 8;
     newCanvas.height = 8;
 
@@ -360,4 +359,5 @@ function setVideoBgColor(vid, backgroundElement) {
 		console.log(p);
     //dont take the first but fourth pixel [r g b a]
     backgroundElement.css('backgroundColor', "rgb(" + p[60] + "," + p[61] + "," + p[62] + ")");
+		$('.slideshow-video').append(newCanvas);
 }
