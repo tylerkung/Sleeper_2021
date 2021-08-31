@@ -104,6 +104,7 @@ new ScrollMagic.Scene({
 
 $(window).on('load', function(){
 	// if(!$('.hermes').length) initSlides();
+	drawingLoop();
 	if($('.slideshow'.length)){
 		if($('.hermes').length) initHermes();
 		else if($('.poseidon').length) initPoseidon();
@@ -339,20 +340,21 @@ $('.fluid-container .prev').click(function(){
 	// controller.scrollFluid(container);
 })
 
+var newCanvas = document.createElement("canvas");
+var ctx = newCanvas.getContext("2d");
+
 function drawingLoop() {
     requestId = window.requestAnimationFrame(drawingLoop)
-    ctx.drawImage(video, 0, 0, vidWidth, vidHeight, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(video, 0, 0, vidWidth, vidHeight, 0, 0, newCanvas.width, newCanvas.height);
 		video.remove();
 }
 
 function setVideoBgColor(vid, backgroundElement) {
     // draw first four pixel of video to a canvas
     // then get pixel color from that canvas
-    var newCanvas = document.createElement("canvas");
     newCanvas.width = 8;
     newCanvas.height = 8;
 
-    var ctx = newCanvas.getContext("2d");
     ctx.drawImage(vid, 0, 0, 8, 8);
 
     var p = ctx.getImageData(0, 0, 8, 8).data;
