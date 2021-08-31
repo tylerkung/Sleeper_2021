@@ -275,14 +275,14 @@ function initHermes(){
 		setInterval(cycleSlides, 6000);
 		// console.log(video);
 		var bg = $('.hermes');
-		setVideoBgColor(video, bg);
+		// setVideoBgColor(video, bg);
 		newCanvas.width = 700;
 		newCanvas.height = 400;
 		newCanvas.style.width = "700px";
 		newCanvas.style.height = "400px";
 		ctx.drawImage(video, 0, 0, 700, 400, 0, 0, 700, 400);
 
-		drawingLoop();
+		// drawingLoop();
 	}
 }
 
