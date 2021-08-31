@@ -104,7 +104,6 @@ new ScrollMagic.Scene({
 
 $(window).on('load', function(){
 	// if(!$('.hermes').length) initSlides();
-	drawingLoop();
 	if($('.slideshow'.length)){
 		if($('.hermes').length) initHermes();
 		else if($('.poseidon').length) initPoseidon();
@@ -274,13 +273,13 @@ function initHermes(){
 		// console.log(video);
 		var bg = $('.hermes');
 		setVideoBgColor(video, bg);
-		// canvas.width = 700;
-		// canvas.height = 400;
-		// canvas.style.width = "700px";
-		// canvas.style.height = "400px";
-		// ctx.drawImage(video, 0, 0, 700, 400, 0, 0, 700, 400);
+		newCanvas.width = 700;
+		newCanvas.height = 400;
+		newCanvas.style.width = "700px";
+		newCanvas.style.height = "400px";
+		ctx.drawImage(video, 0, 0, 700, 400, 0, 0, 700, 400);
 
-		// drawingLoop();
+		drawingLoop();
 	}
 }
 
@@ -344,6 +343,7 @@ var newCanvas = document.createElement("canvas");
 var ctx = newCanvas.getContext("2d");
 
 function drawingLoop() {
+	console.log('drawing');
     requestId = window.requestAnimationFrame(drawingLoop)
     ctx.drawImage(video, 0, 0, vidWidth, vidHeight, 0, 0, newCanvas.width, newCanvas.height);
 		video.remove();
