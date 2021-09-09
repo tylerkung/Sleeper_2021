@@ -4,12 +4,12 @@ var lcs_vid = 'https://www.youtube.com/embed/xu_iQr3dhTk';
 var viewport;
 var vidWidth = 700;
 var vidHeight = 400;
-var video = document.getElementById('NFL-video');
-video.play();
-var canvas = document.getElementById('exampleCanvas');
-canvas.width = 700;
-canvas.height = 400;
-var ctx = canvas.getContext('2d');
+// var video = document.getElementById('NFL-video');
+// video.play();
+// var canvas = document.getElementById('exampleCanvas');
+// canvas.width = 700;
+// canvas.height = 400;
+// var ctx = canvas.getContext('2d');
 var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
 
 $(document).ready(function(){
@@ -98,19 +98,30 @@ new ScrollMagic.Scene({
 	// .addIndicators()
 	.addTo(controller);
 
-	new ScrollMagic.Scene({
-		triggerElement: '.page-header-wrapper',
-		triggerHook: 0
+new ScrollMagic.Scene({
+	triggerElement: '.page-header-wrapper',
+	triggerHook: 0
+})
+	.setClassToggle('.main', 'sticky-nav')
+	.addTo(controller);
+
+new ScrollMagic.Scene({
+		triggerElement: '.good-picks',
+		triggerHook: 0.8
 	})
-		.setClassToggle('.main', 'sticky-nav')
-		.addTo(controller);
+	.setClassToggle('.good-picks', 'active')
+	// .addIndicators()
+	.addTo(controller);
 
 $(window).on('load', function(){
 	// if(!$('.hermes').length) initSlides();
 	if($('.slideshow'.length)){
-		if($('.hermes').length) initHermes();
-		else if($('.poseidon').length) initPoseidon();
-		else initSlides();
+		$('.slideshow').each(function(){
+			if($(this).hasClass('hermes')) initHermes();
+			else if($(this).hasClass('poseidon')) initPoseidon();
+			else if($(this).hasClass('nike')) return;
+			else initSlides();
+		})
 	}
 	if($('.preview-slideshow').length) initApollo();
 });
@@ -280,7 +291,7 @@ function initHermes(){
 		newCanvas.height = 400;
 		newCanvas.style.width = "700px";
 		newCanvas.style.height = "400px";
-		ctx.drawImage(video, 0, 0, 700, 400, 0, 0, 700, 400);
+		// ctx.drawImage(video, 0, 0, 700, 400, 0, 0, 700, 400);
 
 		// drawingLoop();
 	}
@@ -291,15 +302,15 @@ function initApollo(){
 }
 
 function cycleSlides(){
-	var currentPage = $('.pagination .active');
+	var currentPage = $('.hermes .pagination .active');
 	var next = $(currentPage).next();
-	if (!next.length) next = $('.page-1');
+	if (!next.length) next = $('.hermes .page-1');
 	$(currentPage).removeClass('active');
 	$(next).addClass('active');
 
-	var currentSlide = $('.slide.active');
+	var currentSlide = $('.hermes .slide.active');
 	var nextS = $(currentSlide).next();
-	if (!nextS.length) nextS = $('.slide.first');
+	if (!nextS.length) nextS = $('.hermes .slide.first');
 	$(currentSlide).removeClass('active');
 	$(nextS).addClass('active');
 	// currentSlide = nextS;
@@ -363,4 +374,24 @@ function setVideoBgColor(vid, backgroundElement) {
     //dont take the first but fourth pixel [r g b a]
     backgroundElement.css('backgroundColor', "rgb(" + p[60] + "," + p[61] + "," + p[62] + ")");
 		// $('.slideshow-video').append(newCanvas);
+}
+$('.player-cell .over').click(setActive);
+$('.player-cell .under').click(setActive);
+
+function setActive(){
+	if ($(this).hasClass('active')){
+		$(this).removeClass('active');
+	}
+	else{
+		var parent = $(this).parent('.player-cell');
+		clearOverUnder(parent);
+		$(this).addClass('active');
+	}
+}
+
+function clearOverUnder(obj){
+	var over = $(obj).children('.over');
+	var under = $(obj).children('.under');
+	$(over).removeClass('active');
+	$(under).removeClass('active');
 }

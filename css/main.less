@@ -277,6 +277,9 @@ img{
 	&.feature-lcs:before{
 		background-image: url('https://sleepercdn.com/landing/web2021/img/lcs/lcs_sprites.png');
 	}
+	&.feature-squads:before{
+		background-image: url('/assets/img/squads/squads_sprites.png');
+	}
 	&.feature-mockdraft:before{
 		background-image: url('https://sleepercdn.com/landing/web2021/img/mockdraft/mockdraft_sprites.png');
 	}
@@ -1509,7 +1512,7 @@ table.comparison-chart{
 			}
 		}
 	}
-	&.hermes{
+	&.hermes, &.nike{
 		background-color: #17263e;
 		padding-top: 34.54%;
 		margin-top: 48px;
@@ -1527,6 +1530,19 @@ table.comparison-chart{
 		}
 		.slideshow-content{
 			z-index: 8;
+		}
+		.slide-bg{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			img{
+				object-fit: cover;
+				height: 100%;
+				width: 100%;
+			}
 		}
 		.pagination{
 			left: 40px;
@@ -1634,6 +1650,10 @@ table.comparison-chart{
 			video{
 				width: 100%;
 				float: right;
+			}
+			img{
+				position: relative;
+				top: 20px;
 			}
 		}
 		.slideshow-bg{
