@@ -446,6 +446,13 @@ section.pos-4:before {
 .page-header.header-mockdraft .header-anchors a:hover {
   color: #BD66FF;
 }
+.page-header.header-squads {
+  background-image: url('https://sleepercdn.com/landing/web2021/background/bg_head.png');
+}
+.page-header.header-squads .header-anchors a.active,
+.page-header.header-squads .header-anchors a:hover {
+  color: #98A2FF;
+}
 .page-header.header-about {
   background-image: url('https://sleepercdn.com/landing/web2021/background/bg_head.png');
 }
@@ -459,8 +466,9 @@ section.pos-4:before {
   top: 50%;
   transform: translateY(-50%);
   margin: 0;
-  z-index: -1;
+  z-index: 1;
   max-width: 180px;
+  pointer-events: none;
 }
 @media (max-width: 767px) {
   .page-header .badge {
@@ -569,14 +577,14 @@ section.pos-4:before {
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v3/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfMZg.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/inter/v7/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfMZg.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inter/v3/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/inter/v7/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Poppins';
@@ -1033,6 +1041,9 @@ img {
 }
 .feature-title.feature-lcs:before {
   background-image: url('https://sleepercdn.com/landing/web2021/img/lcs/lcs_sprites.png');
+}
+.feature-title.feature-squads:before {
+  background-image: url('/assets/img/squads/squads_sprites.png');
 }
 .feature-title.feature-mockdraft:before {
   background-image: url('https://sleepercdn.com/landing/web2021/img/mockdraft/mockdraft_sprites.png');
@@ -2325,61 +2336,89 @@ table.comparison-chart tr.feature td:first-child {
 .slideshow.poseidon .content .description {
   margin-bottom: 16px;
 }
-.slideshow.hermes {
+.slideshow.hermes,
+.slideshow.nike {
   background-color: #17263e;
   padding-top: 34.54%;
   margin-top: 48px;
   border: 1px solid rgba(96, 111, 140, 0.4);
 }
 @media (min-width: 1480px) {
-  .slideshow.hermes {
+  .slideshow.hermes,
+  .slideshow.nike {
     padding-top: 0;
     height: 480px;
   }
-  .slideshow.hermes .slideshow-video {
+  .slideshow.hermes .slideshow-video,
+  .slideshow.nike .slideshow-video {
     max-width: unset !important;
     height: 100%;
   }
-  .slideshow.hermes .slideshow-video video {
+  .slideshow.hermes .slideshow-video video,
+  .slideshow.nike .slideshow-video video {
     height: 100%;
   }
 }
-.slideshow.hermes .slideshow-content {
+.slideshow.hermes .slideshow-content,
+.slideshow.nike .slideshow-content {
   z-index: 8;
 }
-.slideshow.hermes .pagination {
+.slideshow.hermes .slide-bg,
+.slideshow.nike .slide-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.slideshow.hermes .slide-bg img,
+.slideshow.nike .slide-bg img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.slideshow.hermes .pagination,
+.slideshow.nike .pagination {
   left: 40px;
   transform: none;
   bottom: 48px;
 }
-.slideshow.hermes .pagination > div {
+.slideshow.hermes .pagination > div,
+.slideshow.nike .pagination > div {
   height: 12px;
   width: 32px;
   background-color: rgba(216, 226, 237, 0.5);
   border-radius: 6px;
 }
-.slideshow.hermes .pagination > div:not(:first-of-type) {
+.slideshow.hermes .pagination > div:not(:first-of-type),
+.slideshow.nike .pagination > div:not(:first-of-type) {
   margin-left: 8px;
 }
-.slideshow.hermes .pagination > div.active {
+.slideshow.hermes .pagination > div.active,
+.slideshow.nike .pagination > div.active {
   background-color: #fff;
   width: 69px;
 }
 @media (max-width: 767px) {
-  .slideshow.hermes .pagination > div {
+  .slideshow.hermes .pagination > div,
+  .slideshow.nike .pagination > div {
     height: 8px;
     width: 8px;
   }
-  .slideshow.hermes .pagination > div.active {
+  .slideshow.hermes .pagination > div.active,
+  .slideshow.nike .pagination > div.active {
     height: 16px;
     width: 16px;
     border-radius: 50%;
   }
-  .slideshow.hermes .pagination > div:not(.active) {
+  .slideshow.hermes .pagination > div:not(.active),
+  .slideshow.nike .pagination > div:not(.active) {
     margin-top: 4px;
   }
 }
-.slideshow.hermes .slide {
+.slideshow.hermes .slide,
+.slideshow.nike .slide {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -2391,30 +2430,40 @@ table.comparison-chart tr.feature td:first-child {
   pointer-events: none;
 }
 .slideshow.hermes .slide,
+.slideshow.nike .slide,
 .slideshow.hermes .slide.slide-2,
-.slideshow.hermes .slide.slide-3 {
+.slideshow.nike .slide.slide-2,
+.slideshow.hermes .slide.slide-3,
+.slideshow.nike .slide.slide-3 {
   background-color: transparent;
 }
-.slideshow.hermes .slide.active {
+.slideshow.hermes .slide.active,
+.slideshow.nike .slide.active {
   pointer-events: all;
 }
 .slideshow.hermes .slide.active h1,
-.slideshow.hermes .slide.active .description {
+.slideshow.nike .slide.active h1,
+.slideshow.hermes .slide.active .description,
+.slideshow.nike .slide.active .description {
   opacity: 1;
   transform: translateY(0px);
 }
-.slideshow.hermes .slide.active h1 {
+.slideshow.hermes .slide.active h1,
+.slideshow.nike .slide.active h1 {
   transition-delay: 0.5s;
 }
-.slideshow.hermes .slide.active .description {
+.slideshow.hermes .slide.active .description,
+.slideshow.nike .slide.active .description {
   transition-delay: 0.9s;
 }
-.slideshow.hermes .content {
+.slideshow.hermes .content,
+.slideshow.nike .content {
   width: 50%;
   color: #fff;
   padding: 0 40px;
 }
-.slideshow.hermes .content .game-badge img {
+.slideshow.hermes .content .game-badge img,
+.slideshow.nike .content .game-badge img {
   border-radius: 8px;
   height: 48px;
   width: auto;
@@ -2422,19 +2471,22 @@ table.comparison-chart tr.feature td:first-child {
   margin-right: 8px;
   margin-top: 4px;
 }
-.slideshow.hermes .content h1 {
+.slideshow.hermes .content h1,
+.slideshow.nike .content h1 {
   font-weight: 700;
   margin: 0 0 8px;
   opacity: 0;
   transform: translateY(8px);
   transition: all 0.3s ease-out;
 }
-.slideshow.hermes .content .subtitle {
+.slideshow.hermes .content .subtitle,
+.slideshow.nike .content .subtitle {
   font-family: "Poppins", Helvetica, Arial, sans-serif;
   font-weight: 600;
   line-height: 1.5;
 }
-.slideshow.hermes .content .description {
+.slideshow.hermes .content .description,
+.slideshow.nike .content .description {
   font-family: "Inter", Helvetica, Arial, sans-serif;
   font-size: 0.875em;
   color: #B9C4D4;
@@ -2444,18 +2496,28 @@ table.comparison-chart tr.feature td:first-child {
   transition: all 0.3s ease-out;
   line-height: 1.7;
 }
-.slideshow.hermes .slideshow-video {
+.slideshow.hermes .slideshow-video,
+.slideshow.nike .slideshow-video {
   position: absolute;
   z-index: 7;
   max-width: 60%;
   bottom: 0;
   right: 0;
 }
-.slideshow.hermes .slideshow-video video {
+.slideshow.hermes .slideshow-video video,
+.slideshow.nike .slideshow-video video {
   width: 100%;
   float: right;
 }
-.slideshow.hermes .slideshow-bg {
+.slideshow.hermes .slideshow-video img,
+.slideshow.nike .slideshow-video img {
+  position: relative;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slideshow.hermes .slideshow-bg,
+.slideshow.nike .slideshow-bg {
   position: absolute;
   z-index: 7;
   max-width: 40%;
@@ -2463,49 +2525,59 @@ table.comparison-chart tr.feature td:first-child {
   right: 0;
   width: 100%;
 }
-.slideshow.hermes .slideshow-bg img {
+.slideshow.hermes .slideshow-bg img,
+.slideshow.nike .slideshow-bg img {
   object-fit: contain;
   height: 100%;
   width: 100%;
   object-position: bottom right;
 }
 @media (max-width: 964px) {
-  .slideshow.hermes {
+  .slideshow.hermes,
+  .slideshow.nike {
     padding-top: 60%;
   }
-  .slideshow.hermes .content {
+  .slideshow.hermes .content,
+  .slideshow.nike .content {
     width: 60%;
   }
 }
 @media (max-width: 767px) {
-  .slideshow.hermes {
+  .slideshow.hermes,
+  .slideshow.nike {
     padding-top: 100%;
   }
-  .slideshow.hermes .pagination {
+  .slideshow.hermes .pagination,
+  .slideshow.nike .pagination {
     top: 40px;
     left: 16px;
   }
-  .slideshow.hermes .slide {
+  .slideshow.hermes .slide,
+  .slideshow.nike .slide {
     height: 50%;
     width: 100%;
     display: block;
     padding-top: 80px;
   }
-  .slideshow.hermes .content {
+  .slideshow.hermes .content,
+  .slideshow.nike .content {
     width: 100%;
     padding: 0 16px;
   }
-  .slideshow.hermes .slideshow-video {
+  .slideshow.hermes .slideshow-video,
+  .slideshow.nike .slideshow-video {
     max-width: unset;
     width: 120%;
     left: 50%;
     transform: translateX(-50%);
     right: auto;
   }
-  .slideshow.hermes .slideshow-video.mockdraft {
+  .slideshow.hermes .slideshow-video.mockdraft,
+  .slideshow.nike .slideshow-video.mockdraft {
     width: 110%;
   }
-  .slideshow.hermes .slideshow-bg {
+  .slideshow.hermes .slideshow-bg,
+  .slideshow.nike .slideshow-bg {
     max-width: unset;
     width: 100%;
     left: 50%;
@@ -2514,18 +2586,22 @@ table.comparison-chart tr.feature td:first-child {
   }
 }
 @media (max-width: 640px) {
-  .slideshow.hermes {
+  .slideshow.hermes,
+  .slideshow.nike {
     padding-top: 140%;
   }
-  .slideshow.hermes .slideshow-video {
+  .slideshow.hermes .slideshow-video,
+  .slideshow.nike .slideshow-video {
     width: 140%;
   }
-  .slideshow.hermes .slideshow-video.mockdraft {
+  .slideshow.hermes .slideshow-video.mockdraft,
+  .slideshow.nike .slideshow-video.mockdraft {
     width: 115%;
   }
 }
 @media (max-width: 414px) {
-  .slideshow.hermes .slide {
+  .slideshow.hermes .slide,
+  .slideshow.nike .slide {
     padding-top: 60px;
   }
 }
@@ -3704,6 +3780,10 @@ form#form {
   color: #fff;
   background-image: linear-gradient(135deg, #DB84FF, #9139FF);
 }
+.btn-lavender {
+  color: #022047;
+  background-image: linear-gradient(135deg, #98A2FF, #89A5FB);
+}
 .btn-success {
   color: #022047;
   background-image: linear-gradient(135deg, #4CE2B8, #07C5FF);
@@ -3732,4 +3812,193 @@ form#form {
 .btn-round:hover svg path {
   transition: all 0.2s ease;
   stroke: #fff;
+}
+.squads-demo {
+  border-radius: 32px;
+  background-image: linear-gradient(120deg, #6E7DF5, #1C212D, #0085FF);
+  position: relative;
+  width: 340px;
+  height: 660px;
+  margin: 0 auto;
+}
+.squads-demo .squads-ct {
+  position: relative;
+  top: 4px;
+  height: calc(100% - 8px);
+  width: calc(100% - 8px);
+  margin: 4px;
+  border-radius: 30px;
+  background-color: #171B28;
+  padding: 60px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .squads-demo {
+    width: 100%;
+    padding: 0 32px;
+    background-image: none;
+  }
+  .squads-demo .squads-ct {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    margin: 0;
+  }
+}
+.squads-demo .player-cell {
+  width: 100%;
+  background-color: #2C3749;
+  height: 98px;
+  display: flex;
+  border-radius: 49px;
+  margin: 24px auto;
+  max-width: 400px;
+}
+.squads-demo .player-cell:first-of-type {
+  margin-top: 0;
+}
+.squads-demo .player-cell:last-of-type {
+  margin-bottom: 0;
+}
+.squads-demo .over,
+.squads-demo .under {
+  width: 84px;
+  background-color: #344054;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.squads-demo .over:hover,
+.squads-demo .under:hover,
+.squads-demo .over.active,
+.squads-demo .under.active {
+  background-color: #423E64;
+}
+.squads-demo .over:hover svg path,
+.squads-demo .under:hover svg path,
+.squads-demo .over.active svg path,
+.squads-demo .under.active svg path {
+  fill: #BD66FF;
+}
+.squads-demo .over:hover h6,
+.squads-demo .under:hover h6,
+.squads-demo .over.active h6,
+.squads-demo .under.active h6 {
+  color: #BD66FF;
+}
+.squads-demo .over svg,
+.squads-demo .under svg {
+  margin: 4px auto 0;
+  display: block;
+}
+.squads-demo .over h6,
+.squads-demo .under h6 {
+  margin: 8px 0 0;
+  width: 100%;
+  text-align: center;
+}
+.squads-demo .over {
+  border-radius: 49px 8px 8px 49px;
+}
+.squads-demo .under {
+  border-radius: 8px 49px 49px 8px;
+}
+.squads-demo .under svg {
+  transform: rotate(180deg);
+}
+.squads-demo .player-data {
+  flex-grow: 2;
+  background-color: #2C3749;
+  position: relative;
+}
+.squads-demo .player {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.squads-demo .player .team-icon {
+  position: absolute;
+  bottom: 4px;
+  right: 2px;
+}
+.squads-demo .name {
+  width: 100%;
+  text-align: center;
+}
+.squads-demo .name h5 {
+  margin-top: 44px;
+  margin-bottom: 0px;
+}
+.squads-demo .stat-total {
+  width: 100%;
+  text-align: center;
+}
+.squads-demo .stat-total h3 {
+  margin-top: 0px;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.squads-demo .stat-total h3 span {
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #A3BBD3;
+}
+.good-picks {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 48px;
+}
+@media (max-width: 767px) {
+  .good-picks {
+    margin-bottom: 16px;
+  }
+}
+.good-picks.active .pick .pick-correct {
+  opacity: 1;
+}
+.good-picks .pick {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 24px;
+}
+.good-picks .pick .pick-correct {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(110, 125, 245, 0.7);
+  border: 4px solid #635EE4;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+@media (max-width: 767px) {
+  .good-picks .pick .pick-correct svg {
+    max-width: 30px;
+  }
+}
+.good-picks .pick:nth-child(2) .pick-correct {
+  transition-delay: 0.3s;
+}
+.good-picks .pick:nth-child(3) .pick-correct {
+  transition-delay: 0.6s;
+}
+.good-picks .pick:nth-child(4) .pick-correct {
+  transition-delay: 0.9s;
+}
+.good-picks .pick img {
+  border-radius: 50%;
 }
