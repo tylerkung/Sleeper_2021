@@ -499,6 +499,8 @@ section{
 	}
 	.header-title{
 		padding: 32px 0;
+		position: relative;
+		z-index: 1;
 		h1{
 			margin-bottom: 0;
 		}
@@ -587,6 +589,9 @@ section{
 			}
 			&:not(:first-of-type){
 				margin-left: 48px;
+			}
+			&:last-of-type{
+				margin-right: 32px;
 			}
 		}
 	}

@@ -1103,6 +1103,20 @@ table.comparison-chart{
 	overflow: hidden;
 	padding: 40px;
 	border: 1px solid rgba(96,111,140,0.4);
+	position: relative;
+	&:after{
+		content: '';
+		height: 100%;
+		width: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: linear-gradient(to right, #1b0f22 40%, transparent);
+		@media (max-width: 767px){
+			width: 100%;
+			background-image: linear-gradient(to right, #1b0f22 40%, rgba(7, 16, 28, 0.2));
+		}
+	}
 	@media (min-width: @width-s) and (max-width: 1023px){
 		background-size: cover;
 		background-position: center left;
@@ -1126,11 +1140,12 @@ table.comparison-chart{
 		color: @secondary-dm;
 	}
 	.title{
+		position:relative;
+		z-index: 1;
 		@media (min-width: @width-s){
 			display: flex;
 			align-items: center;
 		}
-		margin-bottom: 16px;
 	}
 	.btn{
 		padding: 12px 24px;
@@ -1653,9 +1668,11 @@ table.comparison-chart{
 			}
 			img{
 				position: relative;
-				top: 20px;
+				bottom: -20px;
 				left: 50%;
     		transform: translateX(-50%);
+				height: 100%;
+				width: 100%;
 			}
 		}
 		.slideshow-bg{
@@ -2056,6 +2073,9 @@ table.comparison-chart{
 	width: 54px;
 }
 .draft-group{
+	margin-top: 16px;
+	position: relative;
+	z-index: 1;
 	.col{
 		display: flex;
 		// align-items: center;
@@ -2077,12 +2097,26 @@ table.comparison-chart{
 	border-radius: 16px;
 	overflow: hidden;
 	border: 1px solid rgba(96,111,140,0.4);
+	&:after{
+		content: '';
+		height: 100%;
+		width: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: linear-gradient(to right, #1b0f22 40%, transparent);
+		@media (max-width: 767px){
+			width: 100%;
+			background-image: linear-gradient(to right, #1b0f22 40%, rgba(7, 16, 28, 0.2));
+		}
+	}
 	.card-bg{
 		position: absolute;
 		height: 100%;
 		width: 100%;
-		top: 0;
-		left: 0;
+		top: 1px;
+		left: 1px;
+		z-index: 0;
 		object-fit: cover;
 		object-position: bottom right;
 	}
@@ -2096,6 +2130,9 @@ table.comparison-chart{
 		position: relative;
 		z-index: 1;
 		width: 60%;
+		@media (max-width: 767px){
+			width: 100%;
+		}
 	}
 }
 

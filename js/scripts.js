@@ -43,8 +43,8 @@ $('.video-bg').click(function(e){
 	$('#yt-player').html('');
 })
 
-$('.video-item').click(function(e){
-	var yt_link = $(this).attr('aria-video');
+$('.video-item .thumbnail, .video-item h5').click(function(e){
+	var yt_link = $(this).parents('.video-item').attr('aria-video');
 	$('#yt-player').html('<iframe width="1920" height="1080" src="' + yt_link + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Sleeper Fantasy"></iframe>');
 	$('.tutorial-video').addClass('active');
 });

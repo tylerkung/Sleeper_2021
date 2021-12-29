@@ -480,6 +480,8 @@ section.pos-4:before {
 }
 .page-header .header-title {
   padding: 32px 0;
+  position: relative;
+  z-index: 1;
 }
 .page-header .header-title h1 {
   margin-bottom: 0;
@@ -571,6 +573,9 @@ section.pos-4:before {
 }
 .page-header .header-anchors a:not(:first-of-type) {
   margin-left: 48px;
+}
+.page-header .header-anchors a:last-of-type {
+  margin-right: 32px;
 }
 @font-face {
   font-family: 'Inter';
@@ -1901,6 +1906,22 @@ table.comparison-chart tr.feature td:first-child {
   overflow: hidden;
   padding: 40px;
   border: 1px solid rgba(96, 111, 140, 0.4);
+  position: relative;
+}
+.banner-tk:after {
+  content: '';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #1b0f22 40%, transparent);
+}
+@media (max-width: 767px) {
+  .banner-tk:after {
+    width: 100%;
+    background-image: linear-gradient(to right, #1b0f22 40%, rgba(7, 16, 28, 0.2));
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .banner-tk {
@@ -1929,7 +1950,8 @@ table.comparison-chart tr.feature td:first-child {
   color: #B9C4D4;
 }
 .banner-tk .title {
-  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   .banner-tk .title {
@@ -2512,9 +2534,11 @@ table.comparison-chart tr.feature td:first-child {
 .slideshow.hermes .slideshow-video img,
 .slideshow.nike .slideshow-video img {
   position: relative;
-  top: 20px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
 }
 .slideshow.hermes .slideshow-bg,
 .slideshow.nike .slideshow-bg {
@@ -2937,6 +2961,11 @@ table.comparison-chart tr.feature td:first-child {
   height: 54px;
   width: 54px;
 }
+.draft-group {
+  margin-top: 16px;
+  position: relative;
+  z-index: 1;
+}
 .draft-group .col {
   display: flex;
 }
@@ -2956,12 +2985,28 @@ table.comparison-chart tr.feature td:first-child {
   overflow: hidden;
   border: 1px solid rgba(96, 111, 140, 0.4);
 }
+.card-promo:after {
+  content: '';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #1b0f22 40%, transparent);
+}
+@media (max-width: 767px) {
+  .card-promo:after {
+    width: 100%;
+    background-image: linear-gradient(to right, #1b0f22 40%, rgba(7, 16, 28, 0.2));
+  }
+}
 .card-promo .card-bg {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 0;
-  left: 0;
+  top: 1px;
+  left: 1px;
+  z-index: 0;
   object-fit: cover;
   object-position: bottom right;
 }
@@ -2975,6 +3020,11 @@ table.comparison-chart tr.feature td:first-child {
   position: relative;
   z-index: 1;
   width: 60%;
+}
+@media (max-width: 767px) {
+  .card-promo .card-content {
+    width: 100%;
+  }
 }
 .card {
   background-color: #142136;
@@ -3972,6 +4022,17 @@ form#form {
   overflow: hidden;
   margin: 0 24px;
 }
+@media (max-width: 767px) {
+  .good-picks .pick {
+    margin: 0 12px;
+  }
+  .good-picks .pick:first-of-type {
+    margin-left: 0;
+  }
+  .good-picks .pick:last-of-type {
+    margin-right: 0;
+  }
+}
 .good-picks .pick .pick-correct {
   position: absolute;
   display: flex;
@@ -3987,7 +4048,7 @@ form#form {
 }
 @media (max-width: 767px) {
   .good-picks .pick .pick-correct svg {
-    max-width: 30px;
+    padding: 0 10px;
   }
 }
 .good-picks .pick:nth-child(2) .pick-correct {
