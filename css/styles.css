@@ -1905,7 +1905,7 @@ table.comparison-chart tr.feature td:first-child {
   border-radius: 16px;
   overflow: hidden;
   padding: 40px;
-  border: 1px solid rgba(96, 111, 140, 0.4);
+  border: 1px solid #293447;
   position: relative;
 }
 .banner-tk:after {
@@ -2983,7 +2983,7 @@ table.comparison-chart tr.feature td:first-child {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(96, 111, 140, 0.4);
+  border: 1px solid #293447;
 }
 .card-promo:after {
   content: '';
