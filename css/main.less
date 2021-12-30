@@ -32,7 +32,11 @@ body{
 .inline-flex{
 	display: inline-flex !important;
 }
-
+.bump-down{
+	@media (min-width: 767px){
+		margin-top: 40px;
+	}
+}
 .main{
 	width: 100%;
 	overflow: hidden;
@@ -278,7 +282,7 @@ img{
 		background-image: url('https://sleepercdn.com/landing/web2021/img/lcs/lcs_sprites.png');
 	}
 	&.feature-squads:before{
-		background-image: url('/assets/img/squads/squads_sprites.png');
+		background-image: url('https://sleepercdn.com/landing/web2021/img/squads/squads_sprites.png');
 	}
 	&.feature-mockdraft:before{
 		background-image: url('https://sleepercdn.com/landing/web2021/img/mockdraft/mockdraft_sprites.png');

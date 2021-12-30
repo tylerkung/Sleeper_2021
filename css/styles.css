@@ -801,6 +801,11 @@ body.lock-scroll {
 .inline-flex {
   display: inline-flex !important;
 }
+@media (min-width: 767px) {
+  .bump-down {
+    margin-top: 40px;
+  }
+}
 .main {
   width: 100%;
   overflow: hidden;
@@ -1048,7 +1053,7 @@ img {
   background-image: url('https://sleepercdn.com/landing/web2021/img/lcs/lcs_sprites.png');
 }
 .feature-title.feature-squads:before {
-  background-image: url('/assets/img/squads/squads_sprites.png');
+  background-image: url('https://sleepercdn.com/landing/web2021/img/squads/squads_sprites.png');
 }
 .feature-title.feature-mockdraft:before {
   background-image: url('https://sleepercdn.com/landing/web2021/img/mockdraft/mockdraft_sprites.png');
@@ -4018,13 +4023,14 @@ form#form {
 }
 .good-picks .pick {
   position: relative;
+  display: flex;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 24px;
 }
 @media (max-width: 767px) {
   .good-picks .pick {
-    margin: 0 12px;
+    margin: 0 4px;
   }
   .good-picks .pick:first-of-type {
     margin-left: 0;
@@ -4047,6 +4053,9 @@ form#form {
   transition: all 0.4s ease;
 }
 @media (max-width: 767px) {
+  .good-picks .pick .pick-correct {
+    border-width: 2px;
+  }
   .good-picks .pick .pick-correct svg {
     padding: 0 10px;
   }
