@@ -1975,6 +1975,16 @@ table.comparison-chart tr.feature td:first-child {
     padding: 22px 40px;
   }
 }
+.banner-tk img.qr-code {
+  width: 150px;
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  .banner-tk img.qr-code {
+    margin-left: 24px;
+    margin-top: 0;
+  }
+}
 .banner {
   border-radius: 24px;
   padding: 80px;
@@ -2091,6 +2101,7 @@ table.comparison-chart tr.feature td:first-child {
   padding-top: 40%;
   border-radius: 24px;
   overflow: hidden;
+  z-index: 0;
   position: relative;
   background-color: #333;
 }
@@ -3876,6 +3887,11 @@ form#form {
   height: 660px;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  .squads-demo {
+    height: auto;
+  }
+}
 .squads-demo .squads-ct {
   position: relative;
   top: 4px;
@@ -3884,7 +3900,7 @@ form#form {
   margin: 4px;
   border-radius: 30px;
   background-color: #171B28;
-  padding: 60px 12px;
+  padding: 0px 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
