@@ -133,7 +133,7 @@ $(window).resize(function(){
 function initSlides(){
 	console.log('init');
 	sizeSlides();
-	$('.slideshow-content').attr({'aria-count': 4, 'aria-current': 1});
+	// $('.slideshow-content').attr({'aria-count': 5, 'aria-current': 1}); // for home page
 	var lastClone = $('.slide.last').clone().removeClass('last');
 	var firstClone = $('.slide.first').clone().removeClass('first');
 	$(lastClone).insertBefore('.slide.first');
@@ -150,7 +150,7 @@ function sizeSlides(){
 	// 	}, 1000)
 	// }
 	var currentSlide = parseInt($('.slideshow-content').attr('aria-current'),10);
-	$('.slideshow-content').css({'width': viewport*6, 'transform': 'translateX(' + (-viewport * currentSlide) + 'px' + ')'});
+	$('.slideshow-content').css({'width': viewport*7, 'transform': 'translateX(' + (-viewport * currentSlide) + 'px' + ')'});
 	$('.slide').each(function(){
 		$(this).css('width', viewport);
 	})
